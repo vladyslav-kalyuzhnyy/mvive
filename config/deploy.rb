@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.5.0'
 
-set :repo_url, 'https://github.com/pylypO/M-Vive.git'
+set :repo_url, 'https://github.com/vladyslav-kalyuzhnyy/mvive.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 set :user, 'deployer'
