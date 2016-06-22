@@ -1,0 +1,19 @@
+<div class="info-frame-feedbacks">
+  <% @user.feedbacks.each do |feedback| %>
+      <% creator = User.find(feedback.creator_id)%>
+      <div class="user-casting-comment">
+        <div class="profile-photo" style="background-image: url(<%= creator.avatar_url %>);"></div>
+        <div class="casting-comment-wrap">
+        <p><strong><%= "#{creator.name} #{creator.surname}" %></strong></p>
+        <div class="review-rating" data-score="<%= feedback.rating %>"></div>
+        <p><%= feedback.body %></p>
+        <p><%= time_ago_in_words(feedback.created_at) %> Ago</p>
+        </div>
+      </div>
+  <% end %>
+      <p id="notice"><%= notice %></p>
+      <% unless @user == current_user || @user.feedbacks.find_by(creator_id: current_user.id) %>
+      <h3>Добавить отзыв:</h3>
+      	<%= render "feedbacks/form" %>
+      <% end %>
+</div>

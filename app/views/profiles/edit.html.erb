@@ -1,0 +1,30 @@
+<%= render 'shared/menu' %>
+<div class="global-scope">
+	<div class="settings-scope">
+		<h2>Настройки</h2>
+				<div class="settings-menu">
+					<div class="settings-menu-item settings-menu-item-active" id="private-menu-item">
+						<p>Личные данные</p>
+					</div>
+					<div class="settings-menu-item" id="workinfo-menu-item">
+						<p>Профессиональная информация</p>
+					</div>
+					<div class="settings-menu-item" id="payment-menu-item">
+						<p>Средства оплаты</p>
+					</div>
+					<div class="settings-menu-item" id="pro-menu-item">
+						<p>ПРО возможности</p>
+					</div>
+				</div>
+		<%if current_user.type == "Designer"%>
+			<%= render 'forms/designer_edit_form'%>
+		<%end%>
+		<%if current_user.type == "Model"%>
+			<%= render 'forms/model_edit_form'%>
+		<%end%>
+		<%if current_user.type == "Photographer"%>
+			<%= render 'forms/photographer_edit_form' %>
+		<%end%>
+	</div>
+</div>
+<%=render "shared/footer" %>

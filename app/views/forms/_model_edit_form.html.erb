@@ -1,0 +1,167 @@
+<%= render "forms/user_edit_form"%>
+<div id="for-work-form">
+	<%=form_for @profile, :url => profile_path(@user) ,html:{class: "profile-settings-private"} do |p|%>
+		<%= p.label :work_place, "Место работы" %>
+		<div class="setter-line">
+			<%= p.text_field :work_place,  value: 'Не состою в агенстве'%>
+		</div>
+		<label for="work-experience">Опыт роботы</label>
+		<div class="setter-line">
+			<div class="select-plus-exp"></div>
+			<%=p.select :experience, [['Новичок', "Новичок"], 
+									 ['Меньше года', "Меньше года"], 
+									 ['Меньше 3 лет', "Меньше 3 лет"], 
+									 ['Меньше 5 лет', "Меньше 5 лет"], 
+									 ['Больше 5 лет', "Больше 5 лет"]], 
+									 {}, :id => "work-experience"%>
+		</div>
+		<label>Специализация</label>
+		<div class="setter-line specialisation-model-line">
+			<div class="specialisation-model-block active-specialisation-model-block" id="podium-model">
+				<p>Подиумная модель</p>
+			</div>
+			<div class="specialisation-model-block" style="margin-left: 7px;" id="simple-model">
+				<p>Фотомодель</p>
+			</div>
+			<%= p.text_field :specializationt, style: "display: none;", id: "set-specialisation-model", value: "Подиумная модель"%> 
+		</div>
+		<div class="hidden-ganre" style="display: none;">
+			<label>Жанры</label>
+			<div class="multiselect-plus-skills"></div>
+			<div class="multiselect-list" id="model-ganre">
+				<label><%= p.check_box :specialization, {:multiple => true}, "Эротика", nil %>Эротика</label>
+				<label><%= p.check_box :specialization, {:multiple => true}, "Эротическое ню", nil %>Эротическое ню</label>
+				<label><%= p.check_box :specialization, {:multiple => true}, "Арт Ню", nil %>Арт Ню</label>
+				<label><%= p.check_box :specialization, {:multiple => true}, "Ню", nil %>Ню</label>
+				<label><%= p.check_box :specialization, {:multiple => true}, "Топлесс", nil %>Топлесс</label>
+				<label><%= p.check_box :specialization, {:multiple => true}, "Бьюти", nil %>Бьюти</label>
+				<label><%= p.check_box :specialization, {:multiple => true}, "Гламур", nil %>Гламур</label>
+				<label><%= p.check_box :specialization, {:multiple => true}, "Ланжери", nil %>Ланжери</label>
+				<label><%= p.check_box :specialization, {:multiple => true}, "Портрет", nil %>Портрет</label>
+				<label><%= p.check_box :specialization, {:multiple => true}, "Эдиториал", nil %>Эдиториал</label>
+				<label><%= p.check_box :specialization, {:multiple => true}, "Реклама", nil %>Реклама</label>
+				<label><%= p.check_box :specialization, {:multiple => true}, "Make Up", nil %>Make Up</label>
+			</div>
+		</div>
+
+		<label for="add-event">Участвовал(-ла)</label>
+		<div class="setter-line setter-line-event">
+			<input type="text" id="add-event">
+			<div class="event-push-button event-model-button">
+				Добавить
+			</div>
+		</div>
+		<div class="setter-line" id="event-list">
+		</div>
+		<label>Условия работы</label>
+		<div class="multiselect-license-plus"></div>
+		<div class="multiselect-list" id="multiselect-license-list">
+			<div class="selected-items">
+				<span id="selected-skills-photo">Выберите лицензию</span>
+			</div>
+			<label><%= p.check_box :license, {:multiple => true}, "TFP", nil %>TFP</label>
+			<label><%= p.check_box :license, {:multiple => true}, "TFCD", nil %>TFCD</label>
+			<label><%= p.check_box :license, {:multiple => true}, "Коммерческая съемка", nil %>Коммерческая съемка</label>
+		</div>
+		
+
+		<h2 class="divider">Внешность</h2>
+
+		<label for="color-of-hair">Цвет волос</label>
+
+			
+		<div class="setter-line">
+			<div class="select-plus-hair-color"></div>
+			<%=p.select :haircolor, [['Блондин', "Блондин"], 
+									 ['Брюнет', "Брюнет"],
+									 ['Каштановый', "Каштановый"],
+									 ['Русый', "Русый"],
+									 ['Рыже-каштановый',"Рыже-каштановый"],
+									 ['Рыже-русый',"Рыже-русый"],
+									 ['Рыжий',"Рыжий"],
+									 ['Светло-каштановый',"Светло-каштановый"],
+									 ['Светло-русый',"Светло-русый"],
+									 ['Тёмно-русый',"Тёмно-русый"],
+									 ['Тёмный каштан',"Тёмный каштан"],
+									 ['Шатен',"Шатен"],
+									 ['Седые',"Седые"]], id: "color-of-hair" %>
+		</div>
+
+		<label for="hair-size">Длина волос</label>
+		<div class="setter-line">
+			<div class="select-plus-hair-size"></div>
+			<%=p.select :hairsize, [['Короткая стрижка', "Короткая стрижка"], 
+									 ['Каре', "Каре"],
+									 ['До плеч', "До плеч"],
+									 ['Средняя длина', "Средняя длина"],
+									 ['Длинные',"Длинные"],
+									 ['Бритая наголо',"Бритая наголо"]], id: "hair-size" %>
+		</div>
+
+		<label for="type-of-face">Тип лица</label>
+		<div class="setter-line">
+			<div class="select-plus-type-face"></div>
+			<%=p.select :face, [['Европейский', "Европейский"], 
+							   ['Мулат', "Мулат"],
+							   ['Азиатский', "Азиатский"],
+							   ['Африканский',"Африканский"]], id: "type-of-face" %>
+		</div>
+
+		<label for="color-of-eye">Цвет глаз</label>
+		<div class="setter-line">
+			<div class="select-plus-color-eye"></div>
+			<%=p.select :eyes, [['Голубые', "Голубые"], 
+							   ['Зелено-голубые', "Зелено-голубые"],
+							   ['Зелено-карие', "Зелено-карие"],
+							   ['Зелёные',"Зелёные"],
+							   ['Карие',"Карие"],
+							   ['Серо-голубые',"Серо-голубые"],
+							   ['Серо-зеленые', "Серо-зеленые"],
+							   ['Серые',"Серые"]], id: "color-of-eye" %>
+		</div>
+
+		<label for="boobs-size">Объем груди</label>
+		<div class="setter-line">
+			<%= p.number_field :boobs, min: "0", max: "200", id: "boobs-size"%>
+		</div>
+
+		<label for="talia-size">Объем талии</label>
+		<div class="setter-line">
+			<%= p.number_field :waist, min: "0", max: "200", id: "talia-size"%>
+		</div>
+
+		<label for="bedro-size">Объем бедер</label>
+		<div class="setter-line">
+			<%= p.number_field :hip, min: "0", max: "200", id: "bedro-size"%>
+		</div>
+
+		<label for="height-value">Рост</label>
+		<div class="setter-line">
+			<%= p.number_field :height, min: "0", max: "200", id: "height-value"%>
+		</div>
+
+		<label for="mass-value">Вес</label>
+		<div class="setter-line">
+			<%= p.number_field :mass, min: "0", max: "200", id: "mass-value"%>
+		</div>
+
+
+		<label for="clothes-size">Размер одежды</label>
+		<div class="setter-line">
+			<div class="select-plus-clothes"></div>
+			<%=p.select :clothes, [['XS', "XS"], 
+							   ['S', "S"],
+							   ['M', "M"],
+							   ['L',"L"],
+							   ['XL',"XL"],
+							   ['XXL',"XXL"],
+							   ['XXXL',"XXXL"]], id: "clothes-size" %>
+		</div>
+
+		<div class="setter-line setter-line-button">
+			<%= p.submit "Изменить" %>
+		</div>
+		
+	<% end %>
+</div>
+		

@@ -1,0 +1,53 @@
+<%= render 'shared/menu' %>
+<div class="global-scope">
+			<div class="settings-scope">
+				<h2 class="divider">Создание кастинга</h2>
+				<%= form_for @casting, html:{class: "profile-settings-private"} do |f|%>
+					<label class="required-star">Заголовок кастинга</label>
+					<div class="setter-line">
+						<%= f.text_field :subject, required: true %>
+					</div>
+					<label class="required-star">Цена</label>
+					<div class="setter-line">
+						<%= f.number_field :price, required: true, min: "0"%>
+					</div>
+					<label>Тег 1 (необязательно)</label>
+					<div class="setter-line">
+						<%= f.text_field :tag1 %>
+					</div>
+					<label>Тег 2 (необязательно)</label>
+					<div class="setter-line">
+						<%= f.text_field :tag2 %>
+					</div>
+					<label>Тег 3 (необязательно)</label>
+					<div class="setter-line">
+						<%= f.text_field :tag3 %>
+					</div>
+					<label for="set-country" class="required-star">Страна кастинга</label>
+					<div class="setter-line">
+						<div class="select-plus"></div>
+						<%= f.country_select :country_code,  {include_blank:'Выберите страну из списка', only: ["UA", "RU", "BY"], selected: current_user.country_code}, id: "set-country", required: true %>
+					</div>
+					<label class="required-star">Город кастинга</label>
+					<div class="setter-line">
+						<%= f.text_field :city, required: true %>
+					</div>
+					<label class="required-star">Техническое задание</label>
+					<div class="setter-line setter-area">
+						<%= f.text_area :task, required: true %>
+					</div>
+					<div class="multiselect-list" id="multiselect-license-list">
+							<div class="selected-items">
+								<span id="selected-skills-photo">Выберите лицензию</span>
+							</div>
+							<label><%= f.check_box :license, {:multiple => true}, "TFP", nil %>TFP</label>
+							<label><%= f.check_box :license, {:multiple => true}, "TFCD", nil %>TFCD</label>
+							<label><%= f.check_box :license, {:multiple => true}, "Коммерческая съемка", nil %>Коммерческая съемка</label>
+						</div>
+					<div class="setter-line setter-line-button">
+						<%= f.submit "Создать" %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+<%=render "shared/footer" %>

@@ -1,0 +1,32 @@
+		<%= render 'shared/menu' %>
+		<div class="global-scope">
+			<div class="settings-scope">
+				<h2><%= "#{@user.name} #{@user.surname}" %></h2>
+				<div class="dialog-single-box">
+					<% @messages.each do |m| %>
+					<div class="dialog-single-alien">
+						<a href="/profiles/<%=m.sender.id%>" target= "_self"">
+							<div class="photo-on-dialog" style="background-image: url(<%= m.sender.avatar_url %>)">
+							</div>
+						</a>
+						
+						<%if m.is_unread?(@user) || m.is_unread?(current_user)%>
+						<div class="last-message unread-message">
+						<%elsif m.is_read?(@user) || m.is_read?(current_user)%>
+						<div class="last-message">
+						<% end %>
+							<span><%= m.created_at %></span>
+							<%= simple_format h(word_wrap(m.body)) %>
+						</div>
+						
+					</div>
+					<% end %>
+					<div id="end"></div>
+					<%= form_tag messages_path(@conversation), method: "post", class: "enter-message setter-line" do%>
+						<%= text_area_tag :body%>
+						<input type="submit" value="Отправить">
+					<% end %>
+				</div>
+			</div>
+		</div>
+    </div>

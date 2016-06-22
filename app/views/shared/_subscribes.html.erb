@@ -1,0 +1,36 @@
+<div class="subscribes-user-block">
+	<% if @subscribes.any? %>
+	<% @subscribes.each do |s| %>
+    <div class="info-frame info-frame-subscribes">
+        <!-- User profile photo -->
+        <%= link_to content_tag(:div, nil, class: "profile-photo", style: "background-image: url( #{s.avatar_url});"), profile_path(s) %>
+        <!-- end -->
+        <!-- User profile small information -->
+        <div class="profile-data">
+            <div class="profile-block">
+				 <%= link_to content_tag(:p, "#{s.name} #{s.surname}", class: "profile-text profile-name"), profile_path(s) %>
+            </div>
+            <div class="profile-block">
+				<p class="profile-text profile-user"><%= s.ruType %></p>
+            </div>
+            <div class="profile-block">
+				<i class="fa fa-star-o info-icon-rank"></i>
+				<p class="profile-text profile-rank">228</p>
+            </div>
+        </div>
+        <div class="button-subscribe-block">
+            <% if current_user && current_user.following?(s) %>
+			    <%= form_for(current_user.relationships.find_by(followed_id: s), html: { method: :delete }) do |f| %>
+			  		<%= f.submit "Отписаться", class: "subscribe-value" %>
+				<% end %>
+			 <% else %>
+			    <%= form_for(current_user.relationships.build(followed_id: s.id)) do |f| %>
+			  		<div><%= f.hidden_field :followed_id %></div>
+			  		<%= f.submit "Подписаться", class: "subscribe-value" %>
+				<% end %>
+			<% end %>
+        </div>
+    </div>
+    <% end %>
+    <% end %>
+</div>

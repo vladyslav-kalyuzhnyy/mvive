@@ -1,0 +1,31 @@
+<%= render "shared/menu" %>
+<div class="global-scope">
+  <div class="settings-scope">
+    <h2>Новости</h2>
+    <div class="news-feed">
+
+      <% @news.each do |news| %>
+      <div class="news-container">
+
+        <h1><span class="headline-word"><%= news.name %></span></h1>
+
+
+
+        <a href=" <%= news_path(news) %>" target="_self">
+          <div class="news-photo" style="background-image: url(<%= news.image %>);" >
+            <div class="news-date-block">
+              <p class="news-date-day"><%= news.news_day %></p>
+              <p class="news-date-month"><%= news.news_month %></p>
+            </div>
+          </div>
+        </a>
+
+        <div class="news-content">
+          <p><%= news.short %></p>
+        </div>
+
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

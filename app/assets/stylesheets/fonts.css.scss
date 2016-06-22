@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Panton-LightCaps';
+	font-style: light;
+	src: local("Panton-LightCaps"),
+	     url("Panton-LightCaps.otf");
+}
+
+
+@font-face {
+	font-family: 'Panton-BlackCaps';
+	font-style: black;
+	src: local("Panton-BlackCaps"),
+	     url("Panton-BlackCaps.otf");
+}
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: local('Museo Sans Cyrl 500'), local('MuseoSansCyrl-500'), url("Museosanscyrl500.woff2") format('woff2'), url("Museosanscyrl500.woff") format('woff'), url("Museosanscyrl500.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}

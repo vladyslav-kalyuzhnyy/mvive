@@ -1,0 +1,70 @@
+		<%=render "shared/menu" %>
+		<div class="global-scope">
+            <div class="feed-profile">
+                <%= render "profiles/user_profile" %>
+                <%= render "shared/portfolio" %>
+                
+                <div class="about-user-block">
+                	<% unless @user.birthday.nil? || @user.birthday.year.blank? || @user.birthday.month.blank? || @user.birthday.day.blank? %>
+                	<h3>Возраст</h3>
+                    <div class="text-about-user-stage">
+                        <p><%= @user.age %> лет</p>
+                    </div>
+                    <% end %>
+                    
+                	<% unless @user.country_code.blank? %>
+                    <h3>Место жительства</h3>
+                    <div class="text-about-user-stage">
+                        <p><%= "#{@user.country_name}, #{@user.city}" %></p>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @user.about.blank? %>
+                    <h3>О себе</h3>
+                    <div class="text-about-user">
+                       <p><%= @user.about %></p>
+                    </div>
+                    <% end %>
+                    
+                     <% unless @profile.work_place.blank? %>
+                    <h3>Место роботы</h3>
+                    <div class="text-about-user-stage">
+                        <p><%= @profile.work_place %></p>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.experience.blank? %>
+                    <h3>Опыт роботы</h3>
+                    <div class="text-about-user-stage">
+                        <p><%= @profile.experience %></p>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.specialization.blank? %>
+                    <h3>Специализации</h3>
+                    <div class="specialisation-block">
+                       <% @profile.specialization.each do |spec|%>
+                       <p><%= spec %></p>
+                       <% end %>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.license.blank? %>
+                    <h3>Условия работы</h3>
+                    <div class="license-block">
+                       <% @profile.license.each do |lic|%>
+                       <p><%= lic %></p>
+                       <%end%>
+                    </div>
+                    <%end%>
+                </div>
+                <%= render "shared/subscribes" %>
+              <%= render "shared/feedbacks" %>
+            </div>
+        </div>
+        <script>
+        $(function () {
+            var gallery = $('.gallery a').simpleLightbox();
+        });
+        </script>
+    <%=render "shared/footer" %>

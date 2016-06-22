@@ -1,0 +1,51 @@
+                <div class="profile">
+                    <div class="background-cover">
+                        <div class="overlay-photo-profile"></div>
+                        <div class="cover-menu">
+                            <div class="cover-menu-center">
+                                <div id="menu-profile-portfolio">
+                                    <p class="active-profile-menu-link">Портфолио</p>
+                                </div>
+                                <div id="menu-profile-about">
+                                    <p>Подробная информация</p>
+                                </div>
+                                <div id="menu-profile-subscribes">
+                                    <p>Подписки</p>
+                                </div>
+                                <div id="menu-profile-feedbacks"><p>Отзывы</p></div>
+                            </div>
+                        </div>
+                        <div class="user-cover-profile" style="background-image: url(<%= @user.cover_url %>);">
+                        </div>
+                    </div>
+                    <div class="profile-user-info-block">
+                        <div class="profile-user-photo-but">
+                            <div class="profile-user-photo" style="background-image: url(<%= @user.avatar_url %>);">
+                            </div>
+                            <%= render "shared/follow" %>
+                        </div>
+                        <div class="profile-user-info">
+                            <p class="name-profile"><%= "#{@user.name} #{@user.surname}" %> </p>
+                            <p class="profile-user-type"><%= @user.ruType %></p>
+                            <div class="profile-rank-block">
+                                <i class="fa fa-star-o"></i>
+                                <p>Рейтинг : </p>
+                                <p><%= @rating %></p>
+                            </div>
+                            <div class="profile-deals">
+                                <i class="fa fa-diamond"></i>
+                                <p>Отзывы : </p>
+                                <p><%= @user.feedbacks.count %></p>
+                            </div>
+                            <div class="profile-sub-info">
+                                <p>Подписчики : </p>
+                                <p><%= @user.followers.count %></p>
+                            </div>
+                             <% unless current_user == @user %>
+                            <div class="profile-write-button"><p>Написать</p></div>
+                            <% end %>
+                        </div>
+                    </div>
+                    
+                </div>
+                <%= render 'forms/new_message' %>

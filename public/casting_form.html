@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>M`Vive</title>
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css">
+		<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/media.css">
+		<link rel="shortcut icon" href="img/icon.jpg">
+	</head>
+	<body>
+		<div class="fixed-vertical-menu">
+			<div class="navigation">
+				<a href="profile.html">
+					<div class="navigation-item">
+						<p>Профиль</p>
+					</div>
+				</a>
+				<a href="#">
+					<div class="navigation-item">
+						<p>Сообщения</p>
+					</div>
+				</a>
+				<a href="#">
+					<div class="navigation-item">
+						<p>Новости</p>
+					</div>
+				</a>
+				<a href="main.html">
+					<div class="navigation-item">
+						<p>Лента</p>
+					</div>
+				</a>
+				<a href="#">
+					<div class="navigation-item">
+						<p>Поиск</p>
+					</div>
+				</a>
+				<a href="#">
+					<div class="navigation-item">
+						<p>Избранное</p>
+					</div>
+				</a>
+				<a href="settings_photographer.html">
+					<div class="navigation-item active-navigation-item">
+						<p>Настройки</p>
+					</div>
+				</a>
+				<a href="#">
+					<div class="navigation-item">
+						<p>Выход</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+		<div class="global-scope">
+			<div class="settings-scope">
+				<h2 class="divider">Создание кастинга</h2>
+				<form class="profile-settings-private">
+					<label class="required-star">Заголовок кастинга</label>
+					<div class="setter-line">
+						<input type="text" required="required">
+					</div>
+					<label class="required-star">Цена</label>
+					<div class="setter-line">
+						<input type="number" min="0" required="required">
+					</div>
+					<label>Тег 1 (необязательно)</label>
+					<div class="setter-line">
+						<input type="text" min="0">
+					</div>
+					<label>Тег 2 (необязательно)</label>
+					<div class="setter-line">
+						<input type="text" min="0">
+					</div>
+					<label>Тег 3 (необязательно)</label>
+					<div class="setter-line">
+						<input type="text" min="0">
+					</div>
+					<label for="set-country" class="required-star">Страна кастинга</label>
+					<div class="setter-line">
+						<div class="select-plus"></div>
+						<select id="set-country" required="required">
+							<option value="none">--Выберите страну из списка--</option>
+							<option value="UKR">Ukraine</option>
+							<option value="RUS">Russian Federation</option>
+						</select>
+					</div>
+					<label class="required-star">Город кастинга</label>
+					<div class="setter-line">
+						<input type="text" required="required">
+					</div>
+					<label class="required-star">Техничное задание</label>
+					<div class="setter-line setter-area">
+						<textarea type="text" required="required"></textarea>
+					</div>
+					<div class="multiselect-list" id="multiselect-license-list">
+							<div class="selected-items">
+								<span id="selected-skills-photo">Выберите лицензию</span>
+							</div>
+							<label><input type="checkbox" value="photo_TFP" />TFP</label>
+							<label><input type="checkbox" value="photo_TFCD" />TFCD</label>
+							<label><input type="checkbox" value="photo_commercial" />Коммерческая съемка</label>
+						</div>
+					<div class="setter-line setter-line-button">
+						<input type="submit" value="Изменить">
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<!--[if lt IE 9]>
+		<script src="libs/html5shiv/es5-shim.min.js"></script>
+		<script src="libs/html5shiv/html5shiv.min.js"></script>
+		<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+		<script src="libs/respond/respond.min.js"></script>
+		<![endif]-->
+		<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+		<script src="js/common.js"></script>
+		<!-- Yandex.Metrika counter -->
+		<!-- /Yandex.Metrika counter -->
+		<!-- Google Analytics counter -->
+		<!-- /Google Analytics counter -->
+	</body>
+</html>

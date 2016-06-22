@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://mvive.net/</loc>
+<lastmod>2016-06-02T12:15:07+00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>http://mvive.net/users</loc>
+</url>
+<url>
+<loc>http://mvive.net/users/1</loc>
+</url>
+<url>
+<loc>http://mvive.net/users/2</loc>
+</url>
+<url>
+<loc>http://mvive.net/users/3</loc>
+</url>
+</urlset>

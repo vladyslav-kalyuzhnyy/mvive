@@ -1,0 +1,65 @@
+<%= render "forms/user_edit_form"%>
+<div id="for-work-form" style="display: none;">
+		<%=form_for @profile, :url => profile_path(@user) ,html:{class: "profile-settings-private"} do |p|%>
+		<%= p.label :work_place, "Место работы" %>
+		<div class="setter-line">
+			<%= p.text_field :work_place,  value: 'Фрилансер'%>
+		</div>
+		<label for="work-experience">Опыт роботы</label>
+		<div class="setter-line">
+			<div class="select-plus-exp"></div>
+			<%=p.select :experience, [['Новичок', "Новичок"], 
+									 ['Меньше года', "Меньше года"], 
+									 ['Меньше 3 лет', "Меньше 3 лет"], 
+									 ['Меньше 5 лет', "Меньше 5 лет"], 
+									 ['Больше 5 лет', "Больше 5 лет"]], 
+									 {}, :id => "work-experience"%>
+		</div>
+		<label>Cпециализация</label>
+		<div class="multiselect-plus"></div>
+		<div class="multiselect-list" data-max="8">
+			<div class="selected-items">
+				<span id="selected-skills-photo">Выберите направления</span>
+			</div>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Гламур", nil %>Гламур</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Город,архитектура", nil %>Город,архитектура</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Детская", nil %>Детская</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Жанровая", nil %>Жанровая</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Животные", nil %>Животные</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Love Story", nil %>Love Story</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Ню", nil %>Ню</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Папарацци", nil %>Папарацци</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Пейзаж", nil %>Пейзаж</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Пленер<", nil %>Пленер</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Портрет", nil %>Портрет</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Портфолио", nil %>Портфолио</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Предметная", nil %>Предметная</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Рекламная", nil %>Рекламная</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Свадебная", nil %>Свадебная</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Спорт", nil %>Спорт</label>
+			<label><%= p.check_box :specialization, {:multiple => true}, "Студийная", nil %>Студийная</label>
+			
+		</div>
+		<label for="set-model-ph-ap">Модель фотоапарата</label>
+        <div class="setter-line">
+            <%= p.text_field :camera, id: "set-model-ph-ap"%>
+        </div>
+		<label>Условия работы</label>
+		<div class="multiselect-license-plus"></div>
+		<div class="multiselect-list" id="multiselect-license-list">
+			<div class="selected-items">
+			<span id="selected-skills-photo">Выберите лицензию</span>
+			</div>
+			<label><%= p.check_box :license, {:multiple => true}, "TFP", nil %>TFP</label>
+			<label><%= p.check_box :license, {:multiple => true}, "TFCD", nil %>TFCD</label>
+			<label><%= p.check_box :license, {:multiple => true}, "Коммерческая съемка", nil %>Коммерческая съемка</label>
+		</div>
+
+
+		<div class="setter-line setter-line-button">
+			<%= p.submit "Изменить" %>
+		</div>
+	<% end %>
+</div>
+
+			

@@ -1,0 +1,17 @@
+<%= link_to '<p class="back-main-btn"><На главную</p>'.html_safe, root_path, target: "_self" %>
+
+<div class="contact-us">
+
+  <h2>Форма обратной связи</h2>
+
+  <form action="" method="post">
+    <p>Ваше имя:<br /><input type="text" class="callback-input" name="your_name" /> </p>
+    <p>E-mail:<br /><input type="text" class="callback-input" name="email" /></p>
+    <p>Тема:<br /><input type="text" class="callback-input" name="tema" /></p>
+    <p>Сообщение:<br />
+      <textarea class="callback-msg-textarea" name="message" rows="5" cols="45"></textarea></p>
+    <p><input type="submit" class="callback-btn" name="go" value="Отправить"></p>
+  </form>
+
+</div>
+<%=render "shared/footer" %>

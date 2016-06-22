@@ -1,0 +1,61 @@
+<%= render 'shared/menu' %>
+<div class="global-scope">
+  <div class="settings-scope">
+    <h2>Онлайн кастинги</h2>
+    <!--Link to form-->
+    <div class="casting-btn-wrapper">
+      <%= link_to content_tag(:span, '<i class="fa fa-plus"></i>'.html_safe + "Создать кастинг",  class: "button-casting-form"), new_casting_path, target: "_self"%>
+    </div>
+    <% @castings.each do|c| %>
+        <div class="casting-card-view">
+          <div class="casting-card-title">
+            <h3><%= c.subject %></h3>
+            <div class="casting-info">
+              <i class="fa fa-map-marker"></i>
+              <p><%= "#{c.country_name} #{c.city}" %></p>
+              <i class="fa fa-clock-o" style="margin-left: 5px;"></i>
+              <p><%= c.created_at.to_date.to_s(:db) %></p>
+            </div>
+            <div class="title-tag price-tag">
+              <p><%= c.price %></p><i class="fa fa-money"></i>
+            </div>
+
+            <% unless c.license.blank? %>
+                <% c.license.each do |lic|%>
+                    <div class="title-tag">
+                      <p><%= lic %></p>
+                    </div>
+                <%end%>
+            <%end%>
+
+            <% unless c.tag1.blank? %>
+                <div class="title-tag">
+                  <p><%= c.tag1 %></p>
+                </div>
+            <% end %>
+
+            <% unless c.tag2.blank? %>
+                <div class="title-tag">
+                  <p><%= c.tag2 %></p>
+                </div>
+            <% end %>
+
+            <% unless c.tag3.blank? %>
+                <div class="title-tag">
+                  <p><%= c.tag3 %></p>
+                </div>
+            <% end %>
+
+          </div>
+          <div class="casting-card-content">
+            <p><%= c.task %></p>
+            <%= link_to content_tag(:button, "Посмотреть", class: "show-casting-single"), casting_path(c) %>
+          </div>
+        </div>
+    <% end %>
+    <div class="casting-next-back-btns">
+      <%= will_paginate @casting, previous_label: "Назад", next_label: "Вперед" %>
+    </div>
+  </div>
+</div>
+<%=render "shared/footer" %>

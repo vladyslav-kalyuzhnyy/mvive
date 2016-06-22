@@ -1,0 +1,141 @@
+<%=render "shared/menu" %>
+ <div class="global-scope">
+            <div class="feed-profile">
+                <%= render "profiles/user_profile" %>
+                <%= render "shared/portfolio" %>
+                
+                <div class="about-user-block">
+                    <% unless @user.birthday.nil? || @user.birthday.year.blank? || @user.birthday.month.blank? || @user.birthday.day.blank? %>
+                    <h3>Возраст</h3>
+                    <div class="text-about-user-stage">
+                        <p><%= @user.age %> лет</p>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @user.country_code.blank? %>
+                    <h3>Место жительства</h3>
+                    <div class="text-about-user-stage">
+                        <p><%= "#{@user.country_name}, #{@user.city}" %></p>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @user.about.blank? %>
+                    <h3>О себе</h3>
+                    <div class="text-about-user">
+                       <p><%= @user.about %></p>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.work_place.blank? %>
+                    <h3>Место роботы</h3>
+                    <div class="text-about-user-stage">
+                        <p><%= @profile.work_place %></p>
+                    </div>
+                    <% end %>
+                    
+                     <% unless @profile.experience.blank? %>
+                    <h3>Опыт роботы</h3>
+                    <div class="text-about-user-stage">
+                        <p><%= @profile.experience %></p>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.specializationt.blank? %>
+                    <h3>Специализация</h3>
+                    <div class="text-about-user-stage">
+                        <p><%= @profile.specializationt %></p>
+                    </div>
+                    <% end %>
+                    
+                    <% if @profile.specializationt == "Фотомодель" %>
+                    <% unless @profile.specialization.blank? %>
+                    <h3>Жанры</h3>
+                    <div class="specialisation-block">
+                       <% @profile.specialization.each do |spec|%>
+                       <p><%= spec %></p>
+                       <% end %>
+                    </div>
+                    <% end %>
+                    <% end %>
+                    
+                    <% unless @profile.events.blank? %>
+                    <h3>Участвовал(-ла)</h3>
+                    <div class="specialisation-block">
+                        <% @profile.events.each do |event|%>
+                       <p><%= event %></p>
+                       <% end %>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.license.blank? %>
+                    <h3>Условия работы</h3>
+                    <div class="license-block">
+                       <% @profile.license.each do |lic|%>
+                       <p><%= lic %></p>
+                       <%end%>
+                    </div>
+                    <%end%>
+                    
+                    <h2 class="divider">Внешность</h2>
+
+					<% unless @profile.haircolor.blank? %>
+                    <h3>Цвет волос</h3>
+                    <div class="text-about-user-stage">
+                       <%= @profile.haircolor %>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.hairsize.blank? %>
+                    <h3>Длина волос</h3>
+                    <div class="text-about-user-stage">
+                        <%= @profile.hairsize %>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.face.blank? %>
+                    <h3>Тип лица</h3>
+                    <div class="text-about-user-stage">
+                        <%= @profile.face %>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.eyes.blank? %>
+                    <h3>Цвет глаз</h3>
+                    <div class="text-about-user-stage">
+                        <%= @profile.eyes %>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.boobs.blank? && @profile.waist.blank? && @profile.hip.blank? %>
+                    <h3>Параметры</h3>
+                    <div class="text-about-user-stage">
+                    	<p><%= @profile.boobs.blank? ? "*" : @profile.boobs %>-
+                    	<%= @profile.waist.blank? ? "*" : @profile.waist %>-
+                    	<%= @profile.hip.blank? ? "*" : @profile.hip %></p>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.mass.blank? %>
+                    <h3>Вес</h3>
+                    <div class="text-about-user-stage">
+                        <%= @profile.mass %>
+                    </div>
+                    <% end %>
+                    
+                    <% unless @profile.height.blank? %>
+                    <h3>Рост</h3>
+                    <div class="text-about-user-stage">
+                        <%= @profile.height %>
+                    </div>
+                    <% end %>
+                </div>
+                <%= render "shared/subscribes" %>
+                <%= render "shared/feedbacks" %>
+            </div>
+        </div>
+        <script>
+        $(function () {
+        var gallery = $('.gallery a').simpleLightbox();
+        });
+        </script>
+<%=render "shared/footer" %>

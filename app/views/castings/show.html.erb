@@ -1,0 +1,108 @@
+<%= render 'shared/menu' %>
+<div class="global-scope">
+  <div class="settings-scope">
+    <div class="overlay"></div>
+    <%= form_for @comment, url: comments_path(@casting), method: :post, html: {class: "reg-scale add-comment-casting"} do |f|%>
+        <div class="input-casting-line">
+          <%= f.text_area :body, style: "height: 130px;", placeholder: "Введите ваш комментарий...", maxlength: "180", required: true%>
+        </div>
+        <div class="input-casting-line">
+          <%= f.submit "Подать заявку" %>
+        </div>
+        <p id="cancel">Отмена</p>
+    <% end %>
+    <h2><%= @casting.subject %></h2>
+    <!--Link to form-->
+
+    <div class="casting-card-view">
+      <div class="casting-card-title single-card-title">
+        <div class="casting-single-author">
+          <div class="profile-photo" style="background-image: url(<%= @user.avatar_url %>);">
+          </div>
+          <div class="casting-name">
+            <h3><%="#{@user.name} #{@user.surname}" %></h3>
+            <div class="casting-name-wrap">
+              <p><%= @user.ruType %></p>
+              <i class="fa fa-star"></i><p><%= @rating %></p>
+            </div>
+          </div>
+        </div>
+        <div class="casting-info">
+          <i class="fa fa-map-marker"></i>
+          <p><%= "#{@casting.country_name} #{@casting.city}" %></p>
+          <i class="fa fa-clock-o" style="margin-left: 5px;"></i>
+          <p><%= @casting.created_at.to_date.to_s(:db) %></p>
+        </div>
+        <div class="title-tag price-tag">
+          <p><%= @casting.price %></p><i class="fa fa-money"></i>
+        </div>
+
+        <% unless @casting.license.blank? %>
+            <% @casting.license.each do |lic|%>
+                <div class="title-tag">
+                  <p><%= lic %></p>
+                </div>
+            <%end%>
+        <%end%>
+
+        <% unless @casting.tag1.blank? %>
+            <div class="title-tag">
+              <p><%= @casting.tag1 %></p>
+            </div>
+        <% end %>
+
+        <% unless @casting.tag2.blank? %>
+            <div class="title-tag">
+              <p><%= @casting.tag2 %></p>
+            </div>
+        <% end %>
+
+        <% unless @casting.tag3.blank? %>
+            <div class="title-tag">
+              <p><%= @casting.tag3 %></p>
+            </div>
+        <% end %>
+
+      </div>
+      <div class="casting-card-content single-card-content">
+        <p><%= @casting.task %></p>
+        <% unless current_user == @casting.user%>
+            <button class="show-casting-single" style="display: block; margin-left: auto;margin-right: auto;">Подать заявку</button>
+        <% end %>
+      </div>
+    </div>
+
+    <h2 class="divider">Участники</h2>
+    <div class="casting-comments">
+      <% check = (current_user == @casting.user)%>
+      <% @comments.each do |c|%>
+          <% if check2 = @casting.selected.include?(c.user_id.to_s) %>
+              <div class="user-casting-comment current-user-cast">
+          <% else %>
+              <div class="user-casting-comment">
+          <% end %>
+          <div class="profile-photo" style="background-image: url(<%= c.user.avatar_url %>);"></div>
+          <div class="casting-comment-wrap">
+            <h3><%= "#{c.user.name} #{c.user.surname}" %></h3>
+            <p><%= c.created_at.to_date.to_s(:db) %></p>
+            <p><%= c.body %></p>
+          </div>
+          <% if check %>
+              <% if check2 %>
+                  <%= form_tag unselect_path(@casting) do%>
+                      <%= hidden_field_tag :usr, c.user_id.to_s%>
+                      <button class="show-casting-single1" style="display: block; margin: 25px auto 15px;">Удалить исполнителя</button>
+                  <% end %>
+              <% else %>
+                  <%= form_tag select_path(@casting) do%>
+                      <%= hidden_field_tag :usr, c.user_id.to_s%>
+                      <button class="show-casting-single1" style="display: block; margin: 25px auto 15px;">Добавить исполнителя</button>
+                  <% end %>
+              <% end %>
+          <% end %>
+          </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+<%=render "shared/footer" %>

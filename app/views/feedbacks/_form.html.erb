@@ -1,0 +1,7 @@
+<%= form_for ([@user, @user.feedbacks.build]) do |f| %>
+    <div id="rating-form">
+      <%= f.label :rating %>
+    </div>
+    <p><%= f.text_area :body, rows: "5", cols: "45", class: "feedback-textarea"%></p>
+    <p><%= f.submit "Отправить", class: "feedback-btn-submit" %></p>
+<% end %>

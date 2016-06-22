@@ -1,0 +1,40 @@
+<div id="private-forms">
+	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html:{multipart: true, method: :patch, class: "profile-settings-private" }) do |f| %>
+		<label for="set-avatar">Аватар</label>
+		<div class="avatar-photo-pseudo-input">
+			<label id="label-avatar-change" for="set-avatar"><i class="fa fa-file-photo-o upload-photo-icon"></i>Загрузить фото</label>
+		</div>
+		<div class="setter-line">
+			<%= f.file_field :avatar, id: "set-avatar", accept: "image/*"%>
+		</div>
+		<label for="set-cover">Обложка профиля<p class="rec-size-set-cover">(рекомендуемый размер 1057x500)</p></label>
+		<div class="avatar-photo-pseudo-input">
+			<label id="label-cover-change" for="set-cover"><i class="fa fa-file-photo-o upload-photo-icon"></i>Загрузить фото</label>
+		</div>
+		<div class="setter-line">
+			<%= f.file_field :cover, id: "set-cover", accept: "image/*"%>
+		</div>
+		<div class="setter-line setter-line-button">
+			<%= f.submit "Изменить" %>
+		</div>
+	<% end %>
+	<%= render "forms/user_main_form" %>
+	<h2 class="divider">Пароль</h2>
+	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html:{multipart: true, method: :patch, class: "profile-settings-private" }) do |p| %>
+		<div class="setter-line">
+			<label for="old-password">Старый пароль</label>
+			<%= p.password_field :current_password, id: "old-password" %>
+		</div>
+		<div class="setter-line">
+			<label for="set-new-password">Новый пароль</label>
+			<%= p.password_field :password, id: "set-new-password" %>
+		</div>
+		<div class="setter-line">
+			<label for="confirm-new-password">Подтвердите пароль</label>
+			<%= p.password_field :password_confirmation, id: "confirm-new-password"%>
+		</div>
+		<div class="setter-line setter-line-button">
+			<input type="submit" value="Изменить">
+		</div>
+	<%end%>
+</div>

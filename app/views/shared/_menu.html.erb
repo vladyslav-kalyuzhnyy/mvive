@@ -1,0 +1,34 @@
+ <div class="fixed-vertical-menu">
+   <%= image_tag "big-logo.PNG", alt: "menu-logo", class: "img-responsive center-block" %>
+        <div class="navigation">
+        	<% unless current_user  %>
+        	<%= link_to '<div class="navigation-item"><p>Вход / Регистрация</p></div>'.html_safe, root_path, target: "_self" %>
+        	<% end %>
+        	
+        	<% if current_user  %>
+            <%= link_to '<div class="navigation-item"><p>Профиль</p></div>'.html_safe, my_profile_path, target: "_self" %>
+            <% end %>
+            
+            <% if current_user  %>
+            <%= link_to '<div class="navigation-item"><p>Сообщения</p></div>'.html_safe, conversations_path, target: "_self" %>
+            <% end %>
+
+            <%= link_to '<div class="navigation-item"><p>Новости</p></div>'.html_safe, news_index_path, target: "_self" %>
+
+            <%= link_to '<div class="navigation-item"><p>Лента</p></div>'.html_safe, feed_path, target: "_self" %>
+            
+            <%= link_to '<div class="navigation-item"><p>Поиск</p></div>'.html_safe, search_path, target: "_self" %>
+            
+            <% if current_user  %>
+            <%= link_to '<div class="navigation-item"><p>Онлайн-кастинги</p></div>'.html_safe, castings_path, target: "_self" %>
+            <% end %>
+            
+            <% if current_user  %>
+            <%= link_to '<div class="navigation-item"><p>Настройки</p></div>'.html_safe, edit_profile_path(current_user), target: "_self" %>
+            <% end %>
+            
+            <% if current_user  %>
+            <%= link_to "<div class='navigation-item'><p>Выйти</p></div>".html_safe, destroy_user_session_path,  method: "delete"%>
+            <% end %>
+        </div>
+    </div>

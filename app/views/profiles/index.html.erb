@@ -1,0 +1,79 @@
+<%= render 'shared/menu' %>
+<div class="global-scope">
+        <div class="feed">
+            <div class="header-filter">
+                <h2 class="feeds-h2-up">Лента обновлений друзей</h2>
+            </div>
+            <!-- begin card -->
+            <%@photos.each do |p|%>
+            <div class="photo-card">
+
+                <!-- Information with photo -->
+
+                <div class="info-frame">
+
+                    <!-- User profile photo -->
+
+                    <%= link_to content_tag(:div, nil, class: "profile-photo", style: "background-image: url('#{p.user.avatar_url}')"), profile_path(p.user.profile) %>
+
+                    <!-- end -->
+
+                    <!-- User profile small information -->
+
+                    <div class="profile-data">
+                        <div class="profile-block">
+                            <p class="profile-text profile-name"><%= link_to "#{p.user.name} #{p.user.surname}", profile_path(p.user.profile), style: "color: white" %></p>
+                        </div>
+
+                        <div class="profile-block">
+                            <p class="profile-text profile-user"><%= p.user.ruType %></p>
+                        </div>
+
+                        <div class="profile-block">
+                            <i class="fa fa-star-o info-icon-rank"></i>
+                            <p class="profile-text profile-rank">0</p>
+                        </div>
+
+                    </div>
+
+                    <div class="subscribe-block">
+                        <div class="subscribe-button">
+                            <% if current_user && current_user.following?(p.user) %>
+			    <%= form_for(current_user.relationships.find_by(followed_id: p.user), html: { method: :delete }) do |f| %>
+			  		<%= f.submit "Отписаться", class: "subscribe-value" %>
+				<% end %>
+			 <% else %>
+			    <%= form_for(current_user.relationships.build(followed_id: p.user.id)) do |f| %>
+			  		<div><%= f.hidden_field :followed_id %></div>
+			  		<%= f.submit "Подписаться", class: "subscribe-value" %>
+				<% end %>
+			<% end %>
+                        </div>
+                    </div>
+
+                    <div class="location-line">
+                        <i class="fa fa-location-arrow"></i>
+                        <p>Ukraine, Lviv, Vesnyana street, 4</p>
+                        <i class="fa fa-clock-o info-icon-time"></i>
+                        <p class="profile-text profile-time"><%= p.created_at.to_formatted_s(:db) %></p>
+                    </div>
+
+                </div>
+				
+                <!-- end -->
+
+                <%= link_to '<div class="activity-frame">
+                    <div class="activity-central">
+                        <p class="feeds-go-to-profile-p">
+                          Посмотреть портфолио
+                        </p>
+                    </div>
+                </div>'.html_safe , profile_path(p.user.profile) %>
+                <div class="photo-frame" style="background-image: url(<%= p.image_url %>)">
+                </div>
+            </div>
+			<%end%>
+        </div>
+        <!--end feed -->
+    </div>
+<%=render "shared/footer" %>

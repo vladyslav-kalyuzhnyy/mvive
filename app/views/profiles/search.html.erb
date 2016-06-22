@@ -1,0 +1,220 @@
+		<%= render 'shared/menu' %>
+		<div class="global-scope">
+			<div class="settings-scope">
+				<h2>Поиск</h2>
+				<div class="search-block">
+					<div class="type-user-search">
+						<h3>Кого ищем?</h3>
+						<div class="type-user-block-search">
+							<div class="type-user-single" id="type-user-single-model">
+								<%= image_tag "model-icon.PNG"%>
+								<p>Модель</p>
+							</div>
+							<div class="type-user-single" id="type-user-single-photographer">
+								<%= image_tag "photo-icon.png"%>
+								<p>Фотограф</p>
+							</div>
+							<div class="type-user-single" id="type-user-single-designer">
+								<%= image_tag "modeller-icon.PNG"%>
+								<p>Модельер</p>
+							</div>
+						</div>
+					</div>
+					<div class="property-user-search">
+						<h3>Расширенный поиск</h3>
+						<!-- search photographer -->
+						<%= form_tag search_path, :method => 'get', class: "property-user-block-search", id: "search-photographer" do%>
+							<%= text_field_tag :type, nil, class: "invisible-search", style: "display: none;"%>
+							<div class="setter-line search-line">
+								<%= country_select nil, :country,  {include_blank:'Выберите страну', 
+																	  priority_countries: ["UA", "RU", "BY"]}%>
+							</div>
+							<div class="setter-line search-line">
+								<%= text_field_tag :city, nil, placeholder: "Город"%>
+							</div>
+							<div class="setter-line search-line">
+								<input type="text" placeholder="Макс. цена за услуги">
+							</div>
+							<div class="setter-line search-line">
+								<%=select_tag :experience, options_for_select([['Новичок', "Новичок"], 
+																			  ['Меньше года', "Меньше года"], 
+																			  ['Меньше 3 лет', "Меньше 3 лет"], 
+																			  ['Меньше 5 лет', "Меньше 5 лет"], 
+																			  ['Больше 5 лет', "Больше 5 лет"]]), 
+																			  prompt: "Опыт работы"%>
+							</div>
+							<div class="setter-line search-line">
+								<%=select_tag :work_place, options_for_select([['Фрилансер', "freelance"], 
+																			  ['Работает в конторе', "office"]]), 
+																			  prompt: "Место роботы"%>
+							</div>
+							<div class="setter-line search-line">
+								<input type="text" placeholder="Мин. рейтинг">
+							</div>
+							<div class="setter-line search-line">
+								<input type="submit" value="Поиск">
+							</div>
+						<% end %>
+						
+						<!-- search designer -->
+						<%= form_tag search_path, :method => 'get', class: "property-user-block-search", id: "search-designer" do%>
+							<%= text_field_tag :type, nil, class: "invisible-search", style: "display: none;"%>
+							<div class="setter-line search-line">
+								<%= country_select nil, :country,  {include_blank:'Выберите страну', 
+																	  priority_countries: ["UA", "RU", "BY"]}%>
+							</div>
+							<div class="setter-line search-line">
+								<%= text_field_tag :city, nil, placeholder: "Город"%>
+							</div>
+							<div class="setter-line search-line">
+								<input type="text" placeholder="Макс. цена за услуги">
+							</div>
+							<div class="setter-line search-line">
+								<%=select_tag :experience, options_for_select([['Новичок', "Новичок"], 
+																			  ['Меньше года', "Меньше года"], 
+																			  ['Меньше 3 лет', "Меньше 3 лет"], 
+																			  ['Меньше 5 лет', "Меньше 5 лет"], 
+																			  ['Больше 5 лет', "Больше 5 лет"]]), 
+																			  prompt: "Опыт работы"%>
+							</div>
+							<div class="setter-line search-line">
+								<%=select_tag :specialization, options_for_select([['Художник-модельер', "Художник-модельер"], 
+																		 		  ['Модельер конструктор', "Модельер конструктор"], 
+																			  	  ['Меховой модельер', "Меховой модельер"]]), 
+																			  	  prompt: "Специализация"%>
+							</div>
+							<div class="setter-line search-line">
+								<input type="text" placeholder="Мин. рейтинг">
+							</div>
+							<div class="setter-line search-line">
+								<input type="submit" value="Поиск">
+							</div>
+						<% end %>
+						
+						<!-- search model -->
+						<%= form_tag search_path, :method => 'get', class: "property-user-block-search", id: "search-model" do%>
+							<%= text_field_tag :type, nil, class: "invisible-search", style: "display: none;"%>
+							<div class="setter-line search-line">
+								<%= country_select nil, :country,  {include_blank:'Выберите страну', 
+																	  priority_countries: ["UA", "RU", "BY"]}%>
+							</div>
+							<div class="setter-line search-line">
+								<%= text_field_tag :city, nil, placeholder: "Город"%>
+							</div>
+							<div class="setter-line search-line">
+								<input type="text" placeholder="Макс. цена за услуги">
+							</div>
+							<div class="setter-line search-line">
+								<%=select_tag :experience, options_for_select([['Новичок', "Новичок"], 
+																			  ['Меньше года', "Меньше года"], 
+																			  ['Меньше 3 лет', "Меньше 3 лет"], 
+																			  ['Меньше 5 лет', "Меньше 5 лет"], 
+																			  ['Больше 5 лет', "Больше 5 лет"]]), 
+																			  prompt: "Опыт работы"%>
+							</div>
+							<div class="setter-line search-line">
+								<%=select_tag :specializationt, options_for_select([['Подиумная модель', "Подиумная модель"], 
+									                                          ['Фотомодель', "Фотомодель"]]), 
+									                                          prompt: "Специализация", id: "select-spec-model"%>
+							</div>
+							<div class="setter-line search-line">
+							<%=select_tag :specialization, options_for_select([['Эротика', "Эротика"], 
+																			  ['Эротическое ню', "Эротическое ню"], 
+																			  ['Арт ню', "Арт ню"], 
+																			  ['Меньше 5 лет', "Меньше 5 лет"], 
+																			  ['Ню', "Ню"],
+																			  ['Топлесс', "Топлесс"],
+																			  ['Гламур', "Гламур"],
+																			  ['Ланжери', "Ланжери"],
+																			  ['Портрет', "Портрет"],
+																			  ['Эдиториал', "Эдиториал"],
+																			  ['Реклама', "Реклама"],
+																			  ['Make Up', "Make Up"]]), :disabled => true,
+																			  prompt: "Жанры", id: "select-for-photo-model"%>
+							</div>
+							<div class="setter-line search-line">
+							<%=select_tag :figure, options_for_select([['Стандартная модель', "normal"], 
+																	  ['Полная фигура', "big"], 
+																	  ['Маленькая модель', "small"]]), 
+																	  prompt: "Фигура"%>
+							</div>
+							
+							<div class="setter-line search-line">
+								<%=select_tag :haircolor, options_for_select([['Блондин', "Блондин"], 
+																			  ['Брюнет', "Брюнет"], 
+																			  ['Каштановый', "Каштановый"], 
+																			  ['Русый', "Русый"], 
+																			  ['Рыже-каштановый', "Рыже-каштановый"],
+																			  ['Рыже-русый', "Рыже-русый"],
+																			  ['Рыжый', "Рыжый"],
+																			  ['Светло-каштановый', "Светло-каштановый"],
+																			  ['Светло-русый', "Светло-русый"],
+																			  ['Тёмно-русый', "Тёмно-русый"],
+																			  ['Тёмный каштан', "Тёмный каштан"],
+																			  ['Русый', "Русый"],
+																			  ['Седые',"Седые"]]),
+																			  prompt: "Цвет волос"%>
+							</div>
+							<div class="setter-line search-line">
+								<%=select_tag :hairsize, options_for_select([['Короткая стрижка', "Короткая стрижка"], 
+																			['Каре', "Каре"], 
+																			['До плеч', "До плеч"], 
+																			['Средняя длина', "Средняя длина"], 
+																			['Длинные', "Длинные"],
+																			['Бритая наголо', "Бритая наголо"]]),
+																			prompt: "Длина волос"%>
+							</div>
+							<div class="setter-line search-line">
+								<%=select_tag :face, options_for_select([['Европейский', "Европейский"], 
+																		['Мулат', "Мулат"], 
+																		['Азиатский', "Азиатский"], 
+																		['Африканский', "Африканский"]]),
+																		prompt: "Тип лица"%>
+							</div>
+							<div class="setter-line search-line">
+								<%=select_tag :clothes, options_for_select([['XS', "XS"], 
+																			['S', "S"], 
+																			['M', "M"], 
+																			['L', "L"],
+																			['XL',"XL"],
+																			['XXL',"XXL"],
+																			['XXXL',"XXXL"]]),
+																			prompt: "Размер одежды"%>
+							</div>
+							<div class="setter-line search-line">
+								<%=select_tag :license, options_for_select([['TFP', "TFP"], 
+																			['TFCD', "TFCD"], 
+																			['Коммерческая съемка', "Коммерческая съемка"]]),
+																			prompt: "Лицензия"%>
+							</div>
+							
+							<div class="setter-line search-line">
+								<input type="submit" value="Поиск">
+							</div>
+						<% end %>
+						
+					</div>
+				</div>
+				<h2 class="divider">Мы нашли</h2>
+        <div class="find-a-person-block">
+				<% @users.each do |u|%>
+              <div class="find-a-person">
+                <div class="person-block">
+                  <div class="profile-photo profile-photo-search" style="background-image: url(<%= u.avatar_url %>);">
+                    <div class="buttons-on-search">
+                      <p class="name-search"><%= "#{u.name} #{u.surname}" %></p>
+                      <a href="#">
+                        <div class="btn-on-search" style="margin-bottom: 5px;">
+                          <p>Написать</p>
+                        </div>
+                      </a>
+                      <%= link_to '<div class="btn-on-search"><p>Профиль</p></div>'.html_safe, profile_path(u), target: "_self"%>
+                    </div>
+                  </div>
+                </div>
+              </div>
+				<% end %>
+          </div>
+			</div>
+		</div>
+    <%=render "shared/footer" %>

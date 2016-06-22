@@ -1,0 +1,36 @@
+
+  <div class="container-fluid">
+        <div class="row">
+            <header class="top-index-area">
+                <div class="col-xs-4 col-md-6 col-xs-offset-4 col-xs-offset-3" style="text-align: center;">
+                    <%= image_tag "big-logo.PNG", alt: "big-logo", class: "big-logo", onmousedown: "return false" %>
+                </div>
+                <div class="col-xs-4 col-md-3">
+                    <div class="auth-menu">
+                        <div class="block" id="log-block">
+                            <i class="fa fa-sign-in"></i>
+                            <p>Вход</p>
+                            <%= image_tag "plus.PNG", alt: "plus" %>
+                        </div>
+                        <div id="reg-block" class="block">
+                            <i class="fa fa-chevron-up"></i>
+                            <p>Регистрация</p>
+                            <%= image_tag "plus.PNG", alt: "plus" %>
+                        </div>
+                        <%= link_to '<div class="block" id="main-block">
+                                <p class="must-show-phone">Главная</p>
+                                <p class="must-show">Перейти на главную</p>
+                                <img src="/assets/plus.PNG", alt="plus">
+                            </div>'.html_safe, profiles_path %>
+                            
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    
+    <%= render 'shared/call_to_action' %>
+    <div class="overlay"></div>
+    <%= render 'forms/sign_in' %>
+    <%= render 'forms/sign_up' %>

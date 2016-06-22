@@ -1,0 +1,30 @@
+				<div class="portfolio">
+                    <% if current_user == @user %>
+                    <div class="form-for-download-photo">
+                        <%= form_for Photo.new, :url => "/photos", html:{class: "profile-settings-private profile-settings-push"} do |f|%>
+                            <div class="pseudo-photo-push">
+                                <label id="label-push-photo" for="push-photo"><i class="fa fa-file-photo-o upload-photo-icon"></i>Добавить фото в портфолио</label>
+                            </div>
+                            <div class="setter-line">
+                                <%= f.file_field :image , id: "push-photo", accept: "image/*"%>
+                            </div>
+                            <div class="setter-line setter-line-button inline-setter-line-button">
+                                <%= f.submit "Загрузить", id: "push-photo-button"%>
+                            </div>
+                        <% end %>
+                    </div>
+                    <% end %>
+                    <div class="gallery">
+                    	<% if @photos %>
+                    		<% @photos.each do |p| %>
+                    		<div id="<%=p.id %>">
+                        	<%= link_to image_tag(p.image_url), p.image_url %>
+                        	</div>
+                        <% end %>
+                        <div class="clear"></div>
+                        	
+                        <%else%>
+                        	<p>Нет фото</p>
+                        <%end%>
+                    </div> 
+                </div>

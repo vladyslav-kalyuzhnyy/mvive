@@ -1,0 +1,42 @@
+ 		<%= render "forms/user_edit_form"%>
+        <div id="for-work-form" style="display: none;">
+          <%=form_for @profile, :url => profile_path(@user) ,html:{class: "profile-settings-private"} do |p|%>
+            <label for="work_place">Место работы</label>
+            <div class="setter-line">
+              <%= p.text_field :work_place, id: "work_place", value: "Фрилансер"%>
+            </div>
+            <label for="work-experience">Опыт роботы</label>
+            <div class="setter-line">
+              <div class="select-plus-exp"></div>
+              <%=p.select :experience, [['Новичок', "Новичок"],
+              							['Меньше года', "Меньше года"], 
+              							['Меньше 3 лет', "Меньше 3 лет"], 
+              							['Меньше 5 лет', "Меньше 5 лет"], 
+              							['Больше 5 лет', "Больше 5 лет"]], 
+              							{}, :id => "work-experience"%>
+            </div>
+            <label>Cпециализация</label>
+            <div class="multiselect-plus"></div>
+            <div class="multiselect-list">
+              <div class="selected-items">
+                <span id="selected-skills-photo">Выберите направления</span>
+              </div>
+              <label><%= p.check_box :specialization, {:multiple => true}, "Художник-модельер", nil %>Художник-модельер</label>
+			  <label><%= p.check_box :specialization, {:multiple => true}, "Модельер-конструктор", nil %>Модельер-конструктор</label>
+			  <label><%= p.check_box :specialization, {:multiple => true}, "Меховой модельер", nil %>Меховой модельер</label>
+            </div>
+            
+			<label for="add-event">Участвовал(-ла)</label>
+            <div class="setter-line setter-line-event">
+              <input type="text" id="add-event">
+              <div class="event-push-button event-designer-button">
+                Добавить
+              </div>
+            </div>
+            <div class="setter-line" id="event-list">
+            </div>
+            <div class="setter-line setter-line-button">
+              <%= p.submit "Изменить"%>
+            </div>
+          <% end %>
+        </div>

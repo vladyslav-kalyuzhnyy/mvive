@@ -1,0 +1,11 @@
+<div class="overlay"></div>
+<%= form_tag add_path(@user), method: "post", class: "reg-scale write-message", style: "top: 200px" do%>
+	<div class="input-casting-line">
+		
+		<%= text_area_tag :body, nil, style: "height: 130px;", placeholder: "Введите вашe сообщение...", maxlength: "200"%>
+	</div>
+	<div class="input-casting-line">
+		<input type="submit" value="Отправить сообщение">
+	</div>
+	<p id="cancel-message">Отмена</p>
+<% end %>
