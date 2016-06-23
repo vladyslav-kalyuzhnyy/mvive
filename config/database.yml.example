@@ -19,5 +19,5 @@ test:
 production:
   <<: *default
   database: M-Vive_production
-  username: vlad
+  username: deployer
   password: nfs26391022
