@@ -3,11 +3,14 @@ class ProfilesController < ApplicationController
   
   def index
     @user = current_user
-    @subscribes = @user.followed_users
-    @photos = @subscribes.collect(&:photos).flatten.uniq
-    if @photos
-      @photos.sort_by(&:created_at)
+    if (@user)
+      @subscribes = @user.followed_users
+      @photos = @subscribes.collect(&:photos).flatten.uniq
+      if @photos
+        @photos.sort_by(&:created_at)
+      end
     end
+
   end
   
   def new

@@ -1,10 +1,13 @@
 <%= render 'shared/menu' %>
 <div class="global-scope">
         <div class="feed">
+          <%if @user%>
             <div class="header-filter">
                 <h2 class="feeds-h2-up">Лента обновлений друзей</h2>
             </div>
+          <%end%>
             <!-- begin card -->
+            <%if @user%>
             <%@photos.each do |p|%>
             <div class="photo-card">
 
@@ -73,6 +76,8 @@
                 </div>
             </div>
 			<%end%>
+          <%end%>
+
         </div>
         <!--end feed -->
     </div>
