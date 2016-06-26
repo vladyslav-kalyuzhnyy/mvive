@@ -18,6 +18,18 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :config_files, %w{config/database.yml config/secrets.yml}
 set :puma_conf, "#{shared_path}/config/puma.rb"
 
+namespace :git do
+  desc 'Deploy'
+  task :deploy do
+    ask(:message, "Commit message?")
+    run_locally do
+      execute "git add -A"
+      execute "git commit -m '#{fetch(:message)}'"
+      execute "git push"
+    end
+  end
+end
+
 namespace :deploy do
   before 'check:linked_files', 'config:push'
   before 'check:linked_files', 'puma:config'
