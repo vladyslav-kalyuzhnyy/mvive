@@ -2,6 +2,7 @@
 lock '3.5.0'
 
 set :repo_url, 'https://github.com/vladyslav-kalyuzhnyy/mvive.git'
+set :scm, :git
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 set :user, 'deployer'
@@ -31,9 +32,18 @@ namespace :git do
 end
 
 namespace :deploy do
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      invoke 'puma:restart'
+    end
+  end
+
   before 'check:linked_files', 'config:push'
   before 'check:linked_files', 'puma:config'
   before 'check:linked_files', 'puma:nginx_config'
-  before 'deploy:migrate', 'deploy:db:create'
-  after 'puma:smart_restart', 'nginx:restart'
+  after  :finishing,    :compile_assets
+  after  :finishing,    :cleanup
+  after  :finishing,    :restart
 end
