@@ -16,6 +16,10 @@ set :linked_files, %w{config/database.yml}
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/puma.rb')
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
+set :rvm_type, :user                     # Defaults to: :auto
+set :rvm_ruby_version, '2.3.0'      # Defaults to: 'default'
+set :rvm_roles, [:app, :web]
+
 set :config_files, %w{config/database.yml config/secrets.yml}
 set :puma_conf, "#{shared_path}/config/puma.rb"
 
@@ -32,18 +36,9 @@ namespace :git do
 end
 
 namespace :deploy do
-
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      invoke 'puma:restart'
-    end
-  end
-
   before 'check:linked_files', 'config:push'
   before 'check:linked_files', 'puma:config'
   before 'check:linked_files', 'puma:nginx_config'
-  after  :finishing,    :compile_assets
-  after  :finishing,    :cleanup
-  after  :finishing,    :restart
+  before 'deploy:migrate', 'deploy:db:create'
+  after 'puma:smart_restart', 'nginx:restart'
 end
