@@ -38,7 +38,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-  gem 'pg', '0.15.1'
+  gem 'pg'
   gem 'rspec-rails'
   # The following optional lines are part of the advanced setup.
   # gem 'guard-rspec', '2.5.0'

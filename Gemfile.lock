@@ -213,7 +213,7 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
-    pg (0.15.1)
+    pg (0.18.4)
     pkg-config (1.1.7)
     puma (3.4.0)
     rack (1.6.4)
@@ -368,7 +368,7 @@ DEPENDENCIES
   mailboxer
   omniauth
   omniauth-facebook
-  pg (= 0.15.1)
+  pg
   rails (= 4.2.6)
   rails_admin
   respond-rails (~> 1.0)
@@ -384,4 +384,4 @@ DEPENDENCIES
   will_paginate (~> 3.1)
 
 BUNDLED WITH
-   1.12.5
+   1.10.6
