@@ -351,7 +351,7 @@ DEPENDENCIES
   mailboxer
   omniauth
   omniauth-facebook
-  pg
+  pg (= 0.18.4)
   rails (= 4.2.6)
   rails_admin
   respond-rails (~> 1.0)
