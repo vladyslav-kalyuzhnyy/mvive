@@ -49,3 +49,5 @@ group :development do
   gem 'capistrano-upload-config'
   gem 'sshkit-sudo'
 end
+
+gem 'puma'
