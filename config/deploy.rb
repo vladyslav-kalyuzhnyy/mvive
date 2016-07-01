@@ -47,6 +47,11 @@ namespace :deploy do
         puts "WARNING: HEAD is not the same as origin/master"
         puts "Run `git push` to sync changes."
         exit
+        before 'check:linked_files', 'config:push'
+        before 'check:linked_files', 'puma:config'
+        before 'check:linked_files', 'puma:nginx_config'
+        before 'deploy:migrate', 'deploy:db:create'
+        after 'puma:smart_restart', 'nginx:restart'
       end
     end
   end
