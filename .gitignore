@@ -16,6 +16,7 @@
 /tmp
 # ignore other unnecessary files.
 database.yml
+secrets.yml
 doc/
 *.swp
 *~
