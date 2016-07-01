@@ -5,7 +5,7 @@ set :repo_url,        'https://github.com/vladyslav-kalyuzhnyy/mvive.git'
 set :user, 'deployer'
 set :application, 'M-Vive'
 set :rails_env, 'production'
-server '52.40.231.251', user: "#{fetch(:user)}", roles: %w{app db web}, primary: true
+server '50.112.72.129', user: "#{fetch(:user)}", roles: %w{app db web}, primary: true
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 set :pty, true
 
