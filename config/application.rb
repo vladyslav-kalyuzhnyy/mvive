@@ -35,5 +35,18 @@ module MVive
     config.serve_static_files = true
     config.serve_static_assets = true
     config.assets.compile = true
+
+    ActionMailer::Base.smtp_settings = {
+
+        :address            => 'smtp.gmail.com',
+        :domain             => 'mail.google.com',
+        :port               => 587,
+        :user_name          => "info.mvive@gmail.com",
+        :password           => "Qqqwwweee123",
+        :authentication     => 'login',
+        :enable_starttls_auto => true
+
+    }
+
   end
 end

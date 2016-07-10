@@ -24,5 +24,9 @@ class ApplicationController < ActionController::Base
   def robots
     @admin = Admin.where(published: false)
   end
+
+  def new_session_path(scope)
+    new_user_session_path
+  end
 end
 

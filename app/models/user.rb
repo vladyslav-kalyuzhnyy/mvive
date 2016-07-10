@@ -71,15 +71,12 @@ class User < ActiveRecord::Base
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      x = auth.info.name.to_a
-      user.name = x[0]
-      user.surname = x[1]
-      user.login = auth.info.uid
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
-      
+      user.name = auth.info.name   # assuming the user model has a name
     end
   end
+
   
   def self.new_with_session(params, session)
     super.tap do |user|

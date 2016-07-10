@@ -3,12 +3,13 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'sitemap' => 'home#sitemap'
   get 'robots' => 'home#robots', format: :text
+  get '/auth/:provider/callback', to: 'sessions#create'
   get "help", to: "static_pages#help"
   get "about", to: "static_pages#about"
   get "advert", to: "static_pages#advert"
   get "partners", to: "static_pages#partners"
   get "contactus", to: "static_pages#contactus"
-  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations", confirmations: "users/confirmations", passwords: "users/passwords", omniauth_callbacks: "users/omniauth_callbacks"}
+  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations", confirmations: "users/confirmations", passwords: "users/passwords", :omniauth_callbacks => "users/omniauth_callbacks"}
   devise_scope :user do
     get "login", to: "users/sessions#new"
     get "signup", to: "users/registrations#new"
