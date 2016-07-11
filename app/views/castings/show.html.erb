@@ -26,6 +26,9 @@
               <i class="fa fa-star"></i><p><%= @rating %></p>
             </div>
           </div>
+          <div class="casting-destroy">
+            <%= button_to '<p class="cast-dest-p">Удалить кастинг</p>', :method => :delete %>
+          </div>
         </div>
         <div class="casting-info">
           <i class="fa fa-map-marker"></i>

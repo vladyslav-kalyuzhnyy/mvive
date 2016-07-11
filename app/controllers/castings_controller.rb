@@ -40,9 +40,17 @@ class CastingsController < ApplicationController
     redirect_to casting_path(@casting)
   end
 
+  def destroy
+    @casting = Casting.find(params[:id])
+    @casting.destroy
+    redirect_to castings_path
+
+  end
+
+
   private
   def casting_params
-    params.require(:casting).permit(:rating, :subject, :price, :tag1, :tag2, :tag3, :country_code, :city,
+    params.require(:casting).permit(:rating, :destroy, :subject, :price, :tag1, :tag2, :tag3, :country_code, :city,
                                     :task, :license => [])
   end
 end
