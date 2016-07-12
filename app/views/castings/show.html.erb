@@ -27,7 +27,7 @@
             </div>
           </div>
           <div class="casting-destroy">
-            <%= button_to '<p class="cast-dest-p">Удалить кастинг</p>', :method => :delete %>
+            <%= link_to '<p class="cast-dest-p">Удалить кастинг</p>'.html_safe, :confirm => 'Вы уверены?', :method => :delete %>
           </div>
         </div>
         <div class="casting-info">

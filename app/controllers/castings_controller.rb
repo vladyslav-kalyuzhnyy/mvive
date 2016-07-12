@@ -41,10 +41,10 @@ class CastingsController < ApplicationController
   end
 
   def destroy
+    @user = User.find(params[:user_id])
     @casting = Casting.find(params[:id])
     @casting.destroy
-    redirect_to castings_path
-
+    redirect_to castings_path(@castings)
   end
 
 
