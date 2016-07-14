@@ -26,9 +26,11 @@
               <i class="fa fa-star"></i><p><%= @rating %></p>
             </div>
           </div>
+          <% if current_user == @casting.user %>
           <div class="casting-destroy">
-            <%= link_to '<p class="cast-dest-p">Удалить кастинг</p>'.html_safe, :confirm => 'Вы уверены?', :method => :delete %>
+            <%= link_to '<p class="cast-dest-p">Удалить кастинг</p>'.html_safe, destroy_casting_path(@casting), data: {:confirm => 'Вы уверены?'}, :method => :delete %>
           </div>
+              <% end %>
         </div>
         <div class="casting-info">
           <i class="fa fa-map-marker"></i>
@@ -69,8 +71,10 @@
       </div>
       <div class="casting-card-content single-card-content">
         <p><%= @casting.task %></p>
+        <% if current_user %>
         <% unless current_user == @casting.user%>
             <button class="show-casting-single" style="display: block; margin-left: auto;margin-right: auto;">Подать заявку</button>
+        <% end %>
         <% end %>
       </div>
     </div>

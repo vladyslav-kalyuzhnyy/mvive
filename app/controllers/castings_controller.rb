@@ -1,5 +1,5 @@
 class CastingsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show, :premium]
 
   def index
     @castings = Casting.all.paginate(page: params[:page], per_page: 5)
@@ -41,16 +41,21 @@ class CastingsController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:user_id])
     @casting = Casting.find(params[:id])
+    if current_user == @casting.user
     @casting.destroy
+    end
     redirect_to castings_path(@castings)
+  end
+
+  def premium
+
   end
 
 
   private
   def casting_params
-    params.require(:casting).permit(:rating, :destroy, :subject, :price, :tag1, :tag2, :tag3, :country_code, :city,
+    params.require(:casting).permit(:rating, :subject, :price, :tag1, :tag2, :tag3, :country_code, :city,
                                     :task, :license => [])
   end
 end

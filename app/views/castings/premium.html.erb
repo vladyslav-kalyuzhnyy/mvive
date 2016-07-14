@@ -1,0 +1,24 @@
+<%= render 'shared/menu' %>
+
+<div class="global-scope">
+  <div class="settings-scope">
+    <h2>Премиум кастинги от M'Vive</h2>
+    <div class="blueberry">
+      <ul class="slides">
+        <li><img src="http://marktyrrell.com/labs/blueberry/img/slide1.jpg" /></li>
+        <li><img src="http://marktyrrell.com/labs/blueberry/img/slide2.jpg" /></li>
+        <li><img src="http://marktyrrell.com/labs/blueberry/img/slide3.jpg" /></li>
+        <li><img src="http://marktyrrell.com/labs/blueberry/img/slide4.jpg" /></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  $(window).load(function() {
+    $('.blueberry').blueberry();
+  });
+</script>
+
+<%= render 'shared/footer' %>

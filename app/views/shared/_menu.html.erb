@@ -18,10 +18,8 @@
             <%= link_to '<div class="navigation-item"><p>Лента</p></div>'.html_safe, feed_path, target: "_self" %>
             
             <%= link_to '<div class="navigation-item"><p>Поиск</p></div>'.html_safe, search_path, target: "_self" %>
-            
-            <% if current_user  %>
+
             <%= link_to '<div class="navigation-item"><p>Онлайн-кастинги</p></div>'.html_safe, castings_path, target: "_self" %>
-            <% end %>
             
             <% if current_user  %>
             <%= link_to '<div class="navigation-item"><p>Настройки</p></div>'.html_safe, edit_profile_path(current_user), target: "_self" %>

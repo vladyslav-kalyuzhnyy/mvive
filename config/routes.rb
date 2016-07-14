@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   resources :relationships, only: [:create, :destroy]
   resources :conversations, only: [:index, :show]
   resources :castings, only: [:index, :show, :new, :create]
+  delete "castings/:id", to: "castings#destroy", as: :destroy_casting
+  get "premium", to: "castings#premium"
   resources :users do
     resources :feedbacks
   end

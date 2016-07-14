@@ -41,7 +41,6 @@ Devise.setup do |config|
 
   config.sign_out_via = :delete
 
-  config.omniauth :facebook, '1171884159502626', '58d72e623bcc9c9889d7b1c3c98073a8', callback_url: "http://localhost:3000/user/auth/facebook/callback",
-                  :client_options => {:ssl => {:verify => false}}
+  config.omniauth :facebook, '1171884159502626', '58d72e623bcc9c9889d7b1c3c98073a8', {:client_options => {:ssl => {:verify => false}}}
 
 end
