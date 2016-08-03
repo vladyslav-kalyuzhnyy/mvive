@@ -1,7 +1,7 @@
 <%= render "shared/menu" %>
 <div class="global-scope">
-  <div class="settings-scope">
-    <h2>Новости</h2>
+  <div class="settings-scope" style="padding-top: 0;">
+    <%= render "shared/news_slider_navbar" %>
     <div class="news-feed">
 
       <% @news.each do |news| %>
@@ -45,6 +45,24 @@
         <li><a href="https://www.facebook.com/MVive-Fashion-612944168844010/?ref=aymt_homepage_panel"><i class="fa fa-facebook"></i></a></li>
       </ul>
     </div>
+  </div>
+  <noscript>
+    <style>
+      .step {
+        width: 100%;
+        position: relative;
+      }
+      .step:not(.active) {
+        opacity: 1;
+        filter: alpha(opacity=99);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+      }
+      .step:not(.active) a.jms-link{
+        opacity: 1;
+        margin-top: 40px;
+      }
+    </style>
+  </noscript>
   </div>
 </div>
 <%= render 'shared/footer' %>

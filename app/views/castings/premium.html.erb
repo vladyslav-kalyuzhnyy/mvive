@@ -2,20 +2,66 @@
 
 <div class="global-scope">
   <div class="settings-scope">
-    <h2>Премиум кастинги от M'Vive</h2>
-    <div class="blueberry">
-      <ul class="slides">
-        <li><img src="http://marktyrrell.com/labs/blueberry/img/slide1.jpg" /></li>
-        <li><img src="http://marktyrrell.com/labs/blueberry/img/slide2.jpg" /></li>
-        <li><img src="http://marktyrrell.com/labs/blueberry/img/slide3.jpg" /></li>
-        <li><img src="http://marktyrrell.com/labs/blueberry/img/slide4.jpg" /></li>
-      </ul>
+    <h2>Премиум кастинг от M'Vive</h2>
+    <div class="cont-slider">
+      <script type="text/javascript" charset="utf-8">
+        var $ = jQuery.noConflict();
+        $(window).load(function() {
+          $('.flexslider').flexslider({
+            animation: "fade"
+          });
+
+          $(function() {
+            $('.show_menu').click(function(){
+              $('.menu').fadeIn();
+              $('.show_menu').fadeOut();
+              $('.hide_menu').fadeIn();
+            });
+            $('.hide_menu').click(function(){
+              $('.menu').fadeOut();
+              $('.show_menu').fadeIn();
+              $('.hide_menu').fadeOut();
+            });
+          });
+        });
+      </script>
+    <div class="slider_container">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <a href="#"> <%= image_tag 'slide1.jpg' %></a>
+            <div class="flex-caption">
+              <div class="caption_title_line"><h2>M'Vive</h2><p class="prem-sl-p">Уникальная online-платформа для фотографов, моделей и модельеров !</p></div>
+            </div>
+          </li>
+          <li>
+            <a href="#"><%= image_tag 'slide2.jpg' %></a>
+            <div class="flex-caption">
+              <div class="caption_title_line"><h2>Принимай участие</h2><p class="prem-sl-p">Подавай заявку на участие в конкурсе от M'Vive, выигрывай и стань частью нового проекта !</p></div>
+            </div>
+          </li>
+          <li>
+            <a href="#"><%= image_tag 'slide3.jpg' %></a>
+            <div class="flex-caption">
+              <div class="caption_title_line"><h2>Будет интересно</h2><p class="prem-sl-p">Новый формат кастингов и fashion событий. Мы постараемся вывести моду на новый уровень !</p></div>
+            </div>
+          </li>
+          <li>
+            <a href="#"><%= image_tag 'slide4.jpg' %></a>
+            <div class="flex-caption">
+              <div class="caption_title_line"><h2>Следи за новостями</h2><p class="prem-sl-p">Не забудь подписаться на наши страници в социальных сетях и следи за новостями моды и кастингами !</p></div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+      </div>
     <div class="ab-pr-cast">
       <h3>О конкурсе:</h3>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       <h3>Правила:</h3>
       <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      <h3>Email:</h3>
       <h3>Информационные партнеры:</h3>
       <div class="info-partners">
         <div class="info-partner-block">
@@ -55,16 +101,10 @@
     <div class="social-footer">
       <ul>
         <li><a href="https://vk.com/mvive"><i class="fa fa-vk"></i></a></li>
-        <li><a href="https://www.facebook.com/MVive-Fashion-612944168844010/?ref=aymt_homepage_panel"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.facebook.com/mvivefashion/"><i class="fa fa-facebook"></i></a></li>
       </ul>
     </div>
   </div>
 </div>
-
-<script>
-  $(window).load(function() {
-    $('.blueberry').blueberry();
-  });
-</script>
 
 <%= render 'shared/footer' %>

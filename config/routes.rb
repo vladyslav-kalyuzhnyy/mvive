@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   post "photos", to: "photos#create"
   resources :profiles
   resources :news
+  get "news_trends", to: "news#news_trends"
+  get "news_fashionshows", to: "news#news_fashionshows"
+  get "news_arts_and_lifestyle", to: "news#news_arts_and_lifestyle"
   get "my_profile", to: "profiles#my_profile"
   get "search", to: "profiles#search"
   get "feed", to: "profiles#index"
