@@ -9,11 +9,11 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
+//= require jquery
+//= require jquery_ujs
 //= require es5-shim/es5-shim
 //= require es5-shim/es5-shim-min
 //= require es5-shim/es5-sham
 //= require es5-shim/es5-sham-min
-//= require jquery
-//= require jquery_ujs
 //= require turbolinks
 //= require_tree .
