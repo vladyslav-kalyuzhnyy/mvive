@@ -20,6 +20,6 @@ namespace :deploy do
   before 'check:linked_files', 'config:push'
   before 'check:linked_files', 'puma:config'
   before 'check:linked_files', 'puma:nginx_config'
-  before 'deploy:migrate', 'deploy:db:create', 'deploy:db:drop'
+  before 'deploy:migrate', 'deploy:db:create', 'deploy:drop'
   after 'puma:smart_restart', 'nginx:restart'
 end
