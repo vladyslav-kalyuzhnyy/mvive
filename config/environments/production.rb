@@ -3,18 +3,17 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'http://mvive.net/' }
   config.action_mailer.delivery_method = :smtp
 
-  config.cache_classes = false
+  config.cache_classes = true
   config.eager_load = true
 
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
   config.serve_static_assets = false
-  config.assets.debug = true
 
   config.assets.js_compressor = :uglifier
 
-  config.assets.compile = ['*.js', '*.css']
+  config.assets.compile = true
   config.active_support.deprecation = :silence
 
   config.assets.digest = true
