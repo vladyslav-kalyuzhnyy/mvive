@@ -4,9 +4,9 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.cache_classes = false
-  config.eager_load = true
+  config.eager_load = false
 
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
 
   config.serve_static_assets = false
