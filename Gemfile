@@ -51,3 +51,4 @@ group :development do
 end
 
 gem 'puma'
+gem 'modernizr-rails'
