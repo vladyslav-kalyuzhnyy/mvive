@@ -52,3 +52,4 @@ end
 
 gem 'puma'
 gem 'modernizr-rails'
+gem 'normalize-rails'
