@@ -2,6 +2,9 @@ class NewsController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   def index
     @news = News.all
+    if @news
+      @news.sort_by(&:created_at)
+    end
   end
 
   def show
