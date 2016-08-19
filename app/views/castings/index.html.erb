@@ -5,7 +5,7 @@
     <!--Link to form-->
     <div class="casting-btn-wrapper">
       <%= link_to content_tag(:span, '<i class="fa fa-plus"></i>'.html_safe + "Создать кастинг",  class: "button-casting-form"), new_casting_path %>
-      <%= link_to 'Премиум кастинги от MVive'.html_safe, premium_path, class: "button-casting-form-premium" %>
+      <%= link_to 'Премиум кастинги от MVive'.html_safe, premium_path, class: "button-casting-form-premium", target: "_self" %>
       </div>
     <% @castings.each do|c| %>
         <div class="casting-card-view">
