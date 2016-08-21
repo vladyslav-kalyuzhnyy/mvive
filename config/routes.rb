@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'static_pages#home'
-  get 'sitemap' => 'home#sitemap'
-  get 'robots' => 'home#robots', format: :text
+
+  get 'robots' => 'public#robots', format: :text
   get '/auth/:provider/callback', to: 'sessions#create'
   get "help", to: "static_pages#help"
   get "about", to: "static_pages#about"

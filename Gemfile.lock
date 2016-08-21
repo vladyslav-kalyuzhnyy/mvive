@@ -125,7 +125,6 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
-    dynamic_sitemaps (2.0.0)
     erubis (2.7.0)
     es5-shim-rails (4.0.1)
       actionpack (>= 3.1)
@@ -290,6 +289,8 @@ GEM
     simple_form (3.0.4)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
+    sitemap_generator (5.1.0)
+      builder
     sort_alphabetical (1.0.2)
       unicode_utils (>= 1.2.2)
     sprockets (3.6.2)
@@ -341,7 +342,6 @@ DEPENDENCIES
   country_select
   cucumber-rails (= 1.4.0)
   devise
-  dynamic_sitemaps
   es5-shim-rails
   factory_girl_rails (= 4.2.0)
   file_validators
@@ -364,6 +364,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   selenium-webdriver (= 2.35.1)
   simple_form (~> 3.0.0.rc)
+  sitemap_generator
   sshkit-sudo
   turbolinks
   tzinfo-data

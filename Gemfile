@@ -37,7 +37,7 @@ end
 gem 'devise'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'will_paginate', '~> 3.1'
-gem "dynamic_sitemaps"
+
 group :development do
   gem 'capistrano', '3.5.0'
   gem 'capistrano-rvm'
@@ -53,3 +53,4 @@ end
 gem 'puma'
 gem 'modernizr-rails'
 gem 'normalize-rails'
+gem 'sitemap_generator'
