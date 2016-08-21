@@ -29,6 +29,11 @@
 
 					
 				</div>
+
+        <div class="casting-next-back-btns">
+          <%= will_paginate @conversations, previous_label: "Назад", next_label: "Вперед" %>
+        </div>
+
 			</div>
 		</div>
 <%= render "shared/footer" %>

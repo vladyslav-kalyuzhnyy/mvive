@@ -4,7 +4,7 @@ class ConversationsController < ApplicationController
   before_action :get_conversation, except: [:index, :add_conversation]
   
   def index
-    @conversations = @mailbox.conversations.all
+    @conversations = @mailbox.conversations.all.paginate(page: params[:page], per_page: 7)
   end
 
   def show
