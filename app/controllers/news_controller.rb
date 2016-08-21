@@ -2,8 +2,7 @@ class NewsController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   def index
     @news = News.all
-    @news = News.order(created_at: :desc)
-    @news = News.all.paginate(page: params[:page], per_page: 5)
+    @news = News.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
   end
 
   def show
