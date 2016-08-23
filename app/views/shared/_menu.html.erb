@@ -30,7 +30,7 @@
             <% end %>
             
             <% if current_user  %>
-            <%= link_to "<div class='navigation-item'><p>Выйти</p></div>".html_safe, destroy_user_session_path,  method: "delete"%>
+            <%= link_to "<div class='navigation-item'><p>Выйти</p></div>".html_safe, destroy_user_session_path,  method: "delete", target: "_self"%>
             <% end %>
         </div>
     </div>

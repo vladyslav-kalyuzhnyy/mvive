@@ -17,21 +17,7 @@
   </div>
 
 </section>
-<script type="text/javascript">
-  $(function() {
 
-    var jmpressOpts	= {
-      animation		: { transitionDuration : '0.8s' }
-    };
-
-    $( '#jms-slideshow' ).jmslideshow( $.extend( true, { jmpressOpts : jmpressOpts }, {
-      autoplay	: true,
-      bgColorSpeed: '0.8s',
-      arrows		: false
-    }));
-
-  });
-</script>
 <ul class="menu cf">
   <li><%= link_to 'Все новости'.html_safe, news_index_path %></li>
   <li><%= link_to 'Тенденции'.html_safe, news_trends_path %></li>
