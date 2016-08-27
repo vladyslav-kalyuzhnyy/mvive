@@ -589,18 +589,18 @@ $(window).resize(function() {
     verticalMenuPosition('.navigation');
 });
 $(window).ready(function() {
-$('.review-rating').raty({
-    readOnly: true,
-    score: function() {
-        return $(this).attr('data-score');
-    },
-    path: '/assets/'
-});
+    $('.review-rating').raty({
+        readOnly: true,
+        score: function() {
+            return $(this).attr('data-score');
+        },
+        path: '/assets/'
+    });
 
-$('#rating-form').raty({
-    path: '/assets/',
-    scoreName: 'feedback[rating]'
-});
+    $('#rating-form').raty({
+        path: '/assets/',
+        scoreName: 'feedback[rating]'
+    });
 });
 
 /* FUNCTIONS FOR SERVER RESPONSES */
