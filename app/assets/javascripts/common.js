@@ -588,6 +588,20 @@ $(window).resize(function() {
     verticalAlignInBlock('.block-user', '#modeller-icon');
     verticalMenuPosition('.navigation');
 });
+$(window).ready(function() {
+$('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+        return $(this).attr('data-score');
+    },
+    path: '/assets/'
+});
+
+$('#rating-form').raty({
+    path: '/assets/',
+    scoreName: 'feedback[rating]'
+});
+});
 
 /* FUNCTIONS FOR SERVER RESPONSES */
 
@@ -623,5 +637,5 @@ $(document).ready(function() {
                 }
                 popOverCenterPosition("#second-reg-scale");
 	});
-    
+
 });

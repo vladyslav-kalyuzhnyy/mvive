@@ -1,18 +1,4 @@
 <div class="info-frame-feedbacks">
-  <script>
-    $('.review-rating').raty({
-      readOnly: true,
-      score: function() {
-        return $(this).attr('data-score');
-      },
-      path: '/assets/'
-    });
-
-    $('#rating-form').raty({
-      path: '/assets/',
-      scoreName: 'feedback[rating]'
-    });
-  </script>
   <% @user.feedbacks.each do |feedback| %>
       <% creator = User.find(feedback.creator_id)%>
       <div class="user-casting-comment">
