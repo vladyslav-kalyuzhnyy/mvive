@@ -3,7 +3,8 @@ SitemapGenerator::Sitemap.default_host = "http://www.mvive.net"
 
 SitemapGenerator::Sitemap.create do
 
-  add '/news', :changefreq => 'daily'
+  add '/news/', :changefreq => 'daily'
+  add '/news'
   add '/castings'
   add '/premium'
   add '/about'
