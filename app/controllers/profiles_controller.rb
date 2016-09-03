@@ -26,7 +26,7 @@ class ProfilesController < ApplicationController
       @photos = @user.photos
       @subscribes = @user.followed_users
       unless @user.feedbacks.count == 0
-      @rating = ((@user.feedbacks.where("rating = 5").count*5 + @user.feedbacks.where("rating = 4").count*4 + @user.feedbacks.where("rating = 3").count*3 + @user.feedbacks.where("rating = 2").count*2 +@user.feedbacks.where("rating = 1").count).to_f / @user.feedbacks.count).round(2)
+      @rating = ((@user.feedbacks.where("rating = 5").count*5 + @user.feedbacks.where("rating = 4").count*4 + @user.feedbacks.where("rating = 3").count*3 + @user.feedbacks.where("rating = 2").count*2 + @user.feedbacks.where("rating = 1").count).to_f / @user.feedbacks.count).round(2)
       else
          @rating = 0
       end
