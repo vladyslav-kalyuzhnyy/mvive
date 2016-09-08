@@ -603,18 +603,6 @@ $(window).ready(function() {
     });
 });
 
-var $container = $('#filter-container');
-
-$container.imagesLoaded( function(){
-    $container.isotope({
-        itemSelector : 'figure',
-        filter: '*',
-        resizable: false,
-        animationEngine: 'jquery'
-    });
-});
-
-
 /* FUNCTIONS FOR SERVER RESPONSES */
 
 
