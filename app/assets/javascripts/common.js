@@ -588,6 +588,8 @@ $(window).resize(function() {
     verticalAlignInBlock('.block-user', '#modeller-icon');
     verticalMenuPosition('.navigation');
 });
+
+
 $(window).ready(function() {
     $('.review-rating').raty({
         readOnly: true,
