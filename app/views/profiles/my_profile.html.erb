@@ -1,4 +1,4 @@
-<% content_for(:title, @user.name)%>
+<% content_for(:title)%>
 <%= render "profiles/photographer_profile" if current_user.type == "Photographer"%>
 <%= render "profiles/designer_profile" if current_user.type == "Designer"%> 
 <%= render "profiles/model_profile" if current_user.type == "Model"%> 
