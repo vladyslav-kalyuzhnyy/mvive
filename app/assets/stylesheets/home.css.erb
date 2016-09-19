@@ -1075,23 +1075,37 @@ span {
 }
 
 .portfolio {
-  max-width: 1170px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
 
-.portfolio .gallery a img {
-  float: left;
+.portfolio .gallery,
+.portfolio .gallery a{
+  font-size:0;
+}
+
+.portfolia .gallery a {
+  display: inline-block;
   width: 25%;
-  height: auto;
-  border: white 3px solid;
-  -webkit-transition: -webkit-transform .15s ease;
-  -moz-transition: -moz-transform .15s ease;
-  -o-transition: -o-transform .15s ease;
-  -ms-transition: -ms-transform .15s ease;
-  transition: transform .15s ease;
-  position: relative;
+  height: 200px;
+  overflow: hidden;
+  text-align: center;
+  font-size:0;
+  margin: 0;
+  border: none;
+}
+
+.portfolio .gallery a img {
+  min-width: 250px;
+  max-width: 300px;
+  min-height: 200px;
+  font-size: 0;
+  line-height:0;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
 }
 
 

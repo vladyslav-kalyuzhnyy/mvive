@@ -25,7 +25,7 @@ Devise.setup do |config|
 
   config.stretches = Rails.env.test? ? 1 : 10
 
-  config.allow_unconfirmed_access_for = 7.days
+  config.allow_unconfirmed_access_for = 0.days
 
   config.reconfirmable = true
 

@@ -28,7 +28,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         sign_up(resource_name, resource)
          respond_to do |format|
           format.json { render :json => {}, :status => :ok }
-          format.html { respond_with resource, after_sign_up_path_for(resource) } 
+          format.html { respond_with resource, after_sign_up_path_for(resource) }
         end
       else
         set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_flashing_format?
