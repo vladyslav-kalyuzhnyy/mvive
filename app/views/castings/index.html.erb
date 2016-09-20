@@ -52,7 +52,7 @@
           </div>
           <div class="casting-card-content">
             <p><%= c.task %></p>
-            <%= link_to content_tag(:button, "Посмотреть", class: "show-casting-single"), casting_path(c) %>
+            <%= link_to content_tag(:button, "Посмотреть", class: "show-casting-single"), casting_path(c), target: "_self" %>
           </div>
         </div>
     <% end %>

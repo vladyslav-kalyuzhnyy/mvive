@@ -1,5 +1,5 @@
 <div id="private-forms">
-  <%= render "forms/user_main_form" %>
+
 	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html:{multipart: true, method: :patch, class: "profile-settings-private" }) do |f| %>
       <label for="set-avatar">Аватар</label>
 		<div class="avatar-photo-pseudo-input">
@@ -19,6 +19,7 @@
 			<%= f.submit "Изменить" %>
 		</div>
 	<% end %>
+  <%= render "forms/user_main_form" %>
 	<h2 class="divider">Пароль</h2>
 	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html:{multipart: true, method: :patch, class: "profile-settings-private" }) do |p| %>
 		<div class="setter-line">
