@@ -4,11 +4,14 @@ SitemapGenerator::Sitemap.adapter = SitemapGenerator::WaveAdapter.new
 
 SitemapGenerator::Sitemap.create do
 
-  add '/premium'
-  add '/about'
+  add news_index_path, changefreq: 'always'
+  add castings_path, changefreq: 'always'
+  add premium_path
+  add about_path
+
 
   News.find_each do |news|
-    add news_path(news), :lastmod => news.created_at
+    add news_index_path(news), :lastmod => news.updated_at
   end
 
 end
