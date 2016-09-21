@@ -13,7 +13,7 @@ module ApplicationHelper
   end
 
   def full_title(page_title)
-    base_title = "M'Vive | Новости моды. Freelance для фотографов, моделей и модельеров"
+    base_title = "M'Vive | Новости моды 2016-2017 | Freelance для фотографов, моделей и модельеров"
     page_title.empty? ?  base_title : "#{page_title} - MVive"
   end
   
