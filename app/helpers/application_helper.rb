@@ -13,8 +13,13 @@ module ApplicationHelper
   end
 
   def full_title(page_title)
-    base_title = "M'Vive | Новости моды 2016-2017 | Freelance для фотографов, моделей и модельеров"
+    base_title = "MVive - Фриланс для фотографов, моделей и модельеров"
     page_title.empty? ?  base_title : "#{page_title} - MVive"
+  end
+
+  def full_description(page_description)
+    base_description = "Онлайн сервис для модельеров, фотографов и моделей. Быстро и легко ищите партнера для фотосессии."
+    page_description.empty? ?  base_description : "#{page_description}"
   end
   
 end
