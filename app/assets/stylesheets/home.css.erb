@@ -3131,7 +3131,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .big-img-news {
-  width: 940px;
+  max-width: 940px;
   position: relative;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -3143,8 +3143,21 @@ input:focus:-ms-input-placeholder {
   opacity: 0.2;
 }
 
+.sm-img-news {
+  max-width: 940px;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sm-img-news:hover {
+  opacity: 0.2;
+}
+
 .thumb {
-  width: 940px;
+  max-width: 940px;
   display: block;
   background: #efff69;
 }
