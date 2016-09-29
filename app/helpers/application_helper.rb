@@ -21,5 +21,10 @@ module ApplicationHelper
     base_description = "Онлайн сервис для модельеров, фотографов и моделей. Быстро и легко ищите партнера для фотосессии."
     page_description.empty? ?  base_description : "#{page_description}"
   end
+
+  def full_keywords(page_keywords)
+    base_keywords = "фотограф, модельер, модель, фриланс, кастинг"
+    page_keywords.empty? ? base_keywords : "#{page_keywords}"
+  end
   
 end
