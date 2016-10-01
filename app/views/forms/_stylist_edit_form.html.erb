@@ -1,0 +1,37 @@
+<%= render "forms/user_edit_form"%>
+<div id="for-work-form" style="display: none;">
+  <%=form_for @profile, :url => profile_path(@user) ,html:{class: "profile-settings-private"} do |p|%>
+      <%= p.label :work_place, "Место работы" %>
+      <div class="setter-line">
+        <%= p.text_field :work_place,  value: 'Нету'%>
+      </div>
+      <label for="work-experience">Опыт роботы</label>
+      <div class="setter-line">
+        <div class="select-plus-exp"></div>
+        <%=p.select :experience, [['Новичок', "Новичок"],
+                                  ['Меньше года', "Меньше года"],
+                                  ['Меньше 3 лет', "Меньше 3 лет"],
+                                  ['Меньше 5 лет', "Меньше 5 лет"],
+                                  ['Больше 5 лет', "Больше 5 лет"]],
+                    {}, :id => "work-experience"%>
+      </div>
+      <label>Cпециализация</label>
+      <div class="multiselect-plus"></div>
+      <div class="multiselect-list" data-max="5">
+        <div class="selected-items">
+          <span id="selected-skills-photo">Выберите направления</span>
+        </div>
+        <label><%= p.check_box :specialization, {:multiple => true}, "Визажист", nil %>Визажист</label>
+        <label><%= p.check_box :specialization, {:multiple => true}, "Парикмахер", nil %>Парикмахер</label>
+        <label><%= p.check_box :specialization, {:multiple => true}, "Боди-арт", nil %>Боди-арт</label>
+        <label><%= p.check_box :specialization, {:multiple => true}, "Имиджмейкер", nil %>Имиджмейкер</label>
+        <label><%= p.check_box :specialization, {:multiple => true}, "Гример", nil %>Гример</label>
+        <label><%= p.check_box :specialization, {:multiple => true}, "Декоратор", nil %>Декоратор</label>
+        <label><%= p.check_box :specialization, {:multiple => true}, "Аэромакияж", nil %>Аэромакияж</label>
+      </div>
+
+      <div class="setter-line setter-line-button">
+        <%= p.submit "Изменить" %>
+      </div>
+  <% end %>
+</div>

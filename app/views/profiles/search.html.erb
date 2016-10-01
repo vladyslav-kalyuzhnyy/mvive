@@ -20,6 +20,10 @@
 								<%= image_tag "modeller-icon.PNG"%>
 								<p>Модельер</p>
 							</div>
+              <div class="type-user-single" id="type-user-single-stylist">
+                <%= image_tag "cosmetics.png"%>
+                <p>Стилист</p>
+              </div>
 						</div>
 					</div>
 					<div class="property-user-search">
@@ -92,6 +96,45 @@
 								<input type="submit" value="Поиск">
 							</div>
 						<% end %>
+
+            <!-- search stylist -->
+            <%= form_tag search_path, :method => 'get', class: "property-user-block-search", id: "search-stylist" do%>
+                <%= text_field_tag :type, nil, class: "invisible-search", style: "display: none;"%>
+                <div class="setter-line search-line">
+                  <%= country_select nil, :country,  {include_blank:'Выберите страну',
+                                                      priority_countries: ["UA", "RU", "BY"]}%>
+                </div>
+                <div class="setter-line search-line">
+                  <%= text_field_tag :city, nil, placeholder: "Город"%>
+                </div>
+                <div class="setter-line search-line">
+                  <input type="text" placeholder="Макс. цена за услуги">
+                </div>
+                <div class="setter-line search-line">
+                  <%=select_tag :experience, options_for_select([['Новичок', "Новичок"],
+                                                                 ['Меньше года', "Меньше года"],
+                                                                 ['Меньше 3 лет', "Меньше 3 лет"],
+                                                                 ['Меньше 5 лет', "Меньше 5 лет"],
+                                                                 ['Больше 5 лет', "Больше 5 лет"]]),
+                                prompt: "Опыт работы"%>
+                </div>
+                <div class="setter-line search-line">
+                  <%=select_tag :specialization, options_for_select([['Визажист', "Визажист"],
+                                                                     ['Парикмахер', "Парикмахер"],
+                                                                     ['Боди-арт', "Боди-арт"],
+                                                                     ['Имиджмейкер', "Имиджмейкер"],
+                                                                     ['Гример', "Гример"],
+                                                                     ['Декоратор', "Декоратор"],
+                                                                     ['Аэромакияж', "Аэромакияж"]]),
+                                prompt: "Специализация"%>
+                </div>
+                <div class="setter-line search-line">
+                  <input type="text" placeholder="Мин. рейтинг">
+                </div>
+                <div class="setter-line search-line">
+                  <input type="submit" value="Поиск">
+                </div>
+            <% end %>
 						
 						<!-- search model -->
 						<%= form_tag search_path, :method => 'get', class: "property-user-block-search", id: "search-model" do%>

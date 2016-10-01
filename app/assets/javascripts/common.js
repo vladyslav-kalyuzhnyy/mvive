@@ -95,6 +95,7 @@ $(document).ready(function() {
     verticalAlignInBlock('.block-user', '#photo-icon');
     verticalAlignInBlock('.block-user', '#model-icon');
     verticalAlignInBlock('.block-user', '#modeller-icon');
+    verticalAlignInBlock('.block-user', '#cosmetics');
     verticalMenuPosition('.navigation');
 
     //
@@ -115,6 +116,7 @@ $(document).ready(function() {
         $('.content_anim1').addClass('animated fadeInUp');
         $('.content_anim2').addClass('animated fadeInUp');
         $('.content_anim3').addClass('animated fadeInUp');
+        $('.content_anim4').addClass('animated fadeInUp');
     });
 
     $('#log-block').click(function() {
@@ -182,6 +184,11 @@ $(document).ready(function() {
         type_of_user = "Designer";
         $('#invisible-input').val(type_of_user);
     });
+
+    $('#fourth-block-user').click(function() {
+        type_of_user = "Stylist";
+        $('#invisible-input').val(type_of_user);
+    });
     //search
 
     $('#type-user-single-model').click(function() {
@@ -196,6 +203,11 @@ $(document).ready(function() {
 
     $('#type-user-single-designer').click(function() {
         type_of_user_search = "Designer";
+        $('#invisible-search').val(type_of_user_search);
+    });
+
+    $('#type-user-single-stylist').click(function() {
+        type_of_user_search = "Stylist";
         $('#invisible-search').val(type_of_user_search);
     });
 
@@ -514,6 +526,14 @@ $(document).ready(function() {
         $('.property-user-block-search').hide();
         $('#search-designer').show();
     });
+
+    $('#type-user-single-stylist').click(function() {
+        type_of_user_search = "Stylist";
+        $('.invisible-search').val(type_of_user_search);
+        $('.property-user-block-search').hide();
+        $('#search-stylist').show();
+    });
+
     $('.property-user-block-search').submit(function(e) {
   		return $(this).find('select,input').map(function(i, e) {
     		return e.disabled = !$(e).val();
@@ -586,6 +606,7 @@ $(window).resize(function() {
     verticalAlignInBlock('.block-user', '#photo-icon');
     verticalAlignInBlock('.block-user', '#model-icon');
     verticalAlignInBlock('.block-user', '#modeller-icon');
+    verticalAlignInBlock('.block-user', '#cosmetics');
     verticalMenuPosition('.navigation');
 });
 

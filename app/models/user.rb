@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   has_one :model_profile, dependent: :destroy
   has_one :designer_profile, dependent: :destroy
   has_one :photographer_profile, dependent: :destroy
+  has_one :stylist_profile, dependent: :destroy
   has_many :photos, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :relationships, source: :followed
@@ -94,6 +95,8 @@ class User < ActiveRecord::Base
       model_profile
     when "Designer"
       designer_profile
+      when "Stylist"
+        stylist_profile
     end
   end
   
@@ -105,6 +108,8 @@ class User < ActiveRecord::Base
       "Модель"
     when "Designer"
       "Модельер"
+      when "Stylist"
+        "Стилист"
     end
   end
   

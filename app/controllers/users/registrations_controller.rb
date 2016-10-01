@@ -20,6 +20,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
           resource.create_photographer_profile!()
         when "Designer"
           resource.create_designer_profile!()
+      when "Stylist"
+        resource.create_stylist_profile!()
         end
     yield resource if block_given?
     if resource.persisted?

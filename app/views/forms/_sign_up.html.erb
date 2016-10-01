@@ -11,6 +11,11 @@
         <%= image_tag "modeller-icon.PNG", alt: "modeller-icon", id: "modeller-icon", onmousedown: "return false"%>
         <p>Модельер</p>
     </div>
+    <div class="block-user content_anim4" id="fourth-block-user">
+       <%= image_tag "cosmetics.png", alt: "cosmetics", id: "cosmetics", onmousedown: "return false"%>
+       <p>Стилист</p>
+    </div>
+
     <div class="close-button"></div>
 </div>
 	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html:{ id: "second-reg-scale", class: "reg-scale"}, remote: true, :format => :json) do |u| %>

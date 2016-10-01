@@ -48,6 +48,13 @@ body {
   animation-fill-mode: both;
 }
 
+.animated4 {
+  -webkit-animation-duration: 3.5s;
+  animation-duration: 3.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -183,7 +190,7 @@ body {
 
 .close-button {
   position: absolute;
-  background: url('plus.PNG') no-repeat;
+  background: url(<%= asset_path 'plus.PNG' %>);
   width: 10px;
   height: 10px;
   top: -15px;
@@ -212,7 +219,7 @@ body {
 #first-reg-scale {
   display: none;
   height: 206px;
-  width: 606px;
+  width: 806px;
   cursor: pointer;
 }
 
@@ -475,7 +482,8 @@ body {
 
 #photo-icon,
 #model-icon,
-#modeller-icon {
+#modeller-icon,
+#cosmetics {
   position: relative;
   width: 75px;
   height: 75px;
@@ -1633,7 +1641,7 @@ h2 {
 
 .type-user-block-search {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 25px;
 }
 
 .type-user-single {

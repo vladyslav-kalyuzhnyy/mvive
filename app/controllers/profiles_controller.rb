@@ -101,6 +101,10 @@ class ProfilesController < ApplicationController
              @users = @users.where("model_profiles.height <= 175 AND model_profiles.boobs <= 90 AND model_profiles.waist <= 60 AND model_profiles.hip <= 90")
            end
          end
+        when "Stylist"
+          @users = @users.joins(:stylist_profile)
+          @users = @users.where("stylist_profiles.experience LIKE ?", "%#{params[:experience]}%") unless params[:experience].blank?
+          @users = @users.where("stylist_profiles.specialization LIKE ?", "%#{params[:specialization]}%") unless params[:specialization].blank?
        when "Designer"
          @users = @users.joins(:designer_profile)
          @users = @users.where("designer_profiles.experience LIKE ?", "%#{params[:experience]}%") unless params[:experience].blank?
@@ -117,7 +121,9 @@ class ProfilesController < ApplicationController
        end
     end
   end
+
   private
+
     def photographer_params
       params.require(:photographer_profile).permit(:experience, :p_model, :camera,
                                                    :work_place, {:specialization => []}, {:license => []}) 
@@ -132,6 +138,10 @@ class ProfilesController < ApplicationController
                                             :face, :eyes, :boobs, :waist, :hip, :height, :mass, :clothes,
                                            {:specialization => []}, {:events => []}, {:license => []})
     end
+
+    def stylist_params
+      params.require(:stylist_profile).permit(:work_place, :experience, :specialization, {:specialization => []})
+    end
     
     def pParams
        case current_user.type
@@ -141,6 +151,8 @@ class ProfilesController < ApplicationController
          designer_params
        when "Photographer"
          photographer_params
+       when "Stylist"
+         stylist_params
        end
     end
   

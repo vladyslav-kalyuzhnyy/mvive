@@ -27,6 +27,9 @@
 		<%if current_user.type == "Photographer"%>
 			<%= render 'forms/photographer_edit_form' %>
 		<%end%>
+    <%if current_user.type == "Stylist"%>
+        <%= render 'forms/stylist_edit_form' %>
+    <%end%>
 	</div>
 </div>
 <%=render "shared/footer" %>
