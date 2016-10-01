@@ -49,7 +49,7 @@ class ProfilesController < ApplicationController
   end
   
   def destroy
-    
+
   end
 
   def upvote
