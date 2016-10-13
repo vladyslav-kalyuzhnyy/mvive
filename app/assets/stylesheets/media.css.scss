@@ -7,7 +7,7 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-       
+
 }
 
 /* Small Devices, Tablets */
@@ -28,7 +28,7 @@
     display: block;
     text-align: center;
   }
-    .block .must-show {
+  .block .must-show {
     display: none;
   }
 
@@ -45,7 +45,7 @@
   }
 
   .active-profile-menu-link {
-      border-bottom-width: 5px;
+    border-bottom-width: 5px;
   }
 
   .name-profile {
@@ -67,18 +67,88 @@
   .profile-settings-icon {
     margin: 7px 0 0 20px;
   }
+  /* news adapt changes */
 
+  .news-photo {
+    width: 350px;
+    height:200px
+  }
+
+  .news-content {
+    width: 350px;
+  }
+
+  .news-container h1 span {
+    font-size: 22px;
+  }
+
+  .news-date-block {
+    width: 60px;
+    height: 60px;
+  }
+
+  .news-date-day {
+    font-size: 25px;
+  }
+
+  .news-date-month {
+    font-size: 11px;
+  }
 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-  
+
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-    
+
+  /* news adapt changes */
+
+  .news-photo {
+    width: 280px;
+    height:160px
+  }
+
+  .news-content {
+    width: 280px;
+  }
+
+  .news-container h1 span {
+    font-size: 18px;
+  }
+
+  .news-date-block {
+    width: 45px;
+    height: 45px;
+  }
+
+  .news-date-day {
+    font-size: 20px;
+  }
+
+  .news-date-month {
+    font-size: 9px;
+  }
+
+  .single-news-content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .news-content-img {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+  }
+
+  .nci-img {
+    width: 100%;
+  }
+
+
 }
 
 
@@ -96,21 +166,21 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-    
+
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-    .info-row {
-        margin-top: 60px;
-    }
+  .info-row {
+    margin-top: 60px;
+  }
 
-    .info-content p {
-        margin-bottom: 0;
-    }
+  .info-content p {
+    margin-bottom: 0;
+  }
 }
 
- /* Large Devices, Wide Screens */
+/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
 }
