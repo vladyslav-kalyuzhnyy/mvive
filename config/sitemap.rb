@@ -11,7 +11,7 @@ SitemapGenerator::Sitemap.create do
 
 
   News.find_each do |news|
-    add news_index_path(news), :lastmod => news.updated_at
+    add news_path(news), :lastmod => news.updated_at
   end
 
 end
