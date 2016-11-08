@@ -11,6 +11,27 @@
       <%= link_to content_tag(:span, '<i class="fa fa-plus"></i>'.html_safe + "Создать кастинг",  class: "button-casting-form"), new_casting_path %>
       <%= link_to 'Премиум кастинги от MVive'.html_safe, premium_path, class: "button-casting-form-premium", target: "_self" %>
     </div>
+    <h2>Фильтры</h2>
+    <%= form_tag castings_path, :method => 'get', id: "casting-search" do%>
+        <div>
+          <%= text_field_tag :city, nil, placeholder: "Город"%>
+        </div>
+        <div>
+          <%= text_field_tag :price, nil, placeholder: "Цена"%>
+        </div>
+        <div>
+          <%= text_field_tag :tag1, nil, placeholder: "Тег 1"%>
+        </div>
+        <div>
+          <%= text_field_tag :tag2, nil, placeholder: "Тег 2"%>
+        </div>
+        <div>
+          <%= text_field_tag :tag3, nil, placeholder: "Тег 3"%>
+        </div>
+        <div>
+          <input type="submit" value="Поиск">
+        </div>
+    <% end %>
     <% @castings.each do|c| %>
         <div class="casting-card-view">
           <div class="casting-card-title">

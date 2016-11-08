@@ -2,7 +2,13 @@ class CastingsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :premium]
 
   def index
-    @castings = Casting.all.paginate(page: params[:page], per_page: 5)
+    @castings = Casting.all.order('rating DESC')
+    @castings = @castings.where("city LIKE ?", "%#{params[:city]}%") unless params[:city].blank?
+    @castings = @castings.where("price LIKE ?", "%#{params[:price]}%") unless params[:price].blank?
+    @castings = @castings.where("tag1 LIKE ?", "%#{params[:tag1]}%") unless params[:tag1].blank?
+    @castings = @castings.where("tag2 LIKE ?", "%#{params[:tag2]}%") unless params[:tag2].blank?
+    @castings = @castings.where("tag3 LIKE ?", "%#{params[:tag3]}%") unless params[:tag3].blank?
+    @castings = @castings.paginate(page: params[:page], per_page: 5)
   end
 
   def new

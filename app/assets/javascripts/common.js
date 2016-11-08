@@ -539,6 +539,11 @@ $(document).ready(function() {
     		return e.disabled = !$(e).val();
   		});
 	});
+    $('#casting-search').submit(function(e) {
+        return $(this).find('select,input').map(function (i, e) {
+            return e.disabled = !$(e).val();
+        });
+    });
 
     /*show form add comment for casting*/
     verticalAlignInBlock('.settings-scope','.add-comment-casting');

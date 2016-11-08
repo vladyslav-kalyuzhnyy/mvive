@@ -54,3 +54,4 @@ gem 'puma'
 gem 'modernizr-rails'
 gem 'normalize-rails'
 gem 'sitemap_generator'
+gem 'whenever', :require => false
