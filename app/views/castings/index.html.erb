@@ -11,25 +11,21 @@
       <%= link_to content_tag(:span, '<i class="fa fa-plus"></i>'.html_safe + "Создать кастинг",  class: "button-casting-form"), new_casting_path %>
       <%= link_to 'Премиум кастинги от MVive'.html_safe, premium_path, class: "button-casting-form-premium", target: "_self" %>
     </div>
-    <h2>Фильтры</h2>
+
     <%= form_tag castings_path, :method => 'get', id: "casting-search" do%>
-        <div>
-          <%= text_field_tag :city, nil, placeholder: "Город"%>
-        </div>
-        <div>
-          <%= text_field_tag :price, nil, placeholder: "Цена"%>
-        </div>
-        <div>
-          <%= text_field_tag :tag1, nil, placeholder: "Тег 1"%>
-        </div>
-        <div>
-          <%= text_field_tag :tag2, nil, placeholder: "Тег 2"%>
-        </div>
-        <div>
-          <%= text_field_tag :tag3, nil, placeholder: "Тег 3"%>
-        </div>
-        <div>
-          <input type="submit" value="Поиск">
+        <div class="casting-filter-forms">
+          <h4>Фильтр</h4>
+          <p>Город, Цена, таг1, таг2, таг3</p>
+          <%= text_field_tag :city, nil, placeholder: 'test1', class: 'castings-filter-tag' %>
+
+          <%= text_field_tag :price, nil, class: 'castings-filter-tag' %>
+
+          <%= text_field_tag :tag1, nil, class: 'castings-filter-tag' %>
+
+          <%= text_field_tag :tag2, nil, class: 'castings-filter-tag' %>
+
+          <%= text_field_tag :tag3, nil, class: 'castings-filter-tag' %>
+          <input class="casting-btn-filter" type="submit" value="Поиск">
         </div>
     <% end %>
     <% @castings.each do|c| %>
