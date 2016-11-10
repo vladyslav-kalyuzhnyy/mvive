@@ -1,14 +1,13 @@
 <div class="header-nav">
   <ul class="navbar-ul">
-    <li class="navbar-li"><a class="navbar-a" href="http://mvive.net/news" target="_self">Все новости</a></li>
-    <li class="navbar-li"><a class="navbar-a" href="#" target="_self">Показы</a></li>
-    <li class="navbar-li"><a class="navbar-a" href="#" target="_self">Звезды</a></li>
-    <li class="navbar-li"><a class="navbar-a" href="#" target="_self">Культура</a></li>
-    <li class="navbar-li"><a class="navbar-a" href="#" target="_self">События</a></li>
-    <li class="navbar-li"><a class="navbar-a" href="#" target="_self">Гороскоп</a></li>
-    <li class="navbar-li"><a class="navbar-a" href="#" target="_self">Блог</a></li>
-    <li style="padding-left: 170px;" class="navbar-li"><a class="navbar-a" href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
-    <li class="navbar-li"><a class="navbar-a" href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
-    <li class="navbar-li"><a class="navbar-a" href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
+    <%= link_to '<li class="navbar-li"><p class="navbar-p">Все новости</p></li>'.html_safe, news_index_path, target: "_self" %>
+    <li class="navbar-li"><p class="navbar-p" href="#" target="_self">Показы</p></li>
+    <li class="navbar-li"><p class="navbar-p" href="#" target="_self">Звезды</p></li>
+    <li class="navbar-li"><p class="navbar-p" href="#" target="_self">События</p></li>
+    <%= link_to '<li class="navbar-li"><p class="navbar-p">Fashion & MakeUp</p></li>'.html_safe, fashionandmakeup_index_path, target: "_self" %>
+    <li class="navbar-li"><p class="navbar-p" href="#" target="_self">Блог</p></li>
+    <li style="padding-left: 170px;" class="navbar-li"><p class="navbar-p" href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></p></li>
+    <li class="navbar-li"><p class="navbar-p" href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></p></li>
+    <li class="navbar-li"><p class="navbar-p" href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></p></li>
   </ul>
 </div>

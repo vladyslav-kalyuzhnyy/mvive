@@ -29,6 +29,7 @@ class User < ActiveRecord::Base
   has_many :feedbacks
   has_many :rating
   has_many :news
+  has_many :fashionandmakeup
   mount_uploader :avatar, AvatarUploader
   mount_uploader :cover, CoverUploader
   acts_as_messageable
