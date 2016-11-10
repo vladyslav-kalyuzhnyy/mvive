@@ -8,7 +8,6 @@ SitemapGenerator::Sitemap.create do
   add castings_path
   add premium_path
   add about_path
-  add fashionandmakeup_index_path
 
 
   News.find_each do |news|
