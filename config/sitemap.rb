@@ -8,9 +8,10 @@ SitemapGenerator::Sitemap.create do
   add castings_path, changefreq: 'always'
   add premium_path
   add about_path
+  add fashionandmakeup
 
 
   News.find_each do |news|
-    add '/news/'+news.id.to_s, :lastmod => news.updated_at
+    add news_path, :lastmod => news.updated_at
   end
 end
