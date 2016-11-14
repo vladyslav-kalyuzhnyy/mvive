@@ -1,26 +1,32 @@
-<% content_for(:title, @news.name) %>
-<% content_for(:description, @news.body) %>
+<% content_for(:title, @fashionshow.name) %>
+<% content_for(:description, @fashionshow.body) %>
 <%= render "shared/menu" %>
 <div class="global-scope" xmlns="http://www.w3.org/1999/html">
   <div class="settings-scope no-padding-top">
-    <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @news.image %>">
+    <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @fashionshow.image %>">
       <div class="single-news-main-text">
-        <h1><%= @news.name %></h1>
+        <h1><%= @fashionshow.name %></h1>
       </div>
     </div>
-      <p class="single-news-content"><%= @news.body %></p>
+    <p class="single-news-content"><%= @fashionshow.body %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @news.image2 %>">
+      <img class="nci-img" src="<%= @fashionshow.image2 %>">
     </div>
-      <p class="single-news-content"><%= @news.body2 %></p>
+    <p class="single-news-content"><%= @fashionshow.body2 %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @news.image3 %>">
+      <img class="nci-img" src="<%= @fashionshow.image3 %>">
     </div>
-      <p class="single-news-content"><%= @news.body3 %></p>
+    <p class="single-news-content"><%= @fashionshow.body3 %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @news.image4 %>">
+      <img class="nci-img" src="<%= @fashionshow.image4 %>">
     </div>
-    <p class="single-news-content"><%= @news.body4 %></p>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @fashionshow.image5 %>">
+    </div>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @fashionshow.image6 %>">
+    </div>
+    <p class="single-news-content"><%= @fashionshow.body4 %></p>
 
     <h2>Смотрите также:</h2>
     <div class="look-more-block">
@@ -37,29 +43,28 @@
           <p class="lm-block-p">Dolce&Gabbana: сыновья звезд снялись в рекламе</p>
         </div>
       </a>
-
     </div>
 
-    <div class="google-ads-news-single">
+    <div class="google-ads-news-main">
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- mv-news-single -->
+      <!-- mv-news-main -->
       <ins class="adsbygoogle"
            style="display:inline-block;width:728px;height:90px"
            data-ad-client="ca-pub-3562964519569523"
-           data-ad-slot="8740594493"></ins>
+           data-ad-slot="1356928495"></ins>
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
 
     <h3 class="social-call">Мы в социальных сетях</h3>
-      <div class="social-footer">
-        <ul>
-          <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
-          <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
-        </ul>
-      </div>
+    <div class="social-footer">
+      <ul>
+        <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
+        <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </div>
 
   </div>
 </div>

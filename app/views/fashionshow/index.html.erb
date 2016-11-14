@@ -1,12 +1,12 @@
-<% content_for(:title, "Fashion и MakeUp места | Мода")%>
-<% content_for(:description, "Все последние и актуальные новости Моды и MakeUp в Мире. Список только лучших Luxury заведений.") %>
-<% content_for(:keywords, "новости моды, мода, makeup, luxury, fashion")%>
+<% content_for(:title, "Показы моды/Fashion Shows | Мода")%>
+<% content_for(:description, "Список последних показов Украины и со всего мира моды 2016/17.") %>
+<% content_for(:keywords, "новости моды, мода, показы, fashio show")%>
 
 <%= render "shared/menu" %>
 <div class="global-scope">
   <div class="settings-scope" style="padding-top: 0;">
     <%= render "shared/main_news_navbar" %>
-    <h2 style="padding-top: 60px;">Раздел Fashion & MakeUp в разработке</h2>
+    <h2 style="padding-top: 60px;">Показы</h2>
     <div class="google-ads-news-main">
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <!-- mv-news-main -->
@@ -20,24 +20,24 @@
     </div>
     <div class="news-feed">
 
-      <% @fashionandmakeup.each do |fashionandmakeup| %>
+      <% @fashionshow.each do |fashionshow| %>
           <div class="news-container">
 
-            <h1><span class="headline-word"><%= fashionandmakeup.name %></span></h1>
+            <h1><span class="headline-word"><%= fashionshow.name %></span></h1>
 
 
 
-            <a href=" <%= fashionandmakeup_path(fashionandmakeup) %>" target="_self">
-              <div class="news-photo" style="background-image: url(<%= fashionandmakeup.image %>);" >
+            <a href=" <%= fashionshow_path(fashionshow) %>" target="_self">
+              <div class="news-photo" style="background-image: url(<%= fashionshow.image %>);" >
                 <div class="news-date-block">
-                  <p class="news-date-day"><%= fashionandmakeup.address %></p>
-                  <p class="news-date-month"><%= fashionandmakeup.phone %></p>
+                  <p class="news-date-day"><%= fashionshow.news_day %></p>
+                  <p class="news-date-month"><%= fashionshow.news_month %></p>
                 </div>
               </div>
             </a>
 
             <div class="news-content">
-              <p><%= fashionandmakeup.short %></p>
+              <p><%= fashionshow.short %></p>
             </div>
 
           </div>
@@ -45,7 +45,7 @@
     </div>
 
     <div class="casting-next-back-btns">
-      <%= will_paginate @fashionandmakeup, previous_label: "Назад", next_label: "Вперед" %>
+      <%= will_paginate @fashionshow, previous_label: "Назад", next_label: "Вперед" %>
     </div>
 
     <div class="google-ads-news-main">
