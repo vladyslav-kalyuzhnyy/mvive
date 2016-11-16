@@ -55,3 +55,4 @@ gem 'modernizr-rails'
 gem 'normalize-rails'
 gem 'sitemap_generator'
 gem 'whenever', :require => false
+gem 'contact_us', '~> 1.0.1'

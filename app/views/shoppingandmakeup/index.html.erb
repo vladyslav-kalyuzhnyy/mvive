@@ -1,12 +1,12 @@
-<% content_for(:title, "Fashion и MakeUp места | Мода")%>
-<% content_for(:description, "Все последние и актуальные новости Моды и MakeUp в Мире. Список только лучших Luxury заведений.") %>
+<% content_for(:title, "Shopping и MakeUp. Каталог лучших магазинов одежды и салонов красоты в Украине | Мода")%>
+<% content_for(:description, "Все последние и актуальные новости Моды и MakeUp в Мире. Список только лучших Luxury заведений, магазинов одежды и салонов красоты в Украине.") %>
 <% content_for(:keywords, "новости моды, мода, makeup, luxury, fashion")%>
 
 <%= render "shared/menu" %>
 <div class="global-scope">
   <div class="settings-scope" style="padding-top: 0;">
     <%= render "shared/main_news_navbar" %>
-    <h2 style="padding-top: 60px;">Раздел Fashion & MakeUp в разработке</h2>
+    <h2 style="padding-top: 60px;">Shopping & MakeUp в Украине</h2>
     <div class="google-ads-news-main">
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <!-- mv-news-main -->
@@ -20,32 +20,33 @@
     </div>
     <div class="news-feed">
 
-      <% @fashionandmakeup.each do |fashionandmakeup| %>
+      <% @shoppingandmakeup.each do |shoppingandmakeup| %>
           <div class="news-container">
 
-            <h1><span class="headline-word"><%= fashionandmakeup.name %></span></h1>
+            <h1><span class="headline-word"><%= shoppingandmakeup.name %></span></h1>
 
 
 
-            <a href=" <%= fashionandmakeup_path(fashionandmakeup) %>" target="_self">
-              <div class="news-photo" style="background-image: url(<%= fashionandmakeup.image %>);" >
-                <div class="news-date-block">
-                  <p class="news-date-day"><%= fashionandmakeup.address %></p>
-                  <p class="news-date-month"><%= fashionandmakeup.phone %></p>
+            <a href=" <%= shoppingandmakeup_path(shoppingandmakeup) %>" target="_self">
+              <div class="news-photo-shoppingandmakeup" style="background-image: url(<%= shoppingandmakeup.image %>);" >
+                <div class="news-date-block-shoppingandmakeup">
+                  <p class="news-date-address-shoppingandmakeup"><%= shoppingandmakeup.address %></p>
+                  <p class="news-date-phone-shoppingandmakeup"><%= shoppingandmakeup.phone %></p>
                 </div>
               </div>
             </a>
 
             <div class="news-content">
-              <p><%= fashionandmakeup.short %></p>
+              <p><%= shoppingandmakeup.short %></p>
             </div>
-
           </div>
       <% end %>
     </div>
 
+    <%= link_to '<p class="add-new-callback">Как попасть в MVive Каталог? Напишите нам.</p>'.html_safe, contact_us_path, target: "_self" %>
+
     <div class="casting-next-back-btns">
-      <%= will_paginate @fashionandmakeup, previous_label: "Назад", next_label: "Вперед" %>
+      <%= will_paginate @shoppingandmakeup, previous_label: "Назад", next_label: "Вперед" %>
     </div>
 
     <div class="google-ads-news-main">
