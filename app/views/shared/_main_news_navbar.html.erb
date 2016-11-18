@@ -2,7 +2,7 @@
   <ul class="navbar-ul">
     <%= link_to '<li class="navbar-li"><p class="navbar-p">Все новости</p></li>'.html_safe, news_index_path, target: "_self" %>
     <%= link_to '<li class="navbar-li"><p class="navbar-p">Показы</p></li>'.html_safe, fashionshow_index_path, target: "_self" %>
-    <li class="navbar-li"><p class="navbar-p" href="#" target="_self">Звезды</p></li>
+    <%= link_to '<li class="navbar-li"><p class="navbar-p">Эксклюзив</p></li>'.html_safe, exclusive_index_path, target: "_self" %>
     <li class="navbar-li"><p class="navbar-p" href="#" target="_self">События</p></li>
     <%= link_to '<li class="navbar-li"><p class="navbar-p">Shopping & MakeUp</p></li>'.html_safe, shoppingandmakeup_index_path, target: "_self" %>
     <li class="navbar-li"><p class="navbar-p" href="#" target="_self">Блог</p></li>

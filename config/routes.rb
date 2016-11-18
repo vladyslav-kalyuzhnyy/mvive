@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :news
   resources :shoppingandmakeup
   resources :fashionshow
+  resources :exclusive
 
   get "my_profile", to: "profiles#my_profile"
   get "search", to: "profiles#search"
