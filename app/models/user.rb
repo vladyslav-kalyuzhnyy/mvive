@@ -31,6 +31,8 @@ class User < ActiveRecord::Base
   has_many :news
   has_many :fashionandmakeup
   has_many :fashionshow
+  has_many :shoppingandmakeup
+  has_many :exclusive
   mount_uploader :avatar, AvatarUploader
   mount_uploader :cover, CoverUploader
   acts_as_messageable
