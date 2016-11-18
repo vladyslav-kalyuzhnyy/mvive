@@ -1,6 +1,6 @@
-<% content_for(:title, "Показы моды/Fashion Shows | Мода")%>
-<% content_for(:description, "Список последних показов Украины и со всего мира моды 2016/17.") %>
-<% content_for(:keywords, "новости моды, мода, показы, fashio show")%>
+<% content_for(:title, "Эксклюзивные новости мира моды | Мода")%>
+<% content_for(:description, "Эксклюзивные новости моды от MVive. Интервью с модельерами, топовыми моделями и лучшими мастерами мейкапа и многое другое!") %>
+<% content_for(:keywords, "эксклюзивные новости моды, мода 2016")%>
 
 <%= render "shared/menu" %>
 <div class="global-scope">
@@ -30,8 +30,8 @@
             <a href=" <%= exclusive_path(exclusive) %>" target="_self">
               <div class="news-photo-shoppingandmakeup" style="background-image: url(<%= exclusive.image %>);" >
                 <div class="news-date-block-shoppingandmakeup">
-                  <p class="news-date-day-shoppingandmakeup"><%= exclusive.news_day %></p>
-                  <p class="news-date-month-shoppingandmakeup"><%= exclusive.news_month %></p>
+                  <p class="news-date-day-exclusive"><%= exclusive.news_day %></p>
+                  <p class="news-date-month-exclusive"><%= exclusive.news_month %></p>
                 </div>
               </div>
             </a>
