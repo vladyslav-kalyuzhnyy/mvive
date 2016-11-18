@@ -56,3 +56,5 @@ gem 'normalize-rails'
 gem 'sitemap_generator'
 gem 'whenever', :require => false
 gem 'contact_us', '~> 1.0.1'
+gem 'friendly_id', '~> 5.1.0'
+gem 'babosa'
