@@ -232,9 +232,7 @@ $(document).ready(function() {
 
     //
     // Межі робочої області
-    $('.settings-scope').css({
-        paddingLeft: $('.fixed-vertical-menu').width()
-    });
+
 
     $('.feed-profile').css({
         paddingLeft: $('.fixed-vertical-menu').width()
@@ -599,10 +597,6 @@ $(window).resize(function() {
     });
 
     */
-
-    $('.settings-scope').css({
-        paddingLeft: $('.fixed-vertical-menu').width()
-    });
 
     popOverCenterPosition('#first-reg-scale');
     popOverCenterPosition('#second-reg-scale');

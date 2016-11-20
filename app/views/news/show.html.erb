@@ -2,7 +2,7 @@
 <% content_for(:description, @news.body) %>
 <%= render "shared/menu" %>
 <div class="global-scope" xmlns="http://www.w3.org/1999/html">
-  <div class="settings-scope no-padding-top">
+  <div class="settings-scope">
     <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @news.image %>">
       <div class="single-news-main-text">
         <h1><%= @news.name %></h1>

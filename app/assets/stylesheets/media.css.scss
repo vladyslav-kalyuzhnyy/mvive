@@ -7,11 +7,18 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+  .info-row {
+    margin-top: 60px;
+  }
 
+  .info-content p {
+    margin-bottom: 0;
+  }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+
   .block p {
     display: none;
   }
@@ -38,6 +45,10 @@
 
   .gloabal-scope {
     width: 100%;
+  }
+
+  .settings-scope {
+    padding-left: 0;
   }
 
   .cover-menu-center div p{
@@ -71,7 +82,7 @@
 
   .news-photo {
     width: 350px;
-    height:200px
+    height: 200px;
   }
 
   .news-content {
@@ -95,10 +106,47 @@
     font-size: 11px;
   }
 
+  .google-ads-news-single {
+    display: none;
+  }
+
+  .footer {
+    padding: 0;
+  }
+
+  .look-more-block {
+    padding: 0;
+    text-align: center;
+  }
+
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+  .look-more-block {
+    width: 100%;
+  }
+
+  .lm-block-single {
+    width: 360px;
+  }
+
+  .lm-block-img {
+    width: 360px;
+  }
+
+  .single-news-content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .google-ads-news-single {
+    display: none;
+  }
 
 }
 
@@ -109,7 +157,7 @@
 
   .news-photo {
     width: 280px;
-    height:160px
+    height: 160px;
   }
 
   .news-content {
@@ -148,39 +196,20 @@
     width: 100%;
   }
 
-
-}
-
-
-/*==========  Mobile First Method  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
-
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-  .info-row {
-    margin-top: 60px;
+  .fixed-vertical-menu {
+    display: none;
   }
 
-  .info-content p {
-    margin-bottom: 0;
+  .look-more-block {
+    width: 100%;
   }
-}
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+  .lm-block-single {
+    width: 320px;
+  }
+
+  .lm-block-img {
+    width: 320px;
+  }
 
 }
