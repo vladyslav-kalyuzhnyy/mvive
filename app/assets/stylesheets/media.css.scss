@@ -193,6 +193,11 @@
     width: 360px;
   }
 
+  .single-news-main-text h1 {
+    font-size: 30px;
+    padding-top: 80px;
+  }
+
 }
 
 /* Custom, iPhone Retina */
@@ -211,6 +216,11 @@
 
   .news-container h1 span {
     font-size: 18px;
+  }
+
+  .single-news-main-text h1 {
+    font-size: 27px;
+    padding-top: 105px;
   }
 
   .news-date-block {
