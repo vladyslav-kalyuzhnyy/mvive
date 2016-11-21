@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161118161531) do
+ActiveRecord::Schema.define(version: 20161121084128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,7 +77,10 @@ ActiveRecord::Schema.define(version: 20161118161531) do
     t.string   "image9"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
+
+  add_index "exclusives", ["slug"], name: "index_exclusives_on_slug", unique: true, using: :btree
 
   create_table "fashionandmakeups", force: :cascade do |t|
     t.integer  "user_id"

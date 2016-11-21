@@ -6,7 +6,7 @@ class ExclusiveController < ApplicationController
   end
 
   def show
-    @exclusive = Exclusive.find(params[:id])
+    @exclusive = Exclusive.friendly.find(params[:id])
   end
 
   def create
