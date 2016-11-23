@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show, :upvote, :downvote]
+  before_action except: [:index, :show, :upvote, :downvote]
   
   def index
     @user = current_user

@@ -271,6 +271,59 @@
   }
 }
 
+@media only screen and (max-width : 420px) {
+
+  .news-container {
+    width: 420px;
+  }
+
+  .news-photo {
+    width: 420px;
+    height: 237px;
+  }
+
+  .news-content {
+    width: 420px;
+  }
+
+  .news-content p {
+    font-size: 13px;
+  }
+
+  .single-news-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .news-content-img {
+    width: 420px;
+    padding-left: 0;
+  }
+
+  .nci-img {
+    width: 420px;
+  }
+
+  .single-news-main-text h1 {
+    font-size: 34px;
+    padding-top: 100px;
+  }
+
+  /* PROFILE */
+
+  .name-profile {
+    font-size: 25px;
+  }
+
+  .profile-user-info-block {
+    top: 60px;
+  }
+
+  .profile-user-info {
+    padding-left: 0;
+  }
+}
+
 @media only screen and (max-width : 360px) {
 
   .news-block-up-lvl {
@@ -366,6 +419,20 @@
   .news-date-block-shoppingandmakeup {
     width: 45px;
     height: 45px;
+  }
+
+  /* PROFILE */
+
+  .name-profile {
+    font-size: 20px;
+  }
+
+  .profile-user-info-block {
+    top: 60px;
+  }
+
+  .profile-user-info {
+    padding-left: 0;
   }
 
 }
@@ -485,6 +552,20 @@
   .news-date-block-shoppingandmakeup {
     width: 45px;
     height: 45px;
+  }
+
+  /* PROFILE */
+
+  .name-profile {
+    font-size: 20px;
+  }
+
+  .profile-user-info-block {
+    top: 60px;
+  }
+
+  .profile-user-info {
+    padding-left: 0;
   }
 
 }
