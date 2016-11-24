@@ -210,6 +210,33 @@
     padding: 0;
   }
 
+  .news-photo-shoppingandmakeup {
+    width: 768px;
+    height: 400px;
+  }
+
+  .news-date-block-events {
+    width: 110px;
+    height: 90px;
+  }
+
+  .news-date-day-events {
+    font-size: 23px;
+    padding-top: 13px;
+  }
+
+  .news-date-month-events {
+    font-size: 12px;
+  }
+
+  .news-date-adress-events {
+    font-size: 12px;
+  }
+
+  .events-h2 {
+    padding-top: 120px;
+  }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -269,6 +296,34 @@
   .nci-img {
     width: 480px;
   }
+
+  .news-photo-shoppingandmakeup {
+    width: 480px;
+    height: 260px;
+  }
+
+  .news-date-block-events {
+    width: 110px;
+    height: 90px;
+  }
+
+  .news-date-day-events {
+    font-size: 23px;
+    padding-top: 13px;
+  }
+
+  .news-date-month-events {
+    font-size: 12px;
+  }
+
+  .news-date-adress-events {
+    font-size: 12px;
+  }
+
+  .events-h2 {
+    padding-top: 120px;
+  }
+
 }
 
 @media only screen and (max-width : 420px) {
@@ -307,6 +362,33 @@
   .single-news-main-text h1 {
     font-size: 34px;
     padding-top: 100px;
+  }
+
+  .news-date-block-events {
+    width: 110px;
+    height: 90px;
+  }
+
+  .news-date-day-events {
+    font-size: 23px;
+    padding-top: 13px;
+  }
+
+  .news-date-month-events {
+    font-size: 12px;
+  }
+
+  .news-date-adress-events {
+    font-size: 12px;
+  }
+
+  .news-photo-shoppingandmakeup {
+    width: 420px;
+    height: 230px;
+  }
+
+  .events-h2 {
+    padding-top: 120px;
   }
 
   /* PROFILE */
@@ -351,12 +433,20 @@
     width: 360px;
   }
 
+  .events-h2 {
+    padding-top: 120px;
+  }
+
   .news-photo {
     width: 360px;
     height: 200px;
   }
 
   .news-content {
+    width: 360px;
+  }
+
+  .news-container {
     width: 360px;
   }
 
@@ -413,7 +503,8 @@
   }
 
   .news-date-day-exclusive {
-    font-size: 20px;
+    font-size: 13px;
+    padding-top: 5px;
   }
 
   .news-date-month-exclusive {
@@ -421,8 +512,35 @@
   }
 
   .news-date-block-shoppingandmakeup {
-    width: 45px;
-    height: 45px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .news-date-address-shoppingandmakeup {
+    font-size: 13px;
+    padding-top: 5px;
+  }
+
+  .news-date-phone-shoppingandmakeup {
+    font-size: 9px;
+  }
+
+  .news-date-block-events {
+    width: 55px;
+    height: 55px;
+  }
+
+  .news-date-day-events {
+    font-size: 13px;
+    padding-top: 5px;
+  }
+
+  .news-date-month-events {
+    font-size: 9px;
+  }
+
+  .news-date-adress-events {
+    font-size: 9px;
   }
 
   /* PROFILE */
@@ -461,6 +579,10 @@
   .news-block-low-lvl {
     padding-top: 1180px;
     padding-bottom: 850px;
+  }
+
+  .news-container {
+    width: 320px;
   }
 
   .google-ads-news-main {

@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :shoppingandmakeup
   resources :fashionshow
   resources :exclusive
+  resources :event
 
   get "my_profile", to: "profiles#my_profile"
   get "search", to: "profiles#search"

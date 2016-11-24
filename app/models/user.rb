@@ -33,6 +33,7 @@ class User < ActiveRecord::Base
   has_many :fashionshow
   has_many :shoppingandmakeup
   has_many :exclusive
+  has_many :event
   mount_uploader :avatar, AvatarUploader
   mount_uploader :cover, CoverUploader
   acts_as_messageable

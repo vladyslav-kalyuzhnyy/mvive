@@ -1,0 +1,67 @@
+<% content_for(:title, @event.name) %>
+<% content_for(:description, @event.body) %>
+<%= render "shared/menu" %>
+<div class="global-scope" xmlns="http://www.w3.org/1999/html">
+  <div class="settings-scope">
+    <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @event.image %>">
+      <div class="single-news-main-text">
+        <h1><%= @event.name %></h1>
+      </div>
+    </div>
+    <p class="single-news-content"><%= @event.body %></p>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @event.image2 %>">
+    </div>
+    <p class="single-news-content"><%= @event.body2 %></p>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @event.image3 %>">
+    </div>
+    <p class="single-news-content"><%= @event.body3 %></p>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @event.image4 %>">
+    </div>
+    <p class="single-news-content"><%= @event.body4 %></p>
+
+    <h2>Смотрите также:</h2>
+    <div class="look-more-block">
+      <a href="http://www.mvive.net/news/49" class="lm-block-a" target="_self">
+        <div class="lm-block-single">
+          <img src="https://s3.amazonaws.com/mvive-news-images/images-news/19-okt-1.jpeg" class="lm-block-img">
+          <p class="lm-block-p">Покрова: как создавался этно-проект от Vogue.ua и другое</p>
+        </div>
+      </a>
+
+      <a href="http://www.mvive.net/news/51" class="lm-block-a" target="_self">
+        <div class="lm-block-single">
+          <img src="https://s3.amazonaws.com/mvive-news-images/images-news/24-okt-1.jpeg" class="lm-block-img">
+          <p class="lm-block-p">Dolce&Gabbana: сыновья звезд снялись в рекламе</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="google-ads-news-main">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- mv-news-main -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-3562964519569523"
+           data-ad-slot="1356928495"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <h3 class="social-call">Мы в социальных сетях</h3>
+    <div class="social-footer">
+      <ul>
+        <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
+        <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<%= render 'shared/footer' %>
+<!-- Share Buttons -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57ce7fb5ff12a99b"></script>
