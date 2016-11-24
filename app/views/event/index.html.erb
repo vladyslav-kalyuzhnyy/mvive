@@ -1,6 +1,6 @@
-<% content_for(:title, "Эксклюзивные новости мира моды | Мода")%>
-<% content_for(:description, "Эксклюзивные новости моды от MVive. Интервью с модельерами, топовыми моделями и лучшими мастерами мейкапа и многое другое!") %>
-<% content_for(:keywords, "эксклюзивные новости моды, мода 2016")%>
+<% content_for(:title, "Афиша модных событий Украины 2016-2017 | Мода")%>
+<% content_for(:description, "Список всех событий моды в Украине. Модные показы, мейкап события и многое другое !") %>
+<% content_for(:keywords, "афиша моды, афиша украина, события моды, мода 2016")%>
 
 <%= render "shared/menu" %>
 <div class="global-scope">
@@ -44,6 +44,8 @@
           </div>
       <% end %>
     </div>
+
+    <%= link_to '<p class="add-new-callback">Как попасть в MVive Афишу? Напишите нам письмо с темой "Афиша".</p>'.html_safe, contact_us_path, target: "_self" %>
 
     <div class="casting-next-back-btns">
       <%= will_paginate @event, previous_label: "Назад", next_label: "Вперед" %>
