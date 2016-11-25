@@ -9,6 +9,7 @@ SitemapGenerator::Sitemap.create do
   add premium_path
   add about_path
   add exclusive_index_path
+  add event_index_path
 
 
   News.find_each do |news|
@@ -17,5 +18,9 @@ SitemapGenerator::Sitemap.create do
 
   Exclusive.find_each do |exclusive|
     add '/exclusive/'+exclusive.id.to_s, :lastmod => exclusive.updated_at
+  end
+
+  Event.find_each do |event|
+    add '/event/'+event.id.to_s, :lastmod => event.updated_at
   end
 end
