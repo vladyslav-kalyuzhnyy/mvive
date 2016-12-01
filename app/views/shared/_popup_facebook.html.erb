@@ -1,0 +1,49 @@
+<style type="text/css">
+  #fb-back { display: none; background: rgba(0,0,0,0.8);   width: 100%; height: 100%; position: fixed; top: 0;   left: 0; z-index: 99999;}
+  #fb-exit { width: 100%; height: 100%; }
+  .fb-box-inner { width:300px; position: relative; display:block; padding: 20px 0px 0px; margin:0 auto; text-align:center; }
+  #fb-close { cursor: pointer; position: absolute; top: 5px; right: 5px; font-size: 18px; font-weight:700; color: #000; z-index: 99999; display:inline-block; line-height: 18px; height:18px;width: 18px; }
+  #fb-close:hover { color: #efff69; }
+  #fb-box { min-width: 340px; min-height: 360px; position: absolute; top: 50%; left: 50%; margin: -220px 0 0 -170px; -webkit-box-shadow: 0px 0px 16px #000; -moz-box-shadow: 0px 0px 16px #000; box-shadow: 0px 0px 16px #000; -webkit-border-radius: 8px;-moz-border-radius: 8px; border-radius: 8px;
+    background: #fff;
+    border-bottom: 40px solid #f0f0f0;
+  }
+  .fb-box-inner h3 { line-height: 1; margin:0 auto; text-transform:none;letter-spacing:none;
+    font-size: 17px!important;
+    color: #1f1e24 !important;
+  }
+  .fb-box-inner p { line-height: 1; margin:0 auto 20px;text-transform:none;letter-spacing:none;
+    font-size: 13px!important;
+    color:#333!important;
+  }
+  a.fb-link { position:relative;margin: 0 auto; display: block; text-align:center; color: #333;
+    bottom: -30px;
+  }
+  #fb-box h3,#fb-box p, a.fb-link { max-width:290px; padding:0; }
+</style>
+<div id='fb-back'>
+  <div id="fb-exit"> </div>
+  <div id='fb-box'>
+    <div class="fb-box-inner">
+      <div id="fb-close">X</div>
+      <h3>Следите за новостями моды</h3>
+      <p>Подписывайтесь на нашу страницу в <b>Facebook</b> !</p>
+      <iframe allowtransparency='true' frameborder='0' scrolling='no' src='//www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/mvivenet&width=290&height=275&colorscheme=light&show_faces=true&border_color=%23ffffff&stream=false&header=false'style='border: 0 none; overflow: hidden; width: 290px; height: 230px;text-align:center;margin:0 auto;'></iframe>
+      <a class="fb-link" href="https://mvive.net/contact-us">Связь с нами</a>
+    </div>
+  </div>
+</div>
+<script type='text/javascript'>
+  jQuery.cookie = function (key, value, options) { if (arguments.length > 1 && String(value) !== "[object Object]") { options = jQuery.extend({}, options); if (value === null || value === undefined) { options.expires = -1; }
+    if (typeof options.expires === 'number') { var days = options.expires,  t = options.expires = new Date();  t.setDate(t.getDate() + days); } value = String(value); return (document.cookie = [encodeURIComponent(key), '=', options.raw ? value : encodeURIComponent(value), options.expires ? '; expires=' + options.expires.toUTCString() : '', options.path ? '; path=' + options.path : '', options.domain ? '; domain=' + options.domain : '', options.secure ? '; secure' : ''].join('')); }
+    options = value || {}; var result, decode = options.raw ? function (s) { return s; } : decodeURIComponent; return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? decode(result[1]) : null; };
+  $(function ($) {
+    if ($.cookie('popup_fb') != 'yes') {
+      $('#fb-back').delay(400).fadeIn("slow");
+      $('#fb-close, #fb-exit').click(function () {
+        $('#fb-back').stop().fadeOut("slow");
+      });
+    }
+    $.cookie('popup_fb', 'yes', { path: '/', expires: 2 });
+  });
+</script>
