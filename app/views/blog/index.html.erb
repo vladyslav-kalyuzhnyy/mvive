@@ -1,0 +1,74 @@
+<% content_for(:title, "Блог проекта MVive / Fashion MVive Blog | Мода")%>
+<% content_for(:description, "Блог модного проекта MVive, где Вы узнаете больше о нас, где мы бываем и что делаем в мире высокой моды!") %>
+<% content_for(:keywords, "блог, проект, мвайв, мода 2016")%>
+
+<%= render "shared/menu" %>
+<div class="global-scope">
+  <div class="settings-scope" style="padding-top: 0;">
+    <%= render "shared/main_news_navbar" %>
+    <h2 style="padding-top: 60px;">Блог проекта M'Vive</h2>
+    <div class="google-ads-news-main">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- mv-news-main -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-3562964519569523"
+           data-ad-slot="1356928495"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <div class="news-feed">
+
+      <% @blog.each do |blog| %>
+          <div class="news-container">
+
+            <h1><span class="headline-word"><%= blog.name %></span></h1>
+
+
+
+            <a href=" <%= blog_path(blog) %>" target="_self">
+              <div class="news-photo-shoppingandmakeup" style="background-image: url(<%= blog.image %>);" >
+                <div class="news-date-block-shoppingandmakeup">
+                  <p class="news-date-day-exclusive"><%= blog.news_day %></p>
+                  <p class="news-date-month-exclusive"><%= blog.news_month %></p>
+                </div>
+              </div>
+            </a>
+
+            <div class="news-content">
+              <p><%= blog.short %></p>
+            </div>
+
+          </div>
+      <% end %>
+    </div>
+
+    <div class="casting-next-back-btns">
+      <%= will_paginate @blog, previous_label: "Назад", next_label: "Вперед" %>
+    </div>
+
+    <div class="google-ads-news-main">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- mv-news-main -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-3562964519569523"
+           data-ad-slot="1356928495"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <h3 class="social-call">Мы в социальных сетях</h3>
+    <div class="social-footer">
+      <ul>
+        <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
+        <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<%= render 'shared/footer' %>

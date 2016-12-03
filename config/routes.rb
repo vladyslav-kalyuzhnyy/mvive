@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :fashionshow
   resources :exclusive
   resources :event
+  resources :blog
 
   get "my_profile", to: "profiles#my_profile"
   get "search", to: "profiles#search"
