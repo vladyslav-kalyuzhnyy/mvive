@@ -6,7 +6,7 @@
 <div class="global-scope">
   <div class="settings-scope" style="padding-top: 0;">
     <%= render "shared/main_news_navbar" %>
-    <h2 style="padding-top: 60px;">Shopping & MakeUp в Украине</h2>
+    <h2 class="shoppingandmakeup-h2">Shopping & MakeUp в Украине</h2>
     <div class="google-ads-news-main">
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <!-- mv-news-main -->
@@ -21,7 +21,7 @@
     <div class="news-feed">
 
       <% @shoppingandmakeup.each do |shoppingandmakeup| %>
-          <div class="news-container">
+          <div class="news-container-shoppingandmakeup">
 
             <h1><span class="headline-word"><%= shoppingandmakeup.name %></span></h1>
 
@@ -36,9 +36,9 @@
               </div>
             </a>
 
-            <div class="news-content">
+            <!--<div class="news-content">
               <p><%= shoppingandmakeup.short %></p>
-            </div>
+            </div>-->
           </div>
       <% end %>
     </div>

@@ -2,7 +2,7 @@ class ShoppingandmakeupController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   def index
     @shoppingandmakeup = Shoppingandmakeup.all
-    @shoppingandmakeup = Shoppingandmakeup.order(created_at: :desc).paginate(page: params[:page], per_page: 11)
+    @shoppingandmakeup = Shoppingandmakeup.order(created_at: :desc).paginate(page: params[:page], per_page: 20)
   end
 
   def show
