@@ -6,7 +6,7 @@ class ShoppingandmakeupController < ApplicationController
   end
 
   def show
-    @shoppingandmakeup = Shoppingandmakeup.find(params[:id])
+    @shoppingandmakeup = Shoppingandmakeup.friendly.find(params[:id])
   end
 
   def create
