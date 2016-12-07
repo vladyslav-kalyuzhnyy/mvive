@@ -8,6 +8,11 @@
         <h1><%= @shoppingandmakeup.name %></h1>
       </div>
     </div>
+    <div class="shoppingandmakeup-info">
+      <p><b>Адрес: </b><%= @shoppingandmakeup.addressinside %></p>
+      <p><b>Открыт: </b><%= @shoppingandmakeup.working %></p>
+      <p><b>Телефон: </b><%= @shoppingandmakeup.phoneinside %></p>
+    </div>
     <p class="single-news-content"><%= @shoppingandmakeup.body %></p>
     <div class="news-content-img">
       <img class="nci-img" src="<%= @shoppingandmakeup.image2 %>">
