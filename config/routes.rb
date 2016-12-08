@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root 'static_pages#home'
+  root 'news#index'
 
   get 'robots' => 'public#robots', format: :text
   get '/auth/:provider/callback', to: 'sessions#create'
@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "about", to: "static_pages#about"
   get "advert", to: "static_pages#advert"
   get "partners", to: "static_pages#partners"
+  get "home", to: "static_pages#home"
   devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations", confirmations: "users/confirmations", passwords: "users/passwords", :omniauth_callbacks => "users/omniauth_callbacks"}
   devise_scope :user do
     get "login", to: "users/sessions#new"

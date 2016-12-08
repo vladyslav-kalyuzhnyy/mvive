@@ -2,7 +2,7 @@
    <%= image_tag "big-logo.PNG", alt: "menu-logo", class: "img-responsive center-block" %>
         <div class="navigation">
         	<% unless current_user  %>
-        	<%= link_to '<div class="navigation-item"><p>Вход / Регистрация</p></div>'.html_safe, root_path, target: "_self" %>
+        	<%= link_to '<div class="navigation-item"><p>Вход / Регистрация</p></div>'.html_safe, home_path, target: "_self" %>
         	<% end %>
         	
         	<% if current_user  %>
@@ -13,7 +13,7 @@
             <%= link_to '<div class="navigation-item"><p>Сообщения</p></div>'.html_safe, conversations_path, target: "_self" %>
             <% end %>
 
-            <%= link_to '<div class="navigation-item"><p>Новости</p></div>'.html_safe, news_index_path, target: "_self" %>
+            <%= link_to '<div class="navigation-item"><p>Новости</p></div>'.html_safe, root_path, target: "_self" %>
 
             <% if current_user %>
             <%= link_to '<div class="navigation-item"><p>Лента</p></div>'.html_safe, feed_path, target: "_self" %>
