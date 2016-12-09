@@ -14,6 +14,50 @@
   .info-content p {
     margin-bottom: 0;
   }
+
+  .news-block-low-lvl {
+    padding-top: 1420px;
+    padding-bottom: 480px;
+  }
+
+  .news-block-midl-lvl {
+    padding-top: 780px;
+  }
+
+  .sm-img-news {
+    width: 680px;
+  }
+
+  .google-ads-news-single {
+    display: none;
+  }
+
+  .google-ads-news-main {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .news-block-low-lvl {
+    padding-top: 1420px;
+    padding-bottom: 480px;
+  }
+
+  .news-block-midl-lvl {
+    padding-top: 400px;
+  }
+
+  .sm-img-news {
+    width: 680px;
+  }
+
+  .google-ads-news-single {
+    display: none;
+  }
+
+  .google-ads-news-main {
+    display: none;
+  }
 }
 
 @media only screen and (max-width : 800px) {
@@ -27,7 +71,7 @@
   }
 
   .news-block-low-lvl {
-    padding-top: 1180px;
+    padding-top: 1900px;
     padding-bottom: 850px;
   }
 
@@ -74,7 +118,7 @@
   }
 
   .news-block-low-lvl {
-    padding-top: 620px;
+    padding-top: 1500px;
     padding-bottom: 480px;
   }
 
@@ -215,6 +259,11 @@
     height: 430px;
   }
 
+  .news-photo-exclusive {
+    width: 768px;
+    height: 430px;
+  }
+
   .news-container-shoppingandmakeup {
     width: 768px;
     padding: 0;
@@ -278,7 +327,7 @@
   }
 
   .news-block-low-lvl {
-    padding-top: 1180px;
+    padding-top: 1820px;
     padding-bottom: 850px;
   }
 
@@ -317,6 +366,11 @@
   }
 
   .news-photo-shoppingandmakeup {
+    width: 480px;
+    height: 270px;
+  }
+
+  .news-photo-exclusive {
     width: 480px;
     height: 270px;
   }
@@ -396,6 +450,10 @@
     padding-right: 15px;
   }
 
+  .news-block-low-lvl {
+    padding-top: 1850px;
+  }
+
   .news-content-img {
     width: 420px;
     padding-left: 0;
@@ -433,6 +491,11 @@
     height: 240px;
   }
 
+  .news-photo-exclusive {
+    width: 420px;
+    height: 240px;
+  }
+
   .news-container-shoppingandmakeup {
     width: 420px;
     padding: 0;
@@ -449,6 +512,10 @@
 
   .news-date-block-shoppingandmakeup p {
     font-size: 9px;
+  }
+
+  .sm-img-news {
+    width: 420px;
   }
 
   .events-h2 {
@@ -494,7 +561,7 @@
   }
 
   .news-block-low-lvl {
-    padding-top: 1180px;
+    padding-top: 1750px;
     padding-bottom: 850px;
   }
 
@@ -573,6 +640,11 @@
   .news-photo-shoppingandmakeup {
     width: 360px;
     height: 210px;
+  }
+
+  .news-photo-exclusive {
+    width: 360px;
+    height: 120px;
   }
 
   .news-date-day-exclusive {
@@ -668,7 +740,7 @@
   }
 
   .news-block-low-lvl {
-    padding-top: 1180px;
+    padding-top: 1730px;
     padding-bottom: 850px;
   }
 
@@ -759,6 +831,11 @@
   .news-container-shoppingandmakeup {
     width: 320px;
     padding: 0;
+  }
+
+  .news-photo-exclusive {
+    width: 320px;
+    height: 180px;
   }
 
   .news-date-day-exclusive {
