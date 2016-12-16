@@ -1,12 +1,12 @@
-<% content_for(:title, "Показы моды/Fashion Shows | Мода")%>
-<% content_for(:description, "Список последних показов Украины и со всего мира моды 2016/17.") %>
-<% content_for(:keywords, "новости моды, мода, показы, fashio show")%>
+<% content_for(:title, "MVive TV | Мода")%>
+<% content_for(:description, "Эксклюзивные новости моды от MVive. Интервью с модельерами, топовыми моделями и лучшими мастерами мейкапа и многое другое!") %>
+<% content_for(:keywords, "эксклюзивные новости моды, мода 2016")%>
 
 <%= render "shared/menu" %>
 <div class="global-scope">
   <div class="settings-scope" style="padding-top: 0;">
     <%= render "shared/main_news_navbar" %>
-    <h2 style="padding-top: 60px;">Показы</h2>
+    <h2 class="mvivetv-h2">M'Vive TV</h2>
     <div class="google-ads-news-main">
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <!-- mv-news-main -->
@@ -20,24 +20,24 @@
     </div>
     <div class="news-feed">
 
-      <% @fashionshow.each do |fashionshow| %>
+      <% @mvivetv.each do |mvivetv| %>
           <div class="news-container">
 
-            <h1><span class="headline-word"><%= fashionshow.name %></span></h1>
+            <h1><span class="headline-word"><%= mvivetv.name %></span></h1>
 
 
 
-            <a href=" <%= fashionshow_path(fashionshow) %>" target="_self">
-              <div class="news-photo" style="background-image: url(<%= fashionshow.image %>);" >
-                <div class="news-date-block">
-                  <p class="news-date-day"><%= fashionshow.news_day %></p>
-                  <p class="news-date-month"><%= fashionshow.news_month %></p>
+            <a href=" <%= mvive_tv_path(mvivetv) %>" target="_self">
+              <div class="news-photo-mvivetv" style="background-image: url(<%= mvivetv.image %>);" >
+                <div class="news-date-block-mvivetv">
+                  <p class="news-date-day-mvivetv"><%= mvivetv.news_day %></p>
+                  <p class="news-date-month-mvivetv"><%= mvivetv.news_month %></p>
                 </div>
               </div>
             </a>
 
             <div class="news-content">
-              <p><%= fashionshow.short %></p>
+              <p><%= mvivetv.short %></p>
             </div>
 
           </div>
@@ -45,7 +45,7 @@
     </div>
 
     <div class="casting-next-back-btns">
-      <%= will_paginate @fashionshow, previous_label: "Назад", next_label: "Вперед" %>
+      <%= will_paginate @mvivetv, previous_label: "Назад", next_label: "Вперед" %>
     </div>
 
     <div class="google-ads-news-main">

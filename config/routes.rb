@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   resources :profiles
   resources :news
   resources :shoppingandmakeup
-  resources :fashionshow
+  resources :mvive_tv
   resources :exclusive
   resources :event
   resources :blog

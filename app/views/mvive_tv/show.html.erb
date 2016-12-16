@@ -1,32 +1,20 @@
-<% content_for(:title, @fashionshow.name) %>
-<% content_for(:description, @fashionshow.body) %>
+<% content_for(:title, @mvivetv.name) %>
+<% content_for(:description, @mvivetv.body) %>
 <%= render "shared/menu" %>
 <div class="global-scope" xmlns="http://www.w3.org/1999/html">
-  <div class="settings-scope no-padding-top">
-    <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @fashionshow.image %>">
+  <div class="settings-scope">
+    <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @mvivetv.image %>">
       <div class="single-news-main-text">
-        <h1><%= @fashionshow.name %></h1>
+        <h1><%= @mvivetv.name %></h1>
       </div>
     </div>
-    <p class="single-news-content"><%= @fashionshow.body %></p>
+    <p class="single-news-content"><%= @mvivetv.body %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @fashionshow.image2 %>">
+      <iframe style="padding-top: 20px" title="YouTube video player" class="youtube-player" type="text/html"
+              width="640" height="390" src="<%= @mvivetv.video %>"
+              frameborder="0" allowFullScreen></iframe>
     </div>
-    <p class="single-news-content"><%= @fashionshow.body2 %></p>
-    <div class="news-content-img">
-      <img class="nci-img" src="<%= @fashionshow.image3 %>">
-    </div>
-    <p class="single-news-content"><%= @fashionshow.body3 %></p>
-    <div class="news-content-img">
-      <img class="nci-img" src="<%= @fashionshow.image4 %>">
-    </div>
-    <div class="news-content-img">
-      <img class="nci-img" src="<%= @fashionshow.image5 %>">
-    </div>
-    <div class="news-content-img">
-      <img class="nci-img" src="<%= @fashionshow.image6 %>">
-    </div>
-    <p class="single-news-content"><%= @fashionshow.body4 %></p>
+    <p class="single-news-content"><%= @mvivetv.body2 %></p>
 
     <h2>Смотрите также:</h2>
     <div class="look-more-block">

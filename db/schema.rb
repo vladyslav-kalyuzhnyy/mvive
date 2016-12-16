@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161207214608) do
+ActiveRecord::Schema.define(version: 20161216104223) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -269,6 +269,23 @@ ActiveRecord::Schema.define(version: 20161207214608) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "mvive_tvs", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.text     "short"
+    t.string   "news_day"
+    t.string   "news_month"
+    t.text     "body"
+    t.text     "body2"
+    t.string   "image"
+    t.string   "video"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+  end
+
+  add_index "mvive_tvs", ["slug"], name: "index_mvive_tvs_on_slug", unique: true, using: :btree
 
   create_table "news", force: :cascade do |t|
     t.integer  "user_id"
