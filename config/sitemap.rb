@@ -10,6 +10,7 @@ SitemapGenerator::Sitemap.create do
   add about_path
   add exclusive_index_path
   add event_index_path
+  add mvive_tv_index_path
 
 
   News.find_each do |news|
@@ -22,5 +23,9 @@ SitemapGenerator::Sitemap.create do
 
   Event.find_each do |event|
     add '/event/'+event.id.to_s, :lastmod => event.updated_at
+  end
+
+  MviveTv.find_each do |mvive_tv|
+    add '/mvive_tv/'+mvive_tv.id.to_s, :lastmod => mvive_tv.updated_at
   end
 end
