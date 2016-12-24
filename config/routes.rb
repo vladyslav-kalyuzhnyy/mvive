@@ -22,7 +22,8 @@ Rails.application.routes.draw do
   resources :mvive_tv
   resources :exclusive
   resources :event
-  resources :blog
+  resources :peopleandparty
+
 
   get "my_profile", to: "profiles#my_profile"
   get "search", to: "profiles#search"

@@ -1,0 +1,64 @@
+<% content_for(:title, "Мода 2016/17. Новости моды 2016-2017 | Fashion News")%>
+<% content_for(:description, "Только актуальные новости в мире высокой моды: тренды, женская мода, выходы новых коллекций, интересные факты из жизни модельеров и другое !") %>
+<% content_for(:keywords, "мода 2016, женская мода, новости, новости моды, женская мода 2016, Мода, мода 2016 года, тренды, коллекции")%>
+
+<%= render "shared/menu" %>
+
+<div class="global-scope">
+  <div class="settings-scope" style="padding-top: 0;">
+    <%= render "shared/main_news_navbar" %>
+    <h2 style="padding-top: 60px;">Люди и Вечеринки</h2>
+    <div class="news-feed">
+
+      <% @peopleandparty.each do |peopleandparty| %>
+          <div class="news-container">
+
+            <h1><span class="headline-word"><%= peopleandparty.name %></span></h1>
+
+
+
+            <a href=" <%= peopleandparty_path(peopleandparty) %>" target="_self">
+              <div class="news-photo" style="background-image: url(<%= peopleandparty.image %>);" >
+                <div class="news-date-block">
+                  <p class="news-date-day"><%= peopleandparty.news_day %></p>
+                  <p class="news-date-month"><%= peopleandparty.news_month %></p>
+                </div>
+              </div>
+            </a>
+
+            <div class="news-content">
+              <p><%= peopleandparty.short %></p>
+            </div>
+
+          </div>
+      <% end %>
+      <div class="google-ads-news-main">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- mv-news-main -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3562964519569523"
+             data-ad-slot="1356928495"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+
+    <div class="casting-next-back-btns">
+      <%= will_paginate @peopleandparty, previous_label: "Назад", next_label: "Вперед" %>
+    </div>
+
+    <h3 class="social-call">Мы в социальных сетях</h3>
+    <div class="social-footer">
+      <ul>
+        <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
+        <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UC19mYJTuoNaIpdTFNPSL23A"><i class="fa fa-youtube"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<%= render 'shared/footer' %>
