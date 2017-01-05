@@ -8,10 +8,13 @@
 <head>
   <title><%= full_title(yield :title)%></title>
   <meta charset="utf-8">
-  <meta name="robots" content="index, follow">
-  <meta name="keywords" content="<%= full_keywords(yield :keywords)%>">
+  <meta name="robots" content="all">
   <meta name="description" content="<%= full_description(yield :description)%>">
+  <meta name="keywords" content="<%= full_keywords(yield :keywords)%>">
   <meta name="copyright" content="MVive">
+  <meta property="og:title" content="<%= full_og_title(yield :og_title)%>"/>
+  <meta property="og:description" content="<%= full_og_description(yield :og_description)%>"/>
+  <meta property="og:url" content="<%= full_og_url(yield :og_url)%>"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
@@ -24,7 +27,7 @@
 {
   "@context": "http://schema.org",
   "@type": "Organization",
-  "url": "http://www.mvive.net",
+  "url": "http://mvive.net",
   "contactPoint": [{
     "@type": "ContactPoint",
     "telephone": "+380636155252",

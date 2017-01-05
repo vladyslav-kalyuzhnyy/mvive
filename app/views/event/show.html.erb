@@ -1,5 +1,9 @@
 <% content_for(:title, @event.name) %>
 <% content_for(:description, @event.body) %>
+<% content_for(:og_title, @event.name)%>
+<% content_for(:og_description, @event.body)%>
+<% content_for(:og_image, @event.image)%>
+
 <%= render "shared/menu" %>
 <div class="global-scope" xmlns="http://www.w3.org/1999/html">
   <div class="settings-scope">

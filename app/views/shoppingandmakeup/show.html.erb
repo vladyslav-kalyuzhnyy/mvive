@@ -1,5 +1,9 @@
 <% content_for(:title, @shoppingandmakeup.name) %>
 <% content_for(:description, @shoppingandmakeup.body) %>
+<% content_for(:og_title, @shoppingandmakeup.name)%>
+<% content_for(:og_description, @shoppingandmakeup.body)%>
+<% content_for(:og_image, @shoppingandmakeup.image)%>
+
 <%= render "shared/menu" %>
 <div class="global-scope" xmlns="http://www.w3.org/1999/html">
   <div class="settings-scope no-padding-top">
