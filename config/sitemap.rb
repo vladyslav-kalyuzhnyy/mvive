@@ -1,7 +1,7 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "http://www.mvive.net"
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::WaveAdapter.new
-SitemapGenerator::Sitemap.create_index = true
+
 SitemapGenerator::Sitemap.create do
 
   add news_index_path, changefreq: 'always'
