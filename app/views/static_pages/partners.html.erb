@@ -1,6 +1,6 @@
 <% content_for(:title, 'Партнерство')%>
 
-<%= link_to '<p class="back-main-btn"><На главную</p>'.html_safe, news_index_path, target: "_self" %>
+<%= link_to '<p class="back-main-btn"><На главную</p>'.html_safe, root_path, target: "_self" %>
 
 <div style="text-align: center">
   <div class="about-us-block">
@@ -10,19 +10,17 @@
 <h3 style="text-align: center">Наши партнеры:</h3>
 <div class="main-partners-block">
   <div class="single-partners-block">
-    <%= image_tag "logo-gal-expo.jpg", alt: "Гал Експо", class: "single-partners-logo" %>
-    <p>Основным направлением деятельности Общества является организация и проведение выставок и презентаций. Кроме проведения собственных выставочных мероприятий, предприятие осуществляет проектирование и оформление экспозиций на выставках других организаторов. В 1999 году в числе первых пяти выставочных организаций страны ЧАО "Гал-ЭКСПО"® получило сертификат Выставочной федерации Украины. С 2000 года выставки ЧАО "Гал-ЭКСПО"® проходят под зарегистрированной торговой маркой "Галицкие экспозиции"®.</p>
-  </div>
-  <div class="single-partners-block">
     <%= image_tag "logo-wavetv.png", alt: "Гал Експо", class: "single-partners-logo" %>
+    <a href="http://wave.inf.ua">wave.inf.ua</a>
     <p>WAVE TV @ "Будь на хвилі разом з нами"</p>
   </div>
-  <%= link_to '<p class="add-new-callback">По вопросам партнерства свяжитесь с нами !</p>'.html_safe, contact_us_path, target: "_self" %>
+  <%= link_to '<p class="add-new-callback">---> По вопросам партнерства свяжитесь с нами по этой ссылке! <---</p>'.html_safe, contact_us_path, target: "_self" %>
   <div class="social-footer">
     <ul>
       <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
       <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
       <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://www.youtube.com/channel/UC19mYJTuoNaIpdTFNPSL23A"><i class="fa fa-youtube"></i></a></li>
     </ul>
   </div>
 </div>
