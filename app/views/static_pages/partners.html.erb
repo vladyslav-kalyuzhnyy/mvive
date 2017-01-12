@@ -1,20 +1,20 @@
 <% content_for(:title, 'Партнерство')%>
-
-<%= link_to '<p class="back-main-btn"><На главную</p>'.html_safe, root_path, target: "_self" %>
-
-<div style="text-align: center">
-  <div class="about-us-block">
-    <%= image_tag "big-logo.PNG", alt: "about_logo", class: "about-logo" %>
-  </div>
-</div>
-<h3 style="text-align: center">Наши партнеры:</h3>
+<%= render "shared/menu" %>
+<div class="global-scope">
+  <div class="settings-scope" style="padding-top: 0;">
+    <%= render "shared/main_news_navbar" %>
 <div class="main-partners-block">
+  <h2 style="padding-top: 70px; padding-bottom: 30px; margin: 0">Партнеры:</h2>
   <div class="single-partners-block">
-    <%= image_tag "logo-wavetv.png", alt: "Гал Експо", class: "single-partners-logo" %>
+    <%= image_tag "lfw-logo.jpeg", alt: "Lviv Fashion Week", class: "single-partners-logo" %>
+    <a href="http://lvivfashionweek.com">Lviv Fashion Week</a>
+  </div>
+  <div style="margin-top: 20px" class="single-partners-block">
+    <%= image_tag "logo-wavetv.png", alt: "WaveTV", class: "single-partners-logo" %>
     <a href="http://wave.inf.ua">wave.inf.ua</a>
     <p>WAVE TV @ "Будь на хвилі разом з нами"</p>
   </div>
-  <%= link_to '<p class="add-new-callback">---> По вопросам партнерства свяжитесь с нами по этой ссылке! <---</p>'.html_safe, contact_us_path, target: "_self" %>
+  <%= link_to '<p class="add-new-callback">---> Стать партнером <---</p>'.html_safe, contact_us_path, target: "_self" %>
   <div class="social-footer">
     <ul>
       <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
@@ -23,4 +23,7 @@
       <li><a href="https://www.youtube.com/channel/UC19mYJTuoNaIpdTFNPSL23A"><i class="fa fa-youtube"></i></a></li>
     </ul>
   </div>
+</div>
+</div>
+  <%= render 'shared/footer' %>
 </div>
