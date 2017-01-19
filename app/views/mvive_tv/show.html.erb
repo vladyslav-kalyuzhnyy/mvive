@@ -12,6 +12,10 @@
         <h1><%= @mvivetv.name %></h1>
       </div>
     </div>
+    <div class="back-btn">
+      <i style="padding-left: 30px" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+      <%= link_to "Вернуться", :back, class:"news-back-btn" %>
+    </div>
     <p class="single-news-content"><%= @mvivetv.body %></p>
     <div class="news-content-img">
       <iframe style="padding-top: 20px" title="YouTube video player" class="youtube-player" type="text/html"

@@ -12,6 +12,10 @@
         <h1><%= @exclusive.name %></h1>
       </div>
     </div>
+    <div class="back-btn">
+      <i style="padding-left: 30px" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+      <%= link_to "Вернуться", :back, class:"news-back-btn" %>
+    </div>
     <p class="single-news-content"><%= @exclusive.body %></p>
     <div class="news-content-img">
       <img class="nci-img" src="<%= @exclusive.image2 %>">

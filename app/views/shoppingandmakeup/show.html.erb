@@ -12,6 +12,10 @@
         <h1><%= @shoppingandmakeup.name %></h1>
       </div>
     </div>
+    <div class="back-btn">
+      <i style="padding-left: 30px" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+      <%= link_to "Вернуться", :back, class:"news-back-btn" %>
+    </div>
     <div class="shoppingandmakeup-info">
       <p><b>Адрес: </b><%= @shoppingandmakeup.addressinside %></p>
       <p><b>Открыт: </b><%= @shoppingandmakeup.working %></p>
