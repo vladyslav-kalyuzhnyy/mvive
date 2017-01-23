@@ -5,9 +5,11 @@
 <% content_for(:og_description, "Проект MVive Fashion TV. Видео всех актуальных событий моды в Украине, видео обзоры, шоппинг и другое интересное с мира высокой моды!")%>
 <% content_for(:og_url, "http://mvive.net/mvive_tv")%>
 
-<%= render "shared/menu" %>
 <div class="global-scope">
   <div class="settings-scope" style="padding-top: 0;">
+    <div class="up-logo-main">
+      <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
+    </div>
     <%= render "shared/main_news_navbar" %>
     <h2 class="mvivetv-h2">M'Vive TV</h2>
     <div class="google-ads-news-main">
@@ -61,16 +63,6 @@
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
-    </div>
-
-    <h3 class="social-call">Мы в социальных сетях</h3>
-    <div class="social-footer">
-      <ul>
-        <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
-        <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="https://www.youtube.com/channel/UC19mYJTuoNaIpdTFNPSL23A"><i class="fa fa-youtube"></i></a></li>
-      </ul>
     </div>
   </div>
 </div>

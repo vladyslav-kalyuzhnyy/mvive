@@ -1,7 +1,10 @@
 <% content_for(:title, 'Партнерство')%>
-<%= render "shared/menu" %>
+
 <div class="global-scope">
   <div class="settings-scope" style="padding-top: 0;">
+    <div class="up-logo-main">
+      <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
+    </div>
     <%= render "shared/main_news_navbar" %>
 <div class="main-partners-block">
   <h2 style="padding-top: 70px; padding-bottom: 30px; margin: 0">Партнеры:</h2>
@@ -20,14 +23,6 @@
     <p>WAVE TV @ "Будь на хвилі разом з нами"</p>
   </div>
   <%= link_to '<p class="add-new-callback">---> Стать партнером <---</p>'.html_safe, contact_us_path, target: "_self" %>
-  <div class="social-footer">
-    <ul>
-      <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
-      <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
-      <li><a href="https://www.youtube.com/channel/UC19mYJTuoNaIpdTFNPSL23A"><i class="fa fa-youtube"></i></a></li>
-    </ul>
-  </div>
 </div>
 </div>
   <%= render 'shared/footer' %>
