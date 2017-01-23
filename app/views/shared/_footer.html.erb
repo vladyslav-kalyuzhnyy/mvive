@@ -1,5 +1,9 @@
 <div class="footer">
-  <p class="social-call">Мы в социальных сетях</p>
+  <%= image_tag "big-logo.PNG", alt: "about_logo", class: "ft-logo" %>
+  <div class="ft-h1-seo">
+    <h1><span style="color: white; font-size: 12px">M'Vive</span> - Мода і Стиль 2017/18. Світське життя, тенденції, подіум, бренди, колекції</h1>
+  </div>
+  <p class="social-call">Ми в соціальних мережах</p>
   <div class="social-footer">
     <ul>
       <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
@@ -10,22 +14,22 @@
   </div>
   <div class="footer-items">
     <div class="footer-item">
-      <%= link_to '<p>О Проекте</p>'.html_safe, about_path, target: "_self" %>
+      <%= link_to '<p>Про проект</p>'.html_safe, about_path, target: "_self" %>
     </div>
     <div class="footer-item">
       <%= link_to '<p>Реклама</p>'.html_safe, advert_path, target: "_self" %>
     </div>
     <div class="footer-item">
-      <%= link_to '<p>Партнеры</p>'.html_safe, partners_path, target: "_self" %>
+      <%= link_to '<p>Партнери</p>'.html_safe, partners_path, target: "_self" %>
     </div>
     <div class="footer-item" style="cursor: pointer">
       <a href="http://mvive.net/sitemap.xml.gz"><p>Карта сайта</p></a>
     </div>
     <div class="footer-item">
-      <%= link_to '<p>Связь с нами</p>'.html_safe, contact_us_path, target: "_self" %>
+      <%= link_to '<p>Контакти</p>'.html_safe, contact_us_path, target: "_self" %>
     </div>
   </div>
-  <p class="all-rights-reserved-p">Все права защищены © 2016 M'Vive Fashion News</p>
+  <p class="all-rights-reserved-p">Всі права захищені © 2016 M'Vive Fashion News</p>
   <!--LiveInternet counter--><script type="text/javascript"><!--
 document.write("<a href='//www.liveinternet.ru/click' "+
     "target=_blank><img src='//counter.yadro.ru/hit?t44.6;r"+

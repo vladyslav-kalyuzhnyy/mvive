@@ -4,7 +4,6 @@
 <% content_for(:og_description, @event.body)%>
 <% content_for(:og_image, @event.image)%>
 
-<%= render "shared/menu" %>
 <div class="global-scope" xmlns="http://www.w3.org/1999/html">
   <div class="settings-scope">
     <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @event.image %>">
@@ -14,7 +13,7 @@
     </div>
     <div class="back-btn">
       <i style="padding-left: 30px" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
-      <%= link_to "Вернуться", :back, class:"news-back-btn" %>
+      <%= link_to "Вернутись", :back, class:"news-back-btn" %>
     </div>
     <p class="single-news-content"><%= @event.body %></p>
     <div class="news-content-img">
