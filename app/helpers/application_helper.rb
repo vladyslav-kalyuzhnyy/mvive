@@ -13,27 +13,27 @@ module ApplicationHelper
   end
 
   def full_title(page_title)
-    base_title = "Мода 2016/17. Новости моды 2016-2017 | Fashion News"
+    base_title = "Мода і Стиль 2017/18. Світське життя, тенденції, подіум, бренди, колекції"
     page_title.empty? ?  base_title : "#{page_title} - MVive"
   end
 
   def full_description(page_description)
-    base_description = "Только актуальные новости в мире высокой моды: тренды, женская мода, выходы новых коллекций, интересные факты из жизни модельеров и другое !"
+    base_description = "Актуальні новини в світі високої моди та світського життя в Україні: тренди, жіноча мода, виходи нових колекцій, цікаві факти з життя модельєрів"
     page_description.empty? ?  base_description : "#{page_description}"
   end
 
   def full_keywords(page_keywords)
-    base_keywords = "мода 2016, женская мода, новости, новости моды, женская мода 2016, Мода, мода 2016 года, тренды, коллекции"
+    base_keywords = "світське життя, мода, стиль, новини моди, львів"
     page_keywords.empty? ? base_keywords : "#{page_keywords}"
   end
 
   def full_og_title(page_og_title)
-    base_og_title = "Мода 2016/17. Новости моды 2016-2017 | M'Vive Fashion News"
+    base_og_title = "Мода і Стиль 2017/18. Світське життя, тенденції, подіум, бренди, колекції"
     page_og_title.empty? ?  base_og_title : "#{page_og_title} - M'Vive Fashion News"
   end
 
   def full_og_description(page_og_description)
-    base_og_description = "Только актуальные новости в мире высокой моды: тренды, женская мода, выходы новых коллекций, интересные факты из жизни модельеров и другое !"
+    base_og_description = "Актуальні новини в світі високої моди та світського життя в Україні: тренди, жіноча мода, виходи нових колекцій, цікаві факти з життя модельєрів"
     page_og_description.empty? ?  base_og_description : "#{page_og_description}"
   end
 
