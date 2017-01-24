@@ -4,7 +4,7 @@
 
 <%= render 'shared/menu' %>
 <div class="global-scope">
-  <div class="settings-scope">
+  <div style="padding-left: 230px" class="settings-scope">
     <h2>Онлайн кастинги</h2>
     <!--Link to form-->
     <div class="casting-btn-wrapper">
@@ -91,6 +91,6 @@
     <div class="casting-next-back-btns">
       <%= will_paginate @casting, previous_label: "Назад", next_label: "Вперед" %>
     </div>
+    <%=render "shared/footer" %>
   </div>
 </div>
-<%=render "shared/footer" %>

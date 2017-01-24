@@ -2,7 +2,7 @@
 
 <%= render 'shared/menu' %>
 		<div class="global-scope">
-			<div class="settings-scope">
+			<div style="padding-left: 230px" class="settings-scope">
 				<h2><%= "#{@user.name} #{@user.surname}" %></h2>
 				<div class="dialog-single-box">
 					<% @messages.each do |m| %>
@@ -30,5 +30,6 @@
 					<% end %>
 				</div>
 			</div>
+        <%=render "shared/footer" %>
 		</div>
     </div>
