@@ -5,7 +5,7 @@ xml.rss :version => "2.0" do
   xml.channel do
     xml.title "RSS Feed M'Vive Fashion News - Мода і Стиль 2017/18"
     xml.description "Актуальні новини в світі високої моди та світського життя в Україні: тренди, жіноча мода, виходи нових колекцій, цікаві факти з життя модельєрів"
-    xml.link "https://mvive.net"
+    xml.link "http://mvive.net"
     xml.language "ua"
 
     for news in @news
@@ -16,7 +16,7 @@ xml.rss :version => "2.0" do
           xml.name ""
         end
         xml.pubDate news.created_at.to_s(:rfc822)
-        xml.link "https://mvive.net" + news_path(news)
+        xml.link "http://mvive.net" + news_path(news)
         xml.guid news.id
 
         text = news.body
