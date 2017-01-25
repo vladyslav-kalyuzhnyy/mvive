@@ -2,7 +2,14 @@ class NewsController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   def index
     @news = News.all
-    @news = News.order(created_at: :desc).paginate(page: params[:page], per_page: 7)
+    @news = News.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+  end
+
+  def feed
+    @news = News.all
+    respond_to do |format|
+      format.rss { render :layout => false }
+    end
   end
 
   def show
