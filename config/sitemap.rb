@@ -4,7 +4,6 @@ SitemapGenerator::Sitemap.adapter = SitemapGenerator::WaveAdapter.new
 
 SitemapGenerator::Sitemap.create do
 
-  add news_index_path
   add castings_path
   add about_path
   add exclusive_index_path
