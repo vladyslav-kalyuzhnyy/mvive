@@ -20,7 +20,7 @@
 </div>
 	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html:{ id: "second-reg-scale", class: "reg-scale"}, remote: true, :format => :json) do |u| %>
 		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-		<%= link_to '<div class="input-line" id="facebook-log"><div class="facebook-block"><p>Регистрация через Facebook</p></div></div>'.html_safe, user_omniauth_authorize_path(:facebook)%>
+		<%= link_to '<div class="input-line" id="facebook-log"><div class="facebook-block"><p>Регистрация через Facebook</p></div></div>'.html_safe, user_facebook_omniauth_authorize_path(:facebook)%>
      <p class="" style="padding: 15px 0; font-size: 12px; text-align: center; color: darkgrey"> Стандартная форма регистрации </p>
      <p class="" style="font-size: 12px; text-align: center; color: darkgrey"> Используйте только символы: A-z 0-9 и - </p>
 		<%=u.hidden_field :type, id: "invisible-input"%>

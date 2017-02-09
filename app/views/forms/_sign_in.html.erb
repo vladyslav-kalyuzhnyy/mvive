@@ -1,7 +1,7 @@
 
 	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html:{ id: "login-scale", class: "reg-scale"}, remote: true, :format => :json) do |u| %>
    	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-        <%= link_to '<div class="input-line" id="facebook-log"><div class="facebook-block"><p>Войти с помощью Facebook</p></div></div>'.html_safe, user_omniauth_authorize_path(:facebook)%>
+        <%= link_to '<div class="input-line" id="facebook-log"><div class="facebook-block"><p>Войти с помощью Facebook</p></div></div>'.html_safe, user_facebook_omniauth_authorize_path(:facebook)%>
         <p class="content_anim10" style="padding: 15px 0; font-size: 12px; text-align: center; color: darkgrey"> Войти с помощью логина </p>
     	<div class="input-line content_anim9" id="login-line-log">
             <%=u.text_field :login, placeholder: "Логин...", required: true%>
