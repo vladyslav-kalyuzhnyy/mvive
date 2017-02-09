@@ -4,13 +4,17 @@
 <% content_for(:og_description, @shoppingandmakeup.body)%>
 <% content_for(:og_image, @shoppingandmakeup.image)%>
 
-<%= render "shared/menu" %>
 <div class="global-scope" xmlns="http://www.w3.org/1999/html">
   <div class="settings-scope no-padding-top">
+    <%= render "shared/main_news_navbar" %>
     <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @shoppingandmakeup.image %>">
       <div class="single-news-main-text">
         <h1><%= @shoppingandmakeup.name %></h1>
       </div>
+    </div>
+    <div class="back-btn">
+      <i style="padding-left: 30px" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+      <%= link_to "Вернуться", :back, class:"news-back-btn" %>
     </div>
     <div class="shoppingandmakeup-info">
       <p><b>Адрес: </b><%= @shoppingandmakeup.addressinside %></p>
@@ -37,7 +41,7 @@
       <img class="nci-img" src="<%= @shoppingandmakeup.image6 %>">
     </div>
 
-    <h2>Смотрите также:</h2>
+    <!-- <h2>Смотрите также:</h2>
     <div class="look-more-block">
       <a href="http://www.mvive.net/news/49" class="lm-block-a" target="_self">
         <div class="lm-block-single">
@@ -53,17 +57,7 @@
         </div>
       </a>
 
-    </div>
-
-    <h3 class="social-call">Мы в социальных сетях</h3>
-    <div class="social-footer">
-      <ul>
-        <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
-        <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="https://www.youtube.com/channel/UC19mYJTuoNaIpdTFNPSL23A"><i class="fa fa-youtube"></i></a></li>
-      </ul>
-    </div>
+    </div> -->
 
   </div>
 </div>

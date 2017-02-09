@@ -4,7 +4,7 @@
 
 <%= render 'shared/menu' %>
 <div class="global-scope">
-  <div class="settings-scope">
+  <div style="padding-left: 270px" class="settings-scope">
     <div class="overlay"></div>
     <%= form_for @comment, url: comments_path(@casting), method: :post, html: {class: "reg-scale add-comment-casting"} do |f|%>
         <div class="input-casting-line">

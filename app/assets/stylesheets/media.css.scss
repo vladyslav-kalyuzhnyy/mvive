@@ -39,12 +39,12 @@
 
 @media only screen and (max-width: 980px) {
   .news-block-low-lvl {
-    padding-top: 1420px;
-    padding-bottom: 480px;
+    padding-top: 500px;
+    padding-bottom: 100px;
   }
 
   .news-block-midl-lvl {
-    padding-top: 400px;
+    padding-top: 0;
   }
 
   .sm-img-news {
@@ -67,12 +67,12 @@
   }
 
   .news-block-midl-lvl {
-    padding-top: 770px;
+    padding-top: 400px;
   }
 
   .news-block-low-lvl {
-    padding-top: 1900px;
-    padding-bottom: 850px;
+    padding-top: 1000px;
+    padding-bottom: 530px;
   }
 
   .google-ads-news-main {
@@ -103,6 +103,14 @@
 
   .google-ads-news-single {
     display: none;
+  }
+
+  .up-logo-main {
+    width: 100%;
+  }
+
+  .up-logo {
+    width: 100%;
   }
 }
 
@@ -327,6 +335,18 @@
     padding-top: 120px;
   }
 
+  .up-logo-main {
+    width: 100%;
+  }
+
+  .up-logo {
+    width: 100%;
+  }
+
+  .admixer-mobile {
+    display: block;
+  }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -466,6 +486,18 @@
 
   .single-partners-logo {
     width: 480px;
+  }
+
+  .up-logo-main {
+    width: 100%;
+  }
+
+  .up-logo {
+    width: 100%;
+  }
+
+  .admixer-mobile {
+    display: block;
   }
 
 }
@@ -614,6 +646,19 @@
   .gallery {
     padding-left: 58px;
   }
+
+  .up-logo-main {
+    width: 100%;
+  }
+
+  .up-logo {
+    width: 100%;
+  }
+
+  .admixer-mobile {
+    display: block;
+  }
+
 }
 
 @media only screen and (max-width : 360px) {
@@ -628,7 +673,7 @@
 
   .news-block-low-lvl {
     padding-top: 1550px;
-    padding-bottom: 850px;
+    padding-bottom: 950px;
   }
 
   .google-ads-news-main {
@@ -810,6 +855,18 @@
 
   .gallery {
     padding-left: 30px;
+  }
+
+  .up-logo-main {
+    width: 100%;
+  }
+
+  .up-logo {
+    width: 100%;
+  }
+
+  .admixer-mobile {
+    display: block;
   }
 
 }
@@ -999,6 +1056,18 @@
 
   .gallery {
     padding-left: 10px;
+  }
+
+  .up-logo-main {
+    width: 100%;
+  }
+
+  .up-logo {
+    width: 100%;
+  }
+
+  .admixer-mobile {
+    display: block;
   }
 
 }

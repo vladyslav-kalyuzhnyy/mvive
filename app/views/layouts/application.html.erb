@@ -3,25 +3,28 @@
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="ru">
+<html lang="ua">
 <!--<![endif]-->
 <head>
-  <title><%= full_title(yield :title)%></title>
   <meta charset="utf-8">
-  <meta name="robots" content="all">
+  <meta name="robots" content="index,follow">
+  <title><%= full_title(yield :title)%></title>
   <meta name="description" content="<%= full_description(yield :description)%>">
   <meta name="keywords" content="<%= full_keywords(yield :keywords)%>">
-  <meta name="copyright" content="MVive">
+  <meta name="copyright" content="M'Vive Fashion News">
   <meta property="og:title" content="<%= full_og_title(yield :og_title)%>"/>
   <meta property="og:description" content="<%= full_og_description(yield :og_description)%>"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="Ea1aHQfPy2bpj8s27OYLIvLcrAHtNTmBWVXxao0_UqE" />
+  <meta name="yandex-verification" content="14e1e3e043cb969e" />
   
   <%= favicon_link_tag 'favicon.ico' %>
   <base target="_self">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="alternate" type="application/rss+xml" title="MVive RSS Feed" href="https://mvive.net/feed?format=rss">
   <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -34,6 +37,10 @@
   }]
 }
 </script>
+  <script type='text/javascript'> (function() { var w = window, d = document, protocol =/https/i.test(w.location.protocol) ? 'https:' : 'http:', aml = typeof admixerML !== 'undefined' ? admixerML : { }; aml.fn = aml.fn || []; aml.invPath = aml.invPath || (protocol + '//inv-nets.admixer.net/'); aml.cdnPath = aml.cdnPath || (protocol + '//cdn.admixer.net/'); if (!w.admixerML) { var lodash = document.createElement('script'); lodash.id = 'amlScript'; lodash.async = true; lodash.type = 'text/javascript'; lodash.src = aml.cdnPath + 'scripts3/loader2.js'; var node = d.getElementsByTagName('script')[0]; node.parentNode.insertBefore(lodash, node); w.admixerML = aml; } })(); </script>
+  <script type='text/javascript'> admixerML.fn.push(function() { admixerML.defineSlot({z: '53fb9a11-9de4-4b97-81da-e1268142a911', ph: 'admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736', i: 'inv-nets'}); admixerML.singleRequest(); }); </script>
+  <script type='text/javascript'> admixerML.fn.push(function() { admixerML.defineSlot({z: '5b401e91-1eb2-4f49-b908-1562326337d5', ph: 'admixer_5b401e911eb24f49b9081562326337d5_zone_14306_sect_4206_site_3736', i: 'inv-nets'}); admixerML.singleRequest(); }); </script>
+  <script type='text/javascript'> admixerML.fn.push(function() { admixerML.defineSlot({z: 'b8ba8392-13ef-46f4-bb92-b37158d0c2af', ph: 'admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736', i: 'inv-nets'}); admixerML.singleRequest(); }); </script>
 </head>
  <body>
 	
@@ -83,6 +90,11 @@
   ga('create', 'UA-80593854-1', 'auto');
   ga('send', 'pageview');
 
+</script>
+<script type="text/javascript">
+    $(function(){
+        $.scrollUp();
+    });
 </script>
   <!-- /Google Analytics counter -->
 </body>

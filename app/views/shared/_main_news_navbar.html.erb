@@ -1,14 +1,17 @@
 <div class="header-nav">
   <ul class="navbar-ul">
-    <%= link_to '<li class="navbar-li"><p class="navbar-p">Все новости</p></li>'.html_safe, root_path, target: "_self" %>
-    <%= link_to '<li class="navbar-li"><p class="navbar-p">Эксклюзив</p></li>'.html_safe, exclusive_index_path, target: "_self" %>
-    <%= link_to '<li class="navbar-li"><p class="navbar-p">События</p></li>'.html_safe, event_index_path, target: "_self" %>
-    <%= link_to '<li class="navbar-li"><p class="navbar-p">Шоппинг</p></li>'.html_safe, shoppingandmakeup_index_path, target: "_self" %>
-    <!-- <%= link_to '<li class="navbar-li"><p class="navbar-p">Люди & Вечеринки</p></li>'.html_safe, peopleandparty_index_path, target: "_self" %> -->
+    <%= link_to '<li style="padding-left: 160px" class="navbar-li-social"><p class="navbar-p"><i class="fa fa-home fa-1x"></i></p></li>'.html_safe, home_path, target: "_self" %>
+    <%= link_to '<li class="navbar-li"><p class="navbar-p">Всі новини</p></li>'.html_safe, root_path, target: "_self" %>
+    <%= link_to '<li class="navbar-li"><p class="navbar-p">Ексклюзив</p></li>'.html_safe, exclusive_index_path, target: "_self" %>
+    <%= link_to '<li class="navbar-li"><p class="navbar-p">Події</p></li>'.html_safe, event_index_path, target: "_self" %>
+    <%= link_to '<li class="navbar-li"><p class="navbar-p">Шопінг</p></li>'.html_safe, shoppingandmakeup_index_path, target: "_self" %>
+    <!-- <%= link_to '<li class="navbar-li"><p class="navbar-p">Світське життя</p></li>'.html_safe, peopleandparty_index_path, target: "_self" %> -->
+    <%= link_to '<li class="navbar-li"><p class="navbar-p">Партнери</p></li>'.html_safe, partners_path, target: "_self" %>
     <%= link_to '<li class="navbar-li"><p class="navbar-p">MVive TV</p></li>'.html_safe, mvive_tv_index_path, target: "_self" %>
-    <li style="padding-left: 170px;" class="navbar-li-social"><a href="https://vk.com/mvivenet"><p class="navbar-p"><i class="fa fa-vk"></i></p></a></li>
+    <li style="padding-left: 110px;" class="navbar-li-social"><a href="https://vk.com/mvivenet"><p class="navbar-p"><i class="fa fa-vk"></i></p></a></li>
     <li class="navbar-li-social"><a href="https://www.facebook.com/mvivenet"><p class="navbar-p"><i class="fa fa-facebook"></i></p></a></li>
     <li class="navbar-li-social"><a href="https://www.instagram.com/mvivenet"><p class="navbar-p"><i class="fa fa-instagram"></i></p></a></li>
     <li class="navbar-li-social"><a href="https://www.youtube.com/channel/UC19mYJTuoNaIpdTFNPSL23A"><p class="navbar-p"><i class="fa fa-youtube"></i></p></a></li>
+    <%= link_to '<li class="navbar-li-social"><p class="navbar-p"><i class="fa fa-rss"></i></p></li>'.html_safe, feed_path(:rss), target: "_blank"%>
   </ul>
 </div>

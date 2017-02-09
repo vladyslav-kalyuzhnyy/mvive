@@ -1136,13 +1136,13 @@ span {
 /* Settings.html */
 
 .settings-scope {
-  padding: 0 0 0 230px;
+
 }
 
 h2 {
   text-align: center;
   margin: 0;
-  font-family: Panton-LightCaps;
+  font-family: PlayfairDisplaySC-Bold;
   color: #1f1e24;
   font-size: 28px;
 }
@@ -2261,7 +2261,7 @@ input:focus:-ms-input-placeholder {
 .news-content p {
   text-align: left;
   color: #fff;
-  font-family: Panton-BlackCaps;
+  font-family: PlayfairDisplay-Regular;
   font-size: 15px;
   padding-left: 10px;
   border-left: solid 5px #efff69;
@@ -2270,6 +2270,7 @@ input:focus:-ms-input-placeholder {
 .single-news-photo {
   width: 100%;
   height: 450px;
+  padding-top: 49px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% auto;
@@ -2309,7 +2310,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .single-news-content {
-  margin-top: 60px;
+  margin-top: 40px;
   padding-left: 150px;
   padding-right: 150px;
   letter-spacing: 1px;
@@ -2353,7 +2354,7 @@ input:focus:-ms-input-placeholder {
   margin-right: 10px;
 }
 .social-footer ul li a i {
-  color: #1f1e24;
+  color: white;
 }
 
 
@@ -2364,10 +2365,10 @@ input:focus:-ms-input-placeholder {
 .social-call {
   text-transform: uppercase;
   text-align: center;
-  color: #1f1e24;
+  color: white;
   font-size: 18px;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   letter-spacing: 2px;
   font-family: Museo Sans Cyrl;
 }
@@ -2865,10 +2866,11 @@ input:focus:-ms-input-placeholder {
 /* FOOTER IN ALL PAGES */
 
 .footer {
-  margin-bottom: 20px;
-  padding: 20px 0 0 230px;
+  padding: 20px 0 20px 0;
   width: 100%;
+  background-color: #15141a;
   text-align: center;
+  border-top: 3px solid #efff69;
 }
 
 .footer-items {
@@ -2880,19 +2882,28 @@ input:focus:-ms-input-placeholder {
 }
 
 .footer-item p {
-  color: #000;
+  color: #ffffff;
   margin: 0;
   padding-bottom: 1px;
   font-size: 10px;
   font-family: Panton-LightCaps;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #000;
 }
 
 .footer-item p:hover {
-  border-color: #000;
+  border-color: #efff69;
 }
 .footer-item {
   background-color: transparent;
+}
+
+.ft-h1-seo {
+  width: 100%;
+}
+
+.ft-h1-seo h1{
+  color: white;
+  font-size: 11px;
 }
 
 /* END FOOTER */
@@ -2912,7 +2923,6 @@ input:focus:-ms-input-placeholder {
 .about-us {
   width: 100%;
   height: auto;
-  padding-top: 10px;
   text-align: center;
 }
 
@@ -3093,7 +3103,7 @@ input:focus:-ms-input-placeholder {
   margin-top: 30px;
   width: 728px;
   height: 90px;
-  padding-left: 165px;
+  padding-left: 280px;
   position: relative;
 }
 
@@ -3101,7 +3111,7 @@ input:focus:-ms-input-placeholder {
   margin: 30px 0 30px 0;
   width: 728px;
   height: 90px;
-  padding-left: 120px;
+  padding-left: 280px;
   position: relative;
 }
 
@@ -3109,7 +3119,7 @@ input:focus:-ms-input-placeholder {
   margin-top: 30px;
   width: 728px;
   height: 90px;
-  padding-left: 165px;
+  padding-left: 280px;
 }
 
 .google-ads-castings-main {
@@ -3373,7 +3383,7 @@ input:focus:-ms-input-placeholder {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #15141a;
 }
 
 .navbar-li {
@@ -3382,6 +3392,7 @@ input:focus:-ms-input-placeholder {
   cursor: pointer;
 }
 
+
 .navbar-li-social {
   float: left;
   text-align: center;
@@ -3389,6 +3400,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .navbar-p {
+  font-size: 15px;
   display: block;
   color: white;
   text-align: center;
@@ -3402,9 +3414,8 @@ input:focus:-ms-input-placeholder {
 }
 
 .header-nav {
-  position: fixed;
+  position: relative;
   float: left;
-  z-index: 99999;
   width: 100%;
 }
 
@@ -3474,7 +3485,7 @@ input:focus:-ms-input-placeholder {
   width: 400px;
   height: auto;
   display: inline-block;
-  margin: 10px 100px 10px 100px;
+  margin: 10px 50px 10px 50px;
 }
 
 .single-partners-logo {
@@ -3494,4 +3505,50 @@ input:focus:-ms-input-placeholder {
 .h2-a-main-news:hover {
   color: #efff69;
   text-decoration: underline;
+}
+
+.back-btn {
+  width: 100%;
+  height: 42px;
+  display: block;
+  padding-top: 10px;
+}
+
+.news-back-btn {
+  font-family: Panton-LightCaps;
+  font-weight: bold;
+  font-size: 21px;
+  color: black;
+}
+
+.news-back-btn:hover {
+  color: GrayText;
+}
+
+.up-logo-main {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  text-align: center;
+}
+
+.up-logo {
+  width: 600px;
+  padding: 40px 0 40px 0;
+}
+
+.ft-logo {
+  width: 100px;
+}
+
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #555;
+  color: #fff;
+}
+
+.admixer-mobile {
+  display: none;
 }

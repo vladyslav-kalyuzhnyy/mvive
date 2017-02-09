@@ -308,7 +308,7 @@ ActiveRecord::Schema.define(version: 20161223152630) do
 
   add_index "news", ["slug"], name: "index_news_on_slug", unique: true, using: :btree
 
-  create_table "peopleandparty", force: :cascade do |t|
+  create_table "peopleandparties", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "name"
     t.text     "short"
@@ -333,7 +333,7 @@ ActiveRecord::Schema.define(version: 20161223152630) do
     t.string   "slug"
   end
 
-  add_index "peopleandparty", ["slug"], name: "index_peopleandparties_on_slug", unique: true, using: :btree
+  add_index "peopleandparties", ["slug"], name: "index_peopleandparties_on_slug", unique: true, using: :btree
 
   create_table "photographer_profiles", force: :cascade do |t|
     t.integer  "user_id"

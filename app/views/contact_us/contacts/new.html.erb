@@ -1,14 +1,13 @@
-<% content_for(:title, 'Форма обратной связи')%>
+<% content_for(:title, "Зворотній зв'язок")%>
 
-<%= render "shared/menu" %>
 <div class="global-scope">
   <div class="settings-scope" style="padding-top: 0;">
-    <h2><%= t('.Связь с нами') %></h2>
+    <h2><%= t("Зворотній зв'язок") %></h2>
     <div class="contact-us">
     <%= form_for @contact, :url => contacts_path, :html => {:class => 'formtastic'} do |f| %>
       <% if ContactUs.require_name %>
         <div class='string required' id='contact_us_contact_name_input'>
-          <%= f.label :name, (t('.Ваше имя') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+          <%= f.label :name, (t(".Ваше ім'я") + content_tag(:abbr, '*', :class => 'required')).html_safe %>
           <%= f.text_field :name, class: 'callback-input' %>
           <% if f.object.errors[:name].present? %>
             <p class='inline-error'><%= f.object.errors[:name].join(' and ') %></p>
@@ -32,7 +31,7 @@
         </div>
       <% end %>
       <div class='text required' id='contact_us_contact_message_input'>
-        <%= f.label :message, (t('.Сообщение') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+        <%= f.label :message, (t(".Текст") + content_tag(:abbr, '*', :class => 'required')).html_safe %>
         <%= f.text_area :message, class: 'callback-msg-textarea' %>
         <% if f.object.errors[:message].present? %>
           <p class='inline-error'><%= f.object.errors[:message].join(' and ') %></p>

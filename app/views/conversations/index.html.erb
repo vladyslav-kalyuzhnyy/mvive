@@ -2,7 +2,7 @@
 
 <%= render 'shared/menu' %>
 		<div class="global-scope">
-			<div class="settings-scope">
+			<div style="padding-left: 230px" class="settings-scope">
 				<h2>Диалоги</h2>
 				<div class="dialogs-box">
 					<% @conversations.each do |c| %>
@@ -35,7 +35,6 @@
         <div class="casting-next-back-btns">
           <%= will_paginate @conversations, previous_label: "Назад", next_label: "Вперед" %>
         </div>
-
+        <%= render "shared/footer" %>
 			</div>
 		</div>
-<%= render "shared/footer" %>

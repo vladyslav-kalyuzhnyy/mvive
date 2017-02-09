@@ -41,7 +41,7 @@ module MVive
         :domain             => 'mail.google.com',
         :port               => 587,
         :user_name          => "info.mvive@gmail.com",
-        :password           => "Qqqwwweee123",
+        :password           => "mvive619infoQ7",
         :authentication     => 'login',
         :enable_starttls_auto => true
 

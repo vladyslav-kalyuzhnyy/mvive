@@ -1,28 +1,29 @@
 <% content_for(:title, 'Партнерство')%>
 
-<%= link_to '<p class="back-main-btn"><На главную</p>'.html_safe, news_index_path, target: "_self" %>
-
-<div style="text-align: center">
-  <div class="about-us-block">
-    <%= image_tag "big-logo.PNG", alt: "about_logo", class: "about-logo" %>
-  </div>
-</div>
-<h3 style="text-align: center">Наши партнеры:</h3>
+<div class="global-scope">
+  <div class="settings-scope" style="padding-top: 0;">
+    <div class="up-logo-main">
+      <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
+    </div>
+    <%= render "shared/main_news_navbar" %>
 <div class="main-partners-block">
+  <h2 style="padding-top: 70px; padding-bottom: 30px; margin: 0">Партнери:</h2>
   <div class="single-partners-block">
-    <%= image_tag "logo-gal-expo.jpg", alt: "Гал Експо", class: "single-partners-logo" %>
-    <p>Основным направлением деятельности Общества является организация и проведение выставок и презентаций. Кроме проведения собственных выставочных мероприятий, предприятие осуществляет проектирование и оформление экспозиций на выставках других организаторов. В 1999 году в числе первых пяти выставочных организаций страны ЧАО "Гал-ЭКСПО"® получило сертификат Выставочной федерации Украины. С 2000 года выставки ЧАО "Гал-ЭКСПО"® проходят под зарегистрированной торговой маркой "Галицкие экспозиции"®.</p>
+    <%= image_tag "lfw-logo.jpeg", alt: "Lviv Fashion Week", class: "single-partners-logo" %>
+    <a target="_blank" rel="nofollow" href="http://lvivfashionweek.com">Lviv Fashion Week</a>
   </div>
-  <div class="single-partners-block">
-    <%= image_tag "logo-wavetv.png", alt: "Гал Експо", class: "single-partners-logo" %>
+  <div style="margin-top: 20px" class="single-partners-block">
+    <%= image_tag "logo-wland.png", alt: "Студія тележурналістики та кіно Wonderland", class: "single-partners-logo" %>
+    <a target="_blank" rel="nofollow" href="http://wonder-land.top/">Wonder-Land</a>
+    <p>Студія тележурналістики та кіно "Wonderland"</p>
+  </div>
+  <div style="margin-top: 20px" class="single-partners-block">
+    <%= image_tag "logo-wavetv.png", alt: "WaveTV", class: "single-partners-logo" %>
+    <a target="_blank" rel="nofollow" href="http://wave.inf.ua">wave.inf.ua</a>
     <p>WAVE TV @ "Будь на хвилі разом з нами"</p>
   </div>
-  <%= link_to '<p class="add-new-callback">По вопросам партнерства свяжитесь с нами !</p>'.html_safe, contact_us_path, target: "_self" %>
-  <div class="social-footer">
-    <ul>
-      <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
-      <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
-    </ul>
-  </div>
+  <%= link_to '<p class="add-new-callback">---> Стать партнером <---</p>'.html_safe, contact_us_path, target: "_self" %>
+</div>
+</div>
+  <%= render 'shared/footer' %>
 </div>

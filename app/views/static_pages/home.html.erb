@@ -1,3 +1,7 @@
+<% content_for(:title, "Фріланс платформа. Фотографи, моделі, стилісти, модельєри")%>
+<% content_for(:description, "Унікальний Freelance-майданчик де у Вас є можливість легко знайти партнера для професійної зйомки, показати себе іншим і потрапити в світ високої моди") %>
+<% content_for(:keywords, "знайти модель, знайти фотографа, зьйомка, робота")%>
+
 <div class="container-fluid">
         <div class="row">
             <header class="top-index-area">
@@ -8,17 +12,17 @@
                     <div class="auth-menu">
                         <div class="block" id="log-block">
                             <i class="fa fa-sign-in"></i>
-                            <p>Вход</p>
+                            <p>Вхід</p>
                             <%= image_tag "plus.PNG", alt: "plus" %>
                         </div>
                         <div id="reg-block" class="block">
                             <i class="fa fa-chevron-up"></i>
-                            <p>Регистрация</p>
+                            <p>Реєстрація</p>
                             <%= image_tag "plus.PNG", alt: "plus" %>
                         </div>
                         <%= link_to '<div class="block" id="main-block">
-                                <p class="must-show-phone">Главная</p>
-                                <p class="must-show">Перейти на главную</p>
+                                <p class="must-show-phone">Головна</p>
+                                <p class="must-show">Перейти на головну</p>
                             </div>'.html_safe, root_path, target: "_self" %>
                             
                     </div>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://www.mvive.net/sitemap.xml.gz
+Sitemap: http://mvive.net/sitemap.xml.gz

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "advert", to: "static_pages#advert"
   get "partners", to: "static_pages#partners"
   get "home", to: "static_pages#home"
+  get "feed" => "news#feed", format: 'rss'
   devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations", confirmations: "users/confirmations", passwords: "users/passwords", :omniauth_callbacks => "users/omniauth_callbacks"}
   devise_scope :user do
     get "login", to: "users/sessions#new"

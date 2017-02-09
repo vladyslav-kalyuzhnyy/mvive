@@ -4,13 +4,17 @@
 <% content_for(:og_description, @mvivetv.body)%>
 <% content_for(:og_image, @mvivetv.image)%>
 
-<%= render "shared/menu" %>
 <div class="global-scope" xmlns="http://www.w3.org/1999/html">
   <div class="settings-scope">
+    <%= render "shared/main_news_navbar" %>
     <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @mvivetv.image %>">
       <div class="single-news-main-text">
         <h1><%= @mvivetv.name %></h1>
       </div>
+    </div>
+    <div class="back-btn">
+      <i style="padding-left: 30px" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+      <%= link_to "Вернуться", :back, class:"news-back-btn" %>
     </div>
     <p class="single-news-content"><%= @mvivetv.body %></p>
     <div class="news-content-img">
@@ -20,7 +24,7 @@
     </div>
     <p class="single-news-content"><%= @mvivetv.body2 %></p>
 
-    <h2>Смотрите также:</h2>
+    <!-- <h2>Смотрите также:</h2>
     <div class="look-more-block">
       <a href="http://www.mvive.net/news/49" class="lm-block-a" target="_self">
         <div class="lm-block-single">
@@ -35,7 +39,7 @@
           <p class="lm-block-p">Dolce&Gabbana: сыновья звезд снялись в рекламе</p>
         </div>
       </a>
-    </div>
+    </div> -->
 
     <div class="google-ads-news-main">
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -48,19 +52,9 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
-
-    <h3 class="social-call">Мы в социальных сетях</h3>
-    <div class="social-footer">
-      <ul>
-        <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
-        <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="https://www.youtube.com/channel/UC19mYJTuoNaIpdTFNPSL23A"><i class="fa fa-youtube"></i></a></li>
-      </ul>
-    </div>
-
   </div>
 </div>
 <%= render 'shared/footer' %>
 <!-- Share Buttons -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57ce7fb5ff12a99b"></script>
+<div id='admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'); }); </script>

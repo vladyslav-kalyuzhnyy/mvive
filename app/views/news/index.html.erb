@@ -1,13 +1,16 @@
-<% content_for(:title, "Мода 2016/17. Новости моды 2016-2017 | Fashion News")%>
-<% content_for(:description, "Только актуальные новости в мире высокой моды: тренды, женская мода, выходы новых коллекций, интересные факты из жизни модельеров и другое !") %>
-<% content_for(:keywords, "мода 2016, женская мода, новости, новости моды, женская мода 2016, Мода, мода 2016 года, тренды, коллекции")%>
+<% content_for(:title, "Стиль і Мода 2016-2017 | Світське життя, красота, бренди, колекції, тенденції")%>
+<% content_for(:description, "Актуальні і останні новини в світі високої моди та світського життя в Україні: тренди, жіноча мода, виходи нових колекцій, цікаві факти з життя модельєрів, модні тенденції, покази дизайнерів") %>
+<% content_for(:keywords, "світське життя, мода, стиль, новини моди, мода 2016, новини моди 2016")%>
 
-<%= render "shared/menu" %>
+
 <div class="global-scope">
   <div class="settings-scope" style="padding-top: 0;">
+    <div class="up-logo-main">
+      <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
+    </div>
     <%= render "shared/main_news_navbar" %>
     <%= render "shared/news_slider_navbar" %>
-    <h2 style="padding-top: 60px;">Последние обновления</h2>
+    <h2 style="padding-top: 60px;">Останні оновлення</h2>
     <div class="news-feed">
 
       <% @news.each do |news| %>
@@ -46,18 +49,10 @@
     <div class="casting-next-back-btns">
       <%= will_paginate @news, previous_label: "Назад", next_label: "Вперед" %>
     </div>
-
-    <h3 class="social-call">Мы в социальных сетях</h3>
-    <div class="social-footer">
-      <ul>
-        <li><a href="https://vk.com/mvivenet"><i class="fa fa-vk"></i></a></li>
-        <li><a href="https://www.facebook.com/mvivenet"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://www.instagram.com/mvivenet/"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="https://www.youtube.com/channel/UC19mYJTuoNaIpdTFNPSL23A"><i class="fa fa-youtube"></i></a></li>
-      </ul>
-    </div>
   </div>
   </div>
 </div>
 <%= render 'shared/footer' %>
 <%= render 'shared/popup_facebook' %>
+<div id='admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'); }); </script>
+<div class="admixer-mobile"><div id='admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'); }); </script></div>
