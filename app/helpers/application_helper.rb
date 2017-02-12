@@ -13,17 +13,17 @@ module ApplicationHelper
   end
 
   def full_title(page_title)
-    base_title = "Стиль і Мода 2016-2017 | Світське життя, красота, бренди, колекції, тенденції"
+    base_title = "Стиль і Мода 2017-2018. Світське життя, культура"
     page_title.empty? ?  base_title : "#{page_title} - MVive.net"
   end
 
   def full_description(page_description)
-    base_description = "Актуальні і останні новини в світі високої моди та світського життя в Україні: тренди, жіноча мода, виходи нових колекцій, цікаві факти з життя модельєрів, модні тенденції, покази дизайнерів"
+    base_description = "Актуальні і останні новини в світі високої моди та світського життя в Україні: тренди, жіноча мода, виходи нових колекцій, цікаві факти з життя модельєрів, модні тенденції, покази дизайнерів та культурні новини в Україні"
     page_description.empty? ?  base_description : "#{page_description}"
   end
 
   def full_keywords(page_keywords)
-    base_keywords = "світське життя, мода, стиль, новини моди, мода 2016, новини моди 2016"
+    base_keywords = "світське життя, мода, стиль, новини моди, мода 2017, культура"
     page_keywords.empty? ? base_keywords : "#{page_keywords}"
   end
 
