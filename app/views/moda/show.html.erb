@@ -1,8 +1,8 @@
-<% content_for(:title, @peopleandparty.name) %>
-<% content_for(:description, @peopleandparty.body) %>
-<% content_for(:og_title, @peopleandparty.name)%>
-<% content_for(:og_description, @peopleandparty.body)%>
-<% content_for(:og_image, @peopleandparty.image)%>
+<% content_for(:title, @moda.name) %>
+<% content_for(:description, @moda.body) %>
+<% content_for(:og_title, @moda.name)%>
+<% content_for(:og_description, @moda.body)%>
+<% content_for(:og_image, @moda.image)%>
 
 
 <div class="global-scope" xmlns="http://www.w3.org/1999/html">
@@ -11,28 +11,36 @@
       <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
     </div>
     <%= render "shared/main_news_navbar" %>
-    <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @peopleandparty.image %>">
+    <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @moda.image %>">
       <div class="single-news-main-text">
-        <h1><%= @peopleandparty.name %></h1>
+        <h1><%= @moda.name %></h1>
       </div>
     </div>
     <div class="back-btn">
       <i style="padding-left: 30px" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
       <%= link_to "Вернутись", :back, class:"news-back-btn" %>
     </div>
-    <p class="single-news-content"><%= @peopleandparty.body %></p>
+    <p class="single-news-content"><%= @moda.body %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @peopleandparty.image2 %>">
+      <img class="nci-img" src="<%= @moda.image2 %>">
     </div>
-    <p class="single-news-content"><%= @peopleandparty.body2 %></p>
+    <p class="single-news-content"><%= @moda.body2 %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @peopleandparty.image3 %>">
+      <img class="nci-img" src="<%= @moda.image3 %>">
     </div>
-    <p class="single-news-content"><%= @peopleandparty.body3 %></p>
+    <p class="single-news-content"><%= @moda.body3 %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @peopleandparty.image4 %>">
+      <img class="nci-img" src="<%= @moda.image4 %>">
     </div>
-    <p class="single-news-content"><%= @peopleandparty.body4 %></p>
+    <p class="single-news-content"><%= @moda.body4 %></p>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @moda.image5 %>">
+    </div>
+    <p class="single-news-content"><%= @moda.body5 %></p>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @moda.image6 %>">
+    </div>
+    <p class="single-news-content"><%= @moda.body6 %></p>
 
     <!-- <h2>Смотрите также:</h2>
     <div class="look-more-block">

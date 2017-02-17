@@ -1,12 +1,36 @@
 <div class="header-nav">
+
+  <!-- <ul class="navbar-ul">
+    <li class="navbar-li"><a href="#">Home</a></li>
+    <li class="navbar-li"><a href="#">About</a></li>
+    <li class="navbar-li">
+      <a href="#">Products</a>
+      <ul class="moda-dropdown">
+        <li class="navbar-li"><a href="#">Laptops</a></li>
+        <li class="navbar-li"><a href="#">Monitors</a></li>
+        <li class="navbar-li"><a href="#">Printers</a></li>
+      </ul>
+    </li>
+    <li class="navbar-li"><a href="#">Contact</a></li>
+  </ul> -->
+
   <ul class="navbar-ul">
     <%= link_to '<li style="padding-left: 160px" class="navbar-li-social"><p class="navbar-p"><i class="fa fa-home fa-1x"></i></p></li>'.html_safe, home_path, target: "_self" %>
     <%= link_to '<li class="navbar-li"><p class="navbar-p">Всі новини</p></li>'.html_safe, root_path, target: "_self" %>
-    <!-- <%= link_to '<li class="navbar-li"><p class="navbar-p">Ексклюзив</p></li>'.html_safe, exclusive_index_path, target: "_self" %> -->
-    <%= link_to '<li class="navbar-li"><p class="navbar-p">Культура</p></li>'.html_safe, event_index_path, target: "_self" %>
-    <%= link_to '<li class="navbar-li"><p class="navbar-p">Шопінг</p></li>'.html_safe, shoppingandmakeup_index_path, target: "_self" %>
-    <!-- <%= link_to '<li class="navbar-li"><p class="navbar-p">Світське життя</p></li>'.html_safe, peopleandparty_index_path, target: "_self" %> -->
-    <%= link_to '<li class="navbar-li"><p class="navbar-p">Партнери</p></li>'.html_safe, partners_path, target: "_self" %>
+    <%= link_to '<li class="navbar-li"><p class="navbar-p">Світське життя</p></li>'.html_safe, peopleandparty_index_path, target: "_self" %>
+    <li class="navbar-li">
+      <%= link_to '<p class="navbar-p">Мода</p>'.html_safe, moda_index_path %>
+      <ul class="moda-dropdown">
+        <%= link_to '<li><p>Жіноча мода</p></li>'.html_safe, woman_fashion_index_path %>
+        <%= link_to '<li><p>Чоловіча мода</p></li>'.html_safe, men_fashion_index_path %>
+        <%= link_to '<li><p>Покази</p></li>'.html_safe, fashionshow_index_path %>
+      </ul>
+    </li>
+
+    <!-- <%= link_to '<li class="navbar-li"><p class="navbar-p">Шопінг</p></li>'.html_safe, shoppingandmakeup_index_path, target: "_self" %> -->
+
+    <li class="navbar-li"><p class="navbar-p">Красота</p></li>
+
     <%= link_to '<li class="navbar-li"><p class="navbar-p">MVive TV</p></li>'.html_safe, mvive_tv_index_path, target: "_self" %>
     <li style="padding-left: 110px;" class="navbar-li-social"><a href="https://vk.com/mvivenet"><p class="navbar-p"><i class="fa fa-vk"></i></p></a></li>
     <li class="navbar-li-social"><a href="https://www.facebook.com/mvivenet"><p class="navbar-p"><i class="fa fa-facebook"></i></p></a></li>

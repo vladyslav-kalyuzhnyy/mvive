@@ -24,6 +24,10 @@ Rails.application.routes.draw do
   resources :exclusive
   resources :event
   resources :peopleandparty
+  resources :moda
+  resources :woman_fashion
+  resources :men_fashion
+  resources :fashionshow
 
 
   get "my_profile", to: "profiles#my_profile"

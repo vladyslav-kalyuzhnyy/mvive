@@ -3413,6 +3413,27 @@ input:focus:-ms-input-placeholder {
   background-color: #111;
 }
 
+.moda-dropdown{
+  min-width: 200px; /* Set width of the dropdown */
+  display: none;
+  position: absolute;
+  z-index: 999;
+}
+
+ul li:hover ul.moda-dropdown{
+  display: block;
+  background-color: #111;
+}
+ul li ul.moda-dropdown li{
+  display: block;
+}
+
+ul li ul.moda-dropdown li p{
+  color: white;
+  padding-right: 40px;
+  text-decoration: underline;
+}
+
 .header-nav {
   position: relative;
   float: left;
@@ -3557,3 +3578,4 @@ input:focus:-ms-input-placeholder {
   padding-bottom: 25px;
   padding-top: 540px;
 }
+

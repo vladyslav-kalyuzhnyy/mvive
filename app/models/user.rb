@@ -27,13 +27,15 @@ class User < ActiveRecord::Base
   has_many :castings, :dependent => :destroy
   has_many :comments
   has_many :feedbacks
-  has_many :rating
+
   has_many :news
   has_many :fashionandmakeup
   has_many :fashionshow
   has_many :shoppingandmakeup
   has_many :exclusive
   has_many :event
+  has_many :moda
+  has_many :woman_fashion
   mount_uploader :avatar, AvatarUploader
   mount_uploader :cover, CoverUploader
   acts_as_messageable

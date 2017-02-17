@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161223152630) do
+ActiveRecord::Schema.define(version: 20170217215216) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -169,7 +169,10 @@ ActiveRecord::Schema.define(version: 20161223152630) do
     t.string   "image6"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
+
+  add_index "fashionshows", ["slug"], name: "index_fashionshows_on_slug", unique: true, using: :btree
 
   create_table "feedbacks", force: :cascade do |t|
     t.integer  "creator_id"
@@ -247,6 +250,56 @@ ActiveRecord::Schema.define(version: 20161223152630) do
 
   add_index "mailboxer_receipts", ["notification_id"], name: "index_mailboxer_receipts_on_notification_id", using: :btree
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type", using: :btree
+
+  create_table "men_fashions", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.text     "short"
+    t.string   "news_day"
+    t.string   "news_month"
+    t.text     "body"
+    t.text     "body2"
+    t.text     "body3"
+    t.text     "body4"
+    t.text     "body5"
+    t.text     "body6"
+    t.string   "image"
+    t.string   "image2"
+    t.string   "image3"
+    t.string   "image4"
+    t.string   "image5"
+    t.string   "image6"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+  end
+
+  add_index "men_fashions", ["slug"], name: "index_men_fashions_on_slug", unique: true, using: :btree
+
+  create_table "modas", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.text     "short"
+    t.string   "news_day"
+    t.string   "news_month"
+    t.text     "body"
+    t.text     "body2"
+    t.text     "body3"
+    t.text     "body4"
+    t.text     "body5"
+    t.text     "body6"
+    t.string   "image"
+    t.string   "image2"
+    t.string   "image3"
+    t.string   "image4"
+    t.string   "image5"
+    t.string   "image6"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+  end
+
+  add_index "modas", ["slug"], name: "index_modas_on_slug", unique: true, using: :btree
 
   create_table "model_profiles", force: :cascade do |t|
     t.integer  "user_id"
@@ -438,6 +491,31 @@ ActiveRecord::Schema.define(version: 20161223152630) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["login"], name: "index_users_on_login", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "woman_fashions", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.text     "short"
+    t.string   "news_day"
+    t.string   "news_month"
+    t.text     "body"
+    t.text     "body2"
+    t.text     "body3"
+    t.text     "body4"
+    t.text     "body5"
+    t.text     "body6"
+    t.string   "image"
+    t.string   "image2"
+    t.string   "image3"
+    t.string   "image4"
+    t.string   "image5"
+    t.string   "image6"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+  end
+
+  add_index "woman_fashions", ["slug"], name: "index_woman_fashions_on_slug", unique: true, using: :btree
 
   add_foreign_key "mailboxer_conversation_opt_outs", "mailboxer_conversations", column: "conversation_id", name: "mb_opt_outs_on_conversations_id"
   add_foreign_key "mailboxer_notifications", "mailboxer_conversations", column: "conversation_id", name: "notifications_on_conversation_id"
