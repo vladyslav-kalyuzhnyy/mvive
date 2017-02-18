@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   resources :woman_fashion
   resources :men_fashion
   resources :fashionshow
+  resources :krasota_ta_zdorovja
+  resources :kultura
 
 
   get "my_profile", to: "profiles#my_profile"

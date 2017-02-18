@@ -1,12 +1,15 @@
-<% content_for(:title, "Каталог лучших магазинов одежды в Украине. Шопинг | Мода 2017")%>
-<% content_for(:description, "Все последние и актуальные новости шопинга и MakeUp в Мире. Список только лучших Luxury заведений, магазинов одежды и салонов красоты в Украине.") %>
+<% content_for(:title, "Шопінг. Кращі магазини та шоу-руми одягу")%>
+<% content_for(:description, "Де купувати дизайнерський одяг ? Новини тільки кращих магазинів та шоу-румів у Львові та України.") %>
 <% content_for(:keywords, "шоппинг, мода, luxury, каталог магазинов")%>
-<% content_for(:og_title, "Каталог лучших магазинов одежды в Украине. Шопинг | Мода 2017")%>
-<% content_for(:og_description, "Все последние и актуальные новости шопинга и MakeUp в Мире. Список только лучших Luxury заведений, магазинов одежды и салонов красоты в Украине.")%>
+<% content_for(:og_title, "Шопінг. Кращі магазини та шоу-руми одягу")%>
+<% content_for(:og_description, "Де купувати дизайнерський одяг ? Новини тільки кращих магазинів та шоу-румів у Львові та України.")%>
 <% content_for(:og_url, "http://mvive.net/shoppingandmakeup")%>
 
 <div class="global-scope">
   <div class="settings-scope" style="padding-top: 0;">
+    <div class="up-logo-main">
+      <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
+    </div>
     <%= render "shared/main_news_navbar" %>
     <h2 class="shoppingandmakeup-h2">Shopping</h2>
     <div class="google-ads-news-main">
@@ -45,7 +48,7 @@
       <% end %>
     </div>
 
-    <%= link_to '<p class="add-new-callback">Как попасть в MVive Каталог? Напишите нам.</p>'.html_safe, contact_us_path, target: "_self" %>
+    <%= link_to '<p class="add-new-callback">Написати в редакцію MVive</p>'.html_safe, contact_us_path, target: "_self" %>
 
     <div class="casting-next-back-btns">
       <%= will_paginate @shoppingandmakeup, previous_label: "Назад", next_label: "Вперед" %>
