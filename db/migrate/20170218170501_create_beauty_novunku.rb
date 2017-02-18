@@ -1,6 +1,6 @@
-class CreateLifestyle < ActiveRecord::Migration
+class CreateBeautyNovunku < ActiveRecord::Migration
   def change
-    create_table :lifestyles do |t|
+    create_table :beauty_novunkus do |t|
       t.references :user
       t.string :name
       t.text :short

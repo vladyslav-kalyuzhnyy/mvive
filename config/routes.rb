@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   resources :men_fashion
   resources :fashionshow
   resources :krasota_ta_zdorovja
+  resources :beauty_novunku
   resources :kultura
   resources :lifestyle
 

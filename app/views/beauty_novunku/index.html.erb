@@ -1,0 +1,58 @@
+<% content_for(:title, "Новинки Beauty індустрії")%>
+<% content_for(:description, "Останні новинки в б'юті індустрії. Тенденції та бренди.") %>
+<% content_for(:keywords, "beauty, бюті, новинки")%>
+
+
+<div class="global-scope">
+  <div class="settings-scope" style="padding-top: 0;">
+    <div class="up-logo-main">
+      <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
+    </div>
+    <%= render "shared/main_news_navbar" %>
+    <%= render "shared/news_slider_navbar" %>
+    <h2 style="padding-top: 60px;">Останні оновлення</h2>
+    <div class="news-feed">
+
+      <% @moda.each do |beauty_novunku| %>
+          <div class="news-container">
+
+            <h1><a href="<%= beauty_novunku_path(beauty_novunku) %>"><span class="headline-word"><%= beauty_novunku.name %></span></a></h1>
+
+            <a href="<%= beauty_novunku_path(beauty_novunku) %>" target="_self">
+              <div class="news-photo" style="background-image: url(<%= beauty_novunku.image %>);" >
+                <div class="news-date-block">
+                  <p class="news-date-day"><%= beauty_novunku.news_day %></p>
+                  <p class="news-date-month"><%= beauty_novunku.news_month %></p>
+                </div>
+              </div>
+            </a>
+
+            <div class="news-content">
+              <p><%= beauty_novunku.short %></p>
+            </div>
+
+          </div>
+      <% end %>
+      <div class="google-ads-news-main">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- mv-news-main -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3562964519569523"
+             data-ad-slot="1356928495"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+
+    <div class="casting-next-back-btns">
+      <%= will_paginate @beauty_novunku, previous_label: "Назад", next_label: "Вперед" %>
+    </div>
+  </div>
+</div>
+</div>
+<%= render 'shared/footer' %>
+<%= render 'shared/popup_facebook' %>
+<div id='admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'); }); </script>
+<div class="admixer-mobile"><div id='admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'); }); </script></div>
