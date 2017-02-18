@@ -1,8 +1,8 @@
-<% content_for(:title, @kultura.name) %>
-<% content_for(:description, @kultura.body) %>
-<% content_for(:og_title, @kultura.name)%>
-<% content_for(:og_description, @kultura.body)%>
-<% content_for(:og_image, @kultura.image)%>
+<% content_for(:title, @lifestyle.name) %>
+<% content_for(:description, @lifestyle.body) %>
+<% content_for(:og_title, @lifestyle.name)%>
+<% content_for(:og_description, @lifestyle.body)%>
+<% content_for(:og_image, @lifestyle.image)%>
 
 
 <div class="global-scope" xmlns="http://www.w3.org/1999/html">
@@ -11,36 +11,36 @@
       <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
     </div>
     <%= render "shared/main_news_navbar" %>
-    <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @kultura.image %>">
+    <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @lifestyle.image %>">
       <div class="single-news-main-text">
-        <h1><%= @kultura.name %></h1>
+        <h1><%= @lifestyle.name %></h1>
       </div>
     </div>
     <div class="back-btn">
       <i style="padding-left: 30px" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
       <%= link_to "Вернутись", :back, class:"news-back-btn" %>
     </div>
-    <p class="single-news-content"><%= @kultura.body %></p>
+    <p class="single-news-content"><%= @lifestyle.body %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @kultura.image2 %>">
+      <img class="nci-img" src="<%= @lifestyle.image2 %>">
     </div>
-    <p class="single-news-content"><%= @kultura.body2 %></p>
+    <p class="single-news-content"><%= @lifestyle.body2 %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @kultura.image3 %>">
+      <img class="nci-img" src="<%= @lifestyle.image3 %>">
     </div>
-    <p class="single-news-content"><%= @kultura.body3 %></p>
+    <p class="single-news-content"><%= @lifestyle.body3 %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @kultura.image4 %>">
+      <img class="nci-img" src="<%= @lifestyle.image4 %>">
     </div>
-    <p class="single-news-content"><%= @kultura.body4 %></p>
+    <p class="single-news-content"><%= @lifestyle.body4 %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @kultura.image5 %>">
+      <img class="nci-img" src="<%= @lifestyle.image5 %>">
     </div>
-    <p class="single-news-content"><%= @kultura.body5 %></p>
+    <p class="single-news-content"><%= @lifestyle.body5 %></p>
     <div class="news-content-img">
-      <img class="nci-img" src="<%= @kultura.image6 %>">
+      <img class="nci-img" src="<%= @lifestyle.image6 %>">
     </div>
-    <p class="single-news-content"><%= @kultura.body6 %></p>
+    <p class="single-news-content"><%= @lifestyle.body6 %></p>
 
     <!-- <h2>Смотрите также:</h2>
     <div class="look-more-block">

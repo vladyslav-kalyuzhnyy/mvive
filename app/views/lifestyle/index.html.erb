@@ -1,6 +1,6 @@
-<% content_for(:title, "Жіноча мода 2017-2018")%>
-<% content_for(:description, "Новинки та тенденції жіночої моди. Актуальні та модні жіночі тренди.") %>
-<% content_for(:keywords, "мода, жіноча мода, тренди, тенденції")%>
+<% content_for(:title, "LifeStyle - Стиль життя 2017")%>
+<% content_for(:description, "Новини кращих luxury ресторанів, готелів та клубів. Подорож як стиль життя та інше.") %>
+<% content_for(:keywords, "lifestyle, стиль життя, подорожувати, подорож, ресторани, готелі, клуби")%>
 
 
 <div class="global-scope">
@@ -13,22 +13,22 @@
     <h2 style="padding-top: 60px;">Останні оновлення</h2>
     <div class="news-feed">
 
-      <% @moda.each do |woman_fashion| %>
+      <% @moda.each do |lifestyle| %>
           <div class="news-container">
 
-            <h1><a href="<%= woman_fashion_path(woman_fashion) %>"><span class="headline-word"><%= woman_fashion.name %></span></a></h1>
+            <h1><a href="<%= lifestyle_path(lifestyle) %>"><span class="headline-word"><%= lifestyle.name %></span></a></h1>
 
-            <a href="<%= woman_fashion_path(woman_fashion) %>" target="_self">
-              <div class="news-photo" style="background-image: url(<%= woman_fashion.image %>);" >
+            <a href="<%= lifestyle_path(lifestyle) %>" target="_self">
+              <div class="news-photo" style="background-image: url(<%= lifestyle.image %>);" >
                 <div class="news-date-block">
-                  <p class="news-date-day"><%= woman_fashion.news_day %></p>
-                  <p class="news-date-month"><%= woman_fashion.news_month %></p>
+                  <p class="news-date-day"><%= lifestyle.news_day %></p>
+                  <p class="news-date-month"><%= lifestyle.news_month %></p>
                 </div>
               </div>
             </a>
 
             <div class="news-content">
-              <p><%= woman_fashion.short %></p>
+              <p><%= lifestyle.short %></p>
             </div>
 
           </div>
@@ -47,7 +47,7 @@
     </div>
 
     <div class="casting-next-back-btns">
-      <%= will_paginate @woman_fashion, previous_label: "Назад", next_label: "Вперед" %>
+      <%= will_paginate @lifestyle, previous_label: "Назад", next_label: "Вперед" %>
     </div>
   </div>
 </div>

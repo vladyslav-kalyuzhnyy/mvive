@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170218143847) do
+ActiveRecord::Schema.define(version: 20170218151618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -247,6 +247,12 @@ ActiveRecord::Schema.define(version: 20170218143847) do
   end
 
   add_index "kulturas", ["slug"], name: "index_kulturas_on_slug", unique: true, using: :btree
+
+  create_table "lifestyles", force: :cascade do |t|
+    t.string "slug"
+  end
+
+  add_index "lifestyles", ["slug"], name: "index_lifestyles_on_slug", unique: true, using: :btree
 
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|
     t.integer "unsubscriber_id"

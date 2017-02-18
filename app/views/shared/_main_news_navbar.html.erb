@@ -1,7 +1,7 @@
 <div class="header-nav">
 
   <ul class="navbar-ul">
-    <%= link_to '<li style="padding-left: 160px" class="navbar-li-social"><p class="navbar-p"><i class="fa fa-home fa-1x"></i></p></li>'.html_safe, home_path, target: "_self" %>
+    <%= link_to '<li style="padding-left: 75px" class="navbar-li-social"><p class="navbar-p"><i class="fa fa-home fa-1x"></i></p></li>'.html_safe, home_path, target: "_self" %>
     <%= link_to '<li class="navbar-li"><p class="navbar-p">Всі новини</p></li>'.html_safe, root_path, target: "_self" %>
     <%= link_to '<li class="navbar-li"><p class="navbar-p">Світське життя</p></li>'.html_safe, peopleandparty_index_path, target: "_self" %>
     <li class="navbar-li">
@@ -34,6 +34,16 @@
         <li><p>Арт</p></li>
         <li><p>Кіно</p></li>
         <%= link_to '<li><p>Події</p></li>'.html_safe, event_index_path, target: "_self" %>
+      </ul>
+    </li>
+
+    <li class="navbar-li">
+      <%= link_to '<p class="navbar-p">LifeStyle</p>'.html_safe, lifestyle_index_path, target: "_self" %>
+      <ul class="moda-dropdown">
+        <li><p>Ресторани</p></li>
+        <li><p>Клуби</p></li>
+        <li><p>Готелі</p></li>
+        <li><p>Подорожування</p></li>
       </ul>
     </li>
 

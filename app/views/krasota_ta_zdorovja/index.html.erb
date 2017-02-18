@@ -1,0 +1,58 @@
+<% content_for(:title, "Красота та Здоров'я")%>
+<% content_for(:description, "Останні новинки в б'юті індустрії, кращі СПА та салони краси. Де купувати дизайнерський одяг.") %>
+<% content_for(:keywords, "красота, стиль, шопінг, спа")%>
+
+
+<div class="global-scope">
+  <div class="settings-scope" style="padding-top: 0;">
+    <div class="up-logo-main">
+      <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
+    </div>
+    <%= render "shared/main_news_navbar" %>
+    <%= render "shared/news_slider_navbar" %>
+    <h2 style="padding-top: 60px;">Останні оновлення</h2>
+    <div class="news-feed">
+
+      <% @moda.each do |krasota_ta_zdorovja| %>
+          <div class="news-container">
+
+            <h1><a href="<%= krasota_ta_zdorovja_path(krasota_ta_zdorovja) %>"><span class="headline-word"><%= krasota_ta_zdorovja.name %></span></a></h1>
+
+            <a href="<%= krasota_ta_zdorovja_path(krasota_ta_zdorovja) %>" target="_self">
+              <div class="news-photo" style="background-image: url(<%= krasota_ta_zdorovja.image %>);" >
+                <div class="news-date-block">
+                  <p class="news-date-day"><%= krasota_ta_zdorovja.news_day %></p>
+                  <p class="news-date-month"><%= krasota_ta_zdorovja.news_month %></p>
+                </div>
+              </div>
+            </a>
+
+            <div class="news-content">
+              <p><%= krasota_ta_zdorovja.short %></p>
+            </div>
+
+          </div>
+      <% end %>
+      <div class="google-ads-news-main">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- mv-news-main -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3562964519569523"
+             data-ad-slot="1356928495"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+
+    <div class="casting-next-back-btns">
+      <%= will_paginate @krasota_ta_zdorovja, previous_label: "Назад", next_label: "Вперед" %>
+    </div>
+  </div>
+</div>
+</div>
+<%= render 'shared/footer' %>
+<%= render 'shared/popup_facebook' %>
+<div id='admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'); }); </script>
+<div class="admixer-mobile"><div id='admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'); }); </script></div>
