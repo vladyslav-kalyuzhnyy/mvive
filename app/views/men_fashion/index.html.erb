@@ -13,7 +13,7 @@
     <h2 style="padding-top: 60px;">Останні оновлення</h2>
     <div class="news-feed">
 
-      <% @moda.each do |men_fashion| %>
+      <% @men_fashion.each do |men_fashion| %>
           <div class="news-container">
 
             <h1><a href="<%= men_fashion_path(men_fashion) %>"><span class="headline-word"><%= men_fashion.name %></span></a></h1>

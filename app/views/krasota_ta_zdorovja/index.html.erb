@@ -13,7 +13,7 @@
     <h2 style="padding-top: 60px;">Останні оновлення</h2>
     <div class="news-feed">
 
-      <% @moda.each do |krasota_ta_zdorovja| %>
+      <% @krasota_ta_zdorovja.each do |krasota_ta_zdorovja| %>
           <div class="news-container">
 
             <h1><a href="<%= krasota_ta_zdorovja_path(krasota_ta_zdorovja) %>"><span class="headline-word"><%= krasota_ta_zdorovja.name %></span></a></h1>
