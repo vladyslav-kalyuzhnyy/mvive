@@ -1,0 +1,50 @@
+class AddImage5ToEvents < ActiveRecord::Migration
+  def change
+    add_column :events, :image5, :string
+    add_column :events, :image6, :string
+    add_column :events, :image7, :string
+    add_column :events, :image8, :string
+    add_column :events, :image9, :string
+    add_column :events, :image10, :string
+    add_column :events, :image11, :string
+    add_column :events, :image12, :string
+    add_column :events, :image13, :string
+    add_column :events, :image14, :string
+    add_column :events, :image15, :string
+    add_column :events, :image16, :string
+    add_column :events, :image17, :string
+    add_column :events, :image18, :string
+    add_column :events, :image19, :string
+    add_column :events, :image20, :string
+    add_column :events, :image21, :string
+    add_column :events, :image22, :string
+    add_column :events, :image23, :string
+    add_column :events, :image24, :string
+    add_column :events, :image25, :string
+    add_column :events, :image26, :string
+    add_column :events, :image27, :string
+    add_column :events, :image28, :string
+    add_column :events, :image29, :string
+    add_column :events, :image30, :string
+    add_column :events, :image31, :string
+    add_column :events, :image32, :string
+    add_column :events, :image33, :string
+    add_column :events, :image34, :string
+    add_column :events, :image35, :string
+    add_column :events, :image36, :string
+    add_column :events, :image37, :string
+    add_column :events, :image38, :string
+    add_column :events, :image39, :string
+    add_column :events, :image40, :string
+    add_column :events, :image41, :string
+    add_column :events, :image42, :string
+    add_column :events, :image43, :string
+    add_column :events, :image44, :string
+    add_column :events, :image45, :string
+    add_column :events, :image46, :string
+    add_column :events, :image47, :string
+    add_column :events, :image48, :string
+    add_column :events, :image49, :string
+    add_column :events, :image50, :string
+  end
+end

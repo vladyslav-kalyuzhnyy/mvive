@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170218170514) do
+ActiveRecord::Schema.define(version: 20170221102919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -121,6 +121,52 @@ ActiveRecord::Schema.define(version: 20170218170514) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.string   "image5"
+    t.string   "image6"
+    t.string   "image7"
+    t.string   "image8"
+    t.string   "image9"
+    t.string   "image10"
+    t.string   "image11"
+    t.string   "image12"
+    t.string   "image13"
+    t.string   "image14"
+    t.string   "image15"
+    t.string   "image16"
+    t.string   "image17"
+    t.string   "image18"
+    t.string   "image19"
+    t.string   "image20"
+    t.string   "image21"
+    t.string   "image22"
+    t.string   "image23"
+    t.string   "image24"
+    t.string   "image25"
+    t.string   "image26"
+    t.string   "image27"
+    t.string   "image28"
+    t.string   "image29"
+    t.string   "image30"
+    t.string   "image31"
+    t.string   "image32"
+    t.string   "image33"
+    t.string   "image34"
+    t.string   "image35"
+    t.string   "image36"
+    t.string   "image37"
+    t.string   "image38"
+    t.string   "image39"
+    t.string   "image40"
+    t.string   "image41"
+    t.string   "image42"
+    t.string   "image43"
+    t.string   "image44"
+    t.string   "image45"
+    t.string   "image46"
+    t.string   "image47"
+    t.string   "image48"
+    t.string   "image49"
+    t.string   "image50"
   end
 
   add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
