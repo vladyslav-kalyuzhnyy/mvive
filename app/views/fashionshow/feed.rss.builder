@@ -16,10 +16,10 @@ xml.rss :version => "2.0" do
           xml.name ""
         end
         xml.pubDate fashionshow.created_at.to_s(:rfc822)
-        xml.link "http://mvive.net/fashionshow" + fashionshow_path(news)
+        xml.link "http://mvive.net/fashionshow" + fashionshow_path(fashionshow)
         xml.guid fashionshow.id
 
-        text = news.body
+        text = fashionshow.body
 
         xml.description "<p>" + text + "</p>"
 

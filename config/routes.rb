@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   resources :beauty_novunku
   resources :kultura
   resources :lifestyle
+  resources :travel
 
 
   get "my_profile", to: "profiles#my_profile"
