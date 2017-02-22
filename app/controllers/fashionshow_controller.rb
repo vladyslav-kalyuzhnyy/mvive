@@ -1,19 +1,19 @@
 class FashionshowController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   def index
-    @fashionshow = WomanFashion.all
-    @fashionshow = WomanFashion.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+    @fashionshow = Fashionshow.all
+    @fashionshow = Fashionshow.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
   end
 
   def feed
-    @fashionshow = WomanFashion.all
+    @fashionshow = Fashionshow.all
     respond_to do |format|
       format.rss { render :layout => false }
     end
   end
 
   def show
-    @fashionshow = WomanFashion.friendly.find(params[:id])
+    @fashionshow = Fashionshow.friendly.find(params[:id])
   end
 
   def create
