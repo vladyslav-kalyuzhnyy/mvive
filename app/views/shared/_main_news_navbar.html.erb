@@ -20,7 +20,7 @@
         <li><p>SPA</p></li>
         <li><p>Косметологія</p></li>
         <li><p>MakeUp</p></li>
-        <li><p>Б'юті Тренд</p></li>
+        <%= link_to "<li><p>Б'юті Тренд</p></li>".html_safe, beauty_trend_index_path, target: "_self" %>
         <%= link_to '<li><p>Шопінг</p></li>'.html_safe, shoppingandmakeup_index_path, target: "_self" %>
         <li><p>Салони красоти</p></li>
       </ul>

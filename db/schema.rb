@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222140358) do
+ActiveRecord::Schema.define(version: 20170223162733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,31 @@ ActiveRecord::Schema.define(version: 20170222140358) do
   end
 
   add_index "beauty_novunkus", ["slug"], name: "index_beauty_novunkus_on_slug", unique: true, using: :btree
+
+  create_table "beauty_trends", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.text     "short"
+    t.string   "news_day"
+    t.string   "news_month"
+    t.text     "body"
+    t.text     "body2"
+    t.text     "body3"
+    t.text     "body4"
+    t.text     "body5"
+    t.text     "body6"
+    t.string   "image"
+    t.string   "image2"
+    t.string   "image3"
+    t.string   "image4"
+    t.string   "image5"
+    t.string   "image6"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+  end
+
+  add_index "beauty_trends", ["slug"], name: "index_beauty_trends_on_slug", unique: true, using: :btree
 
   create_table "blogs", force: :cascade do |t|
     t.integer  "user_id"

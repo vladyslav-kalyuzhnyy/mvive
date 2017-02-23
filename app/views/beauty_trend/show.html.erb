@@ -1,0 +1,79 @@
+<% content_for(:title, @beauty_trend.name) %>
+<% content_for(:description, @beauty_trend.body) %>
+<% content_for(:og_title, @beauty_trend.name)%>
+<% content_for(:og_description, @beauty_trend.body)%>
+<% content_for(:og_image, @beauty_trend.image)%>
+
+
+<div class="global-scope" xmlns="http://www.w3.org/1999/html">
+  <div class="settings-scope">
+    <div class="up-logo-main">
+      <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
+    </div>
+    <%= render "shared/main_news_navbar" %>
+    <div class="single-news-photo parallax-window" data-parallax="scroll" data-image-src="<%= @beauty_trend.image %>">
+      <div class="single-news-main-text">
+        <h1><%= @beauty_trend.name %></h1>
+      </div>
+    </div>
+    <div class="back-btn">
+      <i style="padding-left: 30px" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+      <%= link_to "Вернутись", :back, class:"news-back-btn" %>
+    </div>
+    <p class="single-news-content"><%= @beauty_trend.body %></p>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @beauty_trend.image2 %>">
+    </div>
+    <p class="single-news-content"><%= @beauty_trend.body2 %></p>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @beauty_trend.image3 %>">
+    </div>
+    <p class="single-news-content"><%= @beauty_trend.body3 %></p>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @beauty_trend.image4 %>">
+    </div>
+    <p class="single-news-content"><%= @beauty_trend.body4 %></p>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @beauty_trend.image5 %>">
+    </div>
+    <p class="single-news-content"><%= @beauty_trend.body5 %></p>
+    <div class="news-content-img">
+      <img class="nci-img" src="<%= @beauty_trend.image6 %>">
+    </div>
+    <p class="single-news-content"><%= @beauty_trend.body6 %></p>
+
+    <!-- <h2>Смотрите также:</h2>
+    <div class="look-more-block">
+      <a href="http://www.mvive.net/news/49" class="lm-block-a" target="_self">
+        <div class="lm-block-single">
+          <img src="https://s3.amazonaws.com/mvive-news-images/images-news/19-okt-1.jpeg" class="lm-block-img">
+          <p class="lm-block-p">Покрова: как создавался этно-проект от Vogue.ua и другое</p>
+        </div>
+      </a>
+
+      <a href="http://www.mvive.net/news/51" class="lm-block-a" target="_self">
+        <div class="lm-block-single">
+          <img src="https://s3.amazonaws.com/mvive-news-images/images-news/24-okt-1.jpeg" class="lm-block-img">
+          <p class="lm-block-p">Dolce&Gabbana: сыновья звезд снялись в рекламе</p>
+        </div>
+      </a>
+    </div> -->
+
+    <div class="google-ads-news-single">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- mv-news-single -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-3562964519569523"
+           data-ad-slot="8740594493"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+</div>
+<%= render 'shared/footer' %>
+<!-- Share Buttons -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57ce7fb5ff12a99b"></script>
+<div id='admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'); }); </script>
+<div class="admixer-mobile"><div id='admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'); }); </script></div>
