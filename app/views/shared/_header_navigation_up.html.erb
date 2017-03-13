@@ -1,0 +1,30 @@
+<div class="col-lg-12 col-md-12 col-sm-12">
+  <div class="header_top">
+    <div class="header_top_left">
+      <ul class="top_nav">
+        <%= link_to '<li><p>Фріланс</p></li>'.html_safe, root_path, target: "_self" %>
+        <%= link_to '<li><p>Редакція</p></li>'.html_safe, root_path, target: "_self" %>
+        <li><a href="http://mvive.net/contact-us"><p>Контакти</p></a></li>
+      </ul>
+    </div>
+    <div class="header_top_right">
+      <p>
+        <%= Time.now.strftime("%m/%d/%Y") %>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+  <div class="header_bottom">
+    <div class="logo_area"><a href="http://mvive.net" class="logo"><%= image_tag "mvive-logo-black1.png" %></a></div>
+    <div class="add_banner"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- mv-news-main -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-3562964519569523"
+           data-ad-slot="1356928495"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div>
+  </div>
+</div>

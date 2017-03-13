@@ -2,57 +2,27 @@
 <% content_for(:description, "Актуальні і останні новини в світі високої моди та світського життя в Україні: тренди, жіноча мода, виходи нових колекцій, цікаві факти з життя модельєрів, модні тенденції, покази дизайнерів та культурні новини в Україні") %>
 <% content_for(:keywords, "світське життя, мода, стиль, новини моди, мода 2017, культура")%>
 
-
-<div class="global-scope">
-  <div class="settings-scope" style="padding-top: 0;">
-    <div class="up-logo-main">
-      <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<div class="container">
+  <header id="header">
+    <div class="row">
+      <%= render "shared/header_navigation_up" %>
     </div>
-    <%= render "shared/main_news_navbar" %>
-    <%= render "shared/news_slider_navbar" %>
-    <h2 style="padding-top: 60px;">Останні оновлення</h2>
-    <div class="news-feed">
-
-      <% @news.each do |news| %>
-      <div class="news-container">
-
-        <h1><a href="<%= news_path(news) %>"><span class="headline-word"><%= news.name %></span></a></h1>
-
-        <a href="<%= news_path(news) %>" target="_self">
-          <div class="news-photo" style="background-image: url(<%= news.image %>);" >
-            <div class="news-date-block">
-              <p class="news-date-day"><%= news.news_day %></p>
-              <p class="news-date-month"><%= news.news_month %></p>
-            </div>
-          </div>
-        </a>
-
-        <div class="news-content">
-          <p><%= news.short %></p>
-        </div>
-
-      </div>
-      <% end %>
-      <div class="google-ads-news-main">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- mv-news-main -->
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:728px;height:90px"
-             data-ad-client="ca-pub-3562964519569523"
-             data-ad-slot="1356928495"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-    </div>
-
-    <div class="casting-next-back-btns">
-      <%= will_paginate @news, previous_label: "Назад", next_label: "Вперед" %>
-    </div>
-  </div>
-  </div>
+  </header>
+  <section id="navArea">
+    <%= render "shared/header_navigation_down" %>
+  </section>
+  <section id="newsSection">
+    <%= render "shared/social_area_mainpage" %>
+  </section>
+  <section id="sliderSection">
+    <%= render "shared/sliders_mainpage" %>
+  </section>
+  <section id="contentSection">
+    <%= render "shared/content_mainpage" %>
+  </section>
+  <%= render "shared/footer_mainpage" %>
 </div>
-<%= render 'shared/footer' %>
 <%= render 'shared/popup_facebook' %>
 <div id='admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'); }); </script>
 <div class="admixer-mobile"><div id='admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'); }); </script></div>

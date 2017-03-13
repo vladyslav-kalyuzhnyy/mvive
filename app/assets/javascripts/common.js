@@ -501,7 +501,7 @@ $(document).ready(function() {
             });
         }
     });
-    
+
     //search
 
     $('#type-user-single-model').click(function() {
@@ -565,7 +565,7 @@ $(document).ready(function() {
         $('.overlay').show();
         $('.write-message').show();
         $('.overlay-photo-profile').hide();
-    }); 
+    });
 
     $('#cancel-message').click(function () {
         $('.overlay').hide();
@@ -579,7 +579,7 @@ $(document).ready(function() {
 		console.log(photo_id);
 	});
     $('.like').click(function () {
-        
+
         $("#like_form_" + photo_id).submit();
     }); */
 });
@@ -591,7 +591,7 @@ $(window).resize(function() {
     $('.overlay-photo-profile').css({
         width: $(window).width() - $('.fixed-vertical-menu').width()
     });
-	
+
     $('.cover-menu').css({
         width: $(window).width() - $('.fixed-vertical-menu').width()
     });
@@ -609,22 +609,6 @@ $(window).resize(function() {
     verticalMenuPosition('.navigation');
 });
 
-
-$(window).ready(function() {
-    $('.review-rating').raty({
-        readOnly: true,
-        score: function() {
-            return $(this).attr('data-score');
-        },
-        path: '/assets/'
-    });
-
-    $('#rating-form').raty({
-        path: '/assets/',
-        scoreName: 'feedback[rating]'
-    });
-});
-
 /* FUNCTIONS FOR SERVER RESPONSES */
 
 
@@ -638,7 +622,7 @@ $(document).ready(function() {
 		$('#login-exception').text();
 		$('#login-exception').text('Неверный логин или пароль.');
 	});
-	
+
 	$("#second-reg-scale").on("ajax:success", function(e, data, status, xhr) {
 		$('#reg-exception').html();
 		$('.to-instruction').show(300);

@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-lg-8 col-md-8 col-sm-8">
+    <div class="slick_slider">
+      <div class="single_iteam"> <a href="http://mvive.net/news/mercedes-benz-kiev-fashion-days-pokaz-navro"> <img src="https://s3.amazonaws.com/mvive-news-images/images-news/mbfd-navro-1.jpg" alt="NAVRO Design"></a>
+        <div class="slider_article">
+          <h2><a class="slider_tittle" href="http://mvive.net/news/mercedes-benz-kiev-fashion-days-pokaz-navro">NAVRO Design</a></h2>
+          <p>Союз чорного, золотого та кармінного дозволяє автору створювати невимушені переходи в стилі.</p>
+        </div>
+      </div>
+      <div class="single_iteam"> <a href="http://mvive.net/event/lviv-wedding-festival-2017"><img src="https://s3.amazonaws.com/mvive-news-images/images-event/LWF/ROS_1647.jpg" alt="Lviv Wedding Festival 2017"></a>
+        <div class="slider_article">
+          <h2><a class="slider_tittle" href="http://mvive.net/event/lviv-wedding-festival-2017">Lviv Wedding Festival 2017</a></h2>
+          <p>На початку місяця (4-5 березня), пройшла щорічна виставка, присвячена найромантичнішої тематиці - організація і проведення весіль.</p>
+        </div>
+      </div>
+      <div class="single_iteam"> <a href="http://mvive.net/news/mercedes-benz-kiev-fashion-days-pokaz-alonova"><img src="https://s3.amazonaws.com/mvive-news-images/images-news/mbfd-alonova-1.jpg" alt="Mercedes-Benz Kiev Fashion Days: показ ALONOVA"></a>
+        <div class="slider_article">
+          <h2><a class="slider_tittle" href="http://mvive.net/news/mercedes-benz-kiev-fashion-days-pokaz-alonova">Mercedes-Benz Kiev Fashion Days: показ ALONOVA</a></h2>
+          <p>Ольга Альонова представила нову колекцію FW 2017/18 на MBKFD. Дизайнер створила різнобічні моделі, які підійдуть на будь-які випадки життя: від повсякденних офісних буднів, продовжуючи кавовими бранчами з подружкою і закінчуючи веселими п'ятницями в клубі.</p>
+        </div>
+      </div>
+      <div class="single_iteam"> <a href="http://mvive.net/news/pokaz-chanel-hot-couture-ss-2017"><img src="https://s3.amazonaws.com/mvive-news-images/images-news/30-yanva-1.jpg" alt="Chanel Hot Couture SS 2017"></a>
+        <div class="slider_article">
+          <h2><a class="slider_tittle" href="http://mvive.net/news/pokaz-chanel-hot-couture-ss-2017">Показ Chanel Hot Couture SS 2017</a></h2>
+          <p>В холі дзеркального амфітеатру Grand Palais пройшов показ весняно-літньої колекції Chanel Hot Couture SS 2017. Карл Лагерфельд вийшов на подіум і супроводжував Лілі Роуз-Депп.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4">
+    <div class="latest_post">
+      <h2><span>Оснанні оновлення</span></h2>
+      <div class="latest_post_container">
+
+        <ul class="latest_postnav">
+          <li>
+            <% @news.each do |news| %>
+            <div class="media"> <a href="<%= news_path(news) %>" class="media-left"><img src="<%= news.image %>"></a>
+              <div class="media-body"> <a href="<%= news_path(news) %>" class="catg_title"><%= news.name %></a> </div>
+            </div>
+            <% end %>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>

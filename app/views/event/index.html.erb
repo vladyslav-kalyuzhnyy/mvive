@@ -5,70 +5,25 @@
 <% content_for(:og_description, "Новини з самих цікавих подій у Львові та зі всієї України.")%>
 <% content_for(:og_url, "http://mvive.net/event")%>
 
-<div class="global-scope">
-  <div class="settings-scope" style="padding-top: 0;">
-    <div class="up-logo-main">
-      <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<div class="container">
+  <header id="header">
+    <div class="row">
+      <%= render "shared/header_navigation_up" %>
     </div>
-    <%= render "shared/main_news_navbar" %>
-    <h2 class="events-h2">Події</h2>
-    <div class="google-ads-news-main">
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- mv-news-main -->
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:728px;height:90px"
-           data-ad-client="ca-pub-3562964519569523"
-           data-ad-slot="1356928495"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </div>
-    <div class="news-feed">
+  </header>
+  <section id="navArea">
+    <%= render "shared/header_navigation_down" %>
+  </section>
+  <section id="newsSection">
+    <%= render "shared/social_area_mainpage" %>
+  </section>
 
-      <% @event.each do |event| %>
-          <div class="news-container">
-
-            <h1><span class="headline-word"><%= event.name %></span></h1>
-
-
-
-            <a href="<%= event_path(event) %>" target="_self">
-              <div class="news-photo-event" style="background-image: url(<%= event.image %>);" >
-                <div class="news-date-block-events">
-                  <p class="news-date-day-events"><%= event.events_day %></p>
-                  <p class="news-date-month-events"><%= event.events_month %></p>
-                  <p class="news-date-adress-events"><%= event.events_adress %></p>
-                </div>
-              </div>
-            </a>
-
-            <div class="news-content-events">
-              <p><%= event.short %></p>
-            </div>
-
-          </div>
-      <% end %>
-    </div>
-
-    <%= link_to '<p class="add-new-callback">Написати в редакцію MVive</p>'.html_safe, contact_us_path, target: "_self" %>
-
-    <div class="casting-next-back-btns">
-      <%= will_paginate @event, previous_label: "Назад", next_label: "Вперед" %>
-    </div>
-
-    <div class="google-ads-news-main">
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- mv-news-main -->
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:728px;height:90px"
-           data-ad-client="ca-pub-3562964519569523"
-           data-ad-slot="1356928495"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </div>
-  </div>
+  <section id="contentSection">
+    <%= render "shared/content_event" %>
+  </section>
+  <%= render "shared/footer_mainpage" %>
 </div>
-</div>
-<%= render 'shared/footer' %>
+<%= render 'shared/popup_facebook' %>
 <div id='admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'); }); </script>
+<div class="admixer-mobile"><div id='admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'); }); </script></div>
