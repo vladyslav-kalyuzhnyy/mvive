@@ -1,29 +1,139 @@
 <% content_for(:title, 'Партнерство')%>
 
-<div class="global-scope">
-  <div class="settings-scope" style="padding-top: 0;">
-    <div class="up-logo-main">
-      <%= image_tag "mvive-tv-white-small.png", alt: "MVive Fashion Channel", class: "up-logo" %>
+<div class="container">
+  <header id="header">
+    <div class="row">
+      <%= render "shared/header_navigation_up" %>
     </div>
-    <%= render "shared/main_news_navbar" %>
-<div class="main-partners-block">
-  <h2 style="padding-top: 70px; padding-bottom: 30px; margin: 0">Партнери:</h2>
-  <div class="single-partners-block">
-    <%= image_tag "lfw-logo.jpeg", alt: "Lviv Fashion Week", class: "single-partners-logo" %>
-    <a target="_blank" rel="nofollow" href="http://lvivfashionweek.com">Lviv Fashion Week</a>
+  </header>
+  <section id="navArea">
+    <%= render "shared/header_navigation_down" %>
+  </section>
+  <section id="newsSection">
+    <%= render "shared/social_area_mainpage" %>
+  </section>
+  <div class="col-lg-8 col-md-8 col-sm-8">
+    <div class="left_content">
+      <div class="contact_area">
+        <div class="single_moda_content_left">
+        <h2 style="padding-top: 20px">Партнери</h2>
+
+          <div class="single_moda_content_left">
+            <ul class="moda_catgnav">
+              <li>
+                    <figure style="padding-top: 20px" class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="http://lvivfashionweek.com"> <%= image_tag "lfw-logo.jpeg", alt: "Lviv Fashion Week"%><span class="overlay2"></span> </a>
+                      <figcaption> <h3 style="font-size: 23px"><a href="http://lvivfashionweek.com">Lviv Fashion Week</a></h3> </figcaption>
+                      <p style="border-bottom: 1px solid #000000;"></p>
+                    </figure>
+              </li>
+              <li>
+                <figure class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="http://wonder-land.top/"> <%= image_tag "logo-wland.png", alt: "Студія тележурналістики та кіно Wonderland" %><span class="overlay2"></span> </a>
+                  <figcaption> <h3 style="font-size: 23px"><a href="http://wonder-land.top/">Wonder-Land</a></h3> </figcaption>
+                  <p style="border-bottom: 1px solid #000000;">Студія тележурналістики та кіно "Wonderland"</p>
+                </figure>
+              </li>
+              <%= link_to '<p class="add-new-callback">---> Стати партнером <---</p>'.html_safe, contact_us_path, target: "_self" %>
+            </ul>
+          </div>
+      </div>
+      </div>
+    </div>
   </div>
-  <div style="margin-top: 20px" class="single-partners-block">
-    <%= image_tag "logo-wland.png", alt: "Студія тележурналістики та кіно Wonderland", class: "single-partners-logo" %>
-    <a target="_blank" rel="nofollow" href="http://wonder-land.top/">Wonder-Land</a>
-    <p>Студія тележурналістики та кіно "Wonderland"</p>
+  <div class="col-lg-4 col-md-4 col-sm-4">
+    <aside class="right_content">
+      <div class="single_sidebar">
+        <h2><span>Популярні новини</span></h2>
+        <ul class="spost_nav">
+          <li>
+            <div class="media wow fadeInDown"> <a href="http://mvive.net/news/anna_october_resort_2017_leto_blizko" class="media-left"><img src="https://s3.amazonaws.com/mvive-news-images/images-news/27-noya-2.jpeg" alt="Anna October Resort 2017"></a>
+              <div class="media-body"> <a href="http://mvive.net/news/anna_october_resort_2017_leto_blizko" class="catg_title">Anna October Resort 2017: лето близко</a> </div>
+            </div>
+          </li>
+          <li>
+            <div class="media wow fadeInDown"> <a href="http://mvive.net/news/grammy-2017-epatagni-naryadu-ceremonii" class="media-left"><img src="https://s3.amazonaws.com/mvive-news-images/images-news/13-feb2-1.jpg" alt="Grammy 2017"></a>
+              <div class="media-body"> <a href="http://mvive.net/news/grammy-2017-epatagni-naryadu-ceremonii" class="catg_title">Grammy 2017: епатажні наряди церемонії</a> </div>
+            </div>
+          </li>
+          <li>
+            <div class="media wow fadeInDown"> <a href="http://mvive.net/news/zhukova-jewelry-nova-kolekciya-love-is" class="media-left"><img src="https://s3.amazonaws.com/mvive-news-images/images-news/13-feb-2.jpg" alt="Zhukova jewelry"></a>
+              <div class="media-body"> <a href="http://mvive.net/news/zhukova-jewelry-nova-kolekciya-love-is" class="catg_title">Zhukova jewelry: нова колекція "Love is"</a> </div>
+            </div>
+          </li>
+          <li>
+            <div class="media wow fadeInDown"> <a href="http://mvive.net/news/ostel-fw-2017-18-foto-novoi-kolekcii" class="media-left"><img src="https://s3.amazonaws.com/mvive-news-images/images-news/29-yanva-1.jpg" alt="OSTEL FW 2017/18"></a>
+              <div class="media-body"> <a href="http://mvive.net/news/ostel-fw-2017-18-foto-novoi-kolekcii" class="catg_title">OSTEL FW 2017/18: фото нової колекції</a> </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="single_sidebar">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">M'Vive TV</a></li>
+          <li role="presentation"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Категорії</a></li>
+          <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">Голосування</a></li>
+        </ul>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane" id="category">
+            <ul>
+              <li class="cat-item"><a href="#">Sports</a></li>
+              <li class="cat-item"><a href="#">Fashion</a></li>
+              <li class="cat-item"><a href="#">Business</a></li>
+              <li class="cat-item"><a href="#">Technology</a></li>
+              <li class="cat-item"><a href="#">Life &amp; Style</a></li>
+              <li class="cat-item"><a href="#">Photography</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane active" id="video">
+            <div class="vide_area">
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/2sbJYlR34GQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <!--<div role="tabpanel" class="tab-pane" id="comments">
+            <ul class="spost_nav">
+              <li>
+                <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img1.jpg"> </a>
+                  <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img2.jpg"> </a>
+                  <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img1.jpg"> </a>
+                  <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img2.jpg"> </a>
+                  <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                </div>
+              </li>
+            </ul>
+          </div>-->
+        </div>
+      </div>
+      <div class="single_sidebar wow fadeInDown">
+        <h2><span>Блог</span></h2>
+        <a class="sideAdd" href="#"><%= image_tag "add_img.jpg" %></a> </div>
+      <div class="single_sidebar wow fadeInDown">
+        <h2><span>Facebook</span></h2>
+        <div class="fb-page" data-href="https://www.facebook.com/mvivenet/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/mvivenet/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/mvivenet/">M&#039;Vive - Мода 2017/18</a></blockquote></div>
+      </div>
+      <div class="single_sidebar wow fadeInDown">
+        <h2><span>MVive рекомендує</span></h2>
+        <ul>
+          <li><a href="http://lvivfashionweek.com/" rel="nofollow">Lviv Fashion Week</a></li>
+          <li><a href="#">MVive Blogs</a></li>
+          <li><a href="https://vk.com/wonderlandstudio444">Wonderland Studio and Production</a></li>
+        </ul>
+      </div>
+    </aside>
   </div>
-  <div style="margin-top: 20px" class="single-partners-block">
-    <%= image_tag "logo-wavetv.png", alt: "WaveTV", class: "single-partners-logo" %>
-    <a target="_blank" rel="nofollow" href="http://wave.inf.ua">wave.inf.ua</a>
-    <p>WAVE TV @ "Будь на хвилі разом з нами"</p>
-  </div>
-  <%= link_to '<p class="add-new-callback">---> Стати партнером <---</p>'.html_safe, contact_us_path, target: "_self" %>
+  <%= render "shared/footer_mainpage" %>
 </div>
-</div>
-  <%= render 'shared/footer' %>
-</div>
+<!-- Share Buttons -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57ce7fb5ff12a99b"></script>
+<div id='admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_53fb9a119de44b9781dae1268142a911_zone_14307_sect_4206_site_3736'); }); </script>
+<div class="admixer-mobile"><div id='admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'></div> <script type='text/javascript'> admixerML.fn.push(function() { admixerML.display('admixer_b8ba839213ef46f4bb92b37158d0c2af_zone_14308_sect_4206_site_3736'); }); </script></div>
