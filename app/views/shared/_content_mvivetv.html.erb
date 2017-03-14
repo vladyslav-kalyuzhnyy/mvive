@@ -8,7 +8,7 @@
           <ul class="moda_catgnav">
             <li>
               <% @mvivetv.each do |mvivetv| %>
-                  <figure class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="<%= mvivetv_path(moda) %>"> <img src="<%= mvivetv.image %>"><span class="overlay2"></span> </a>
+                  <figure class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="<%= mvivetv_path(mvivetv) %>"> <img src="<%= mvivetv.image %>"><span class="overlay2"></span> </a>
                     <figcaption> <h1 style="font-size: 23px"><a href="<%= mvivetv_path(mvivetv) %>"><%= mvivetv.name %></a></h1> </figcaption>
                     <p style="border-bottom: 1px solid #000000;"><%= mvivetv.short %></p>
                   </figure>
