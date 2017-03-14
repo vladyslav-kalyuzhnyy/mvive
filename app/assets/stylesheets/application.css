@@ -11,7 +11,7 @@
  * file per style scope.
  *= require normalize-rails
  *= require font-awesome
+ *= require fotorama
  *= require_tree 
  *= require_self
- *
  */

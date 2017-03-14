@@ -11,6 +11,7 @@
 // about supported directives.
 //= require jquery
 //= require jquery_ujs
+//= require fotorama
 //= require es5-shim/es5-shim
 //= require es5-shim/es5-shim-min
 //= require es5-shim/es5-sham
