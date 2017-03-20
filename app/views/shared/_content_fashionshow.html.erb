@@ -8,7 +8,7 @@
           <ul class="moda_catgnav">
             <li>
               <% @fashionshow.each do |fashionshow| %>
-                  <figure class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="<%= fashionshow_path(moda) %>"> <img src="<%= fashionshow.image %>"><span class="overlay2"></span> </a>
+                  <figure class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="<%= fashionshow_path(fashionshow) %>"> <img src="<%= fashionshow.image %>"><span class="overlay2"></span> </a>
                     <figcaption> <h1 style="font-size: 23px"><a href="<%= fashionshow_path(fashionshow) %>"><%= fashionshow.name %></a></h1> </figcaption>
                     <p style="border-bottom: 1px solid #000000;"><%= fashionshow.short %></p>
                   </figure>
