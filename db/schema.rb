@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170223162733) do
+ActiveRecord::Schema.define(version: 20170323224334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -555,6 +555,31 @@ ActiveRecord::Schema.define(version: 20170223162733) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.string   "image11"
+    t.string   "image12"
+    t.string   "image13"
+    t.string   "image14"
+    t.string   "image15"
+    t.string   "image16"
+    t.string   "image17"
+    t.string   "image18"
+    t.string   "image19"
+    t.string   "image20"
+    t.string   "image21"
+    t.string   "image22"
+    t.string   "image23"
+    t.string   "image24"
+    t.string   "image25"
+    t.string   "image26"
+    t.string   "image27"
+    t.string   "image28"
+    t.string   "image29"
+    t.string   "image30"
+    t.string   "image31"
+    t.string   "image32"
+    t.string   "image33"
+    t.string   "image34"
+    t.string   "image35"
   end
 
   add_index "peopleandparties", ["slug"], name: "index_peopleandparties_on_slug", unique: true, using: :btree
