@@ -27,6 +27,6 @@ class FashionshowController < ApplicationController
 
   private
   def fashionshow_params
-    params.require(fashionshow).permit(:name, :short, :body, :body2, :body3, :body4, :news_day, :news_month, :image, :image2, :image3, :image4, :image5, :image6)
+    params.require(fashionshow).permit(:name, :short, :body, :body2, :body3, :body4, :news_day, :news_month, :image, :image2, :image3, :image4, :image5, :image6, :image7, :image8, :image9, :image10, :image11, :image12, :image13, :image14, :image15)
   end
 end

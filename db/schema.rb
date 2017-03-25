@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170323224334) do
+ActiveRecord::Schema.define(version: 20170325075250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -266,6 +266,15 @@ ActiveRecord::Schema.define(version: 20170323224334) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.string   "image7"
+    t.string   "image8"
+    t.string   "image9"
+    t.string   "image10"
+    t.string   "image11"
+    t.string   "image12"
+    t.string   "image13"
+    t.string   "image14"
+    t.string   "image15"
   end
 
   add_index "fashionshows", ["slug"], name: "index_fashionshows_on_slug", unique: true, using: :btree
@@ -528,6 +537,18 @@ ActiveRecord::Schema.define(version: 20170323224334) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.string   "body5"
+    t.string   "body6"
+    t.string   "body7"
+    t.string   "body8"
+    t.string   "body9"
+    t.string   "body10"
+    t.string   "image5"
+    t.string   "image6"
+    t.string   "image7"
+    t.string   "image8"
+    t.string   "image9"
+    t.string   "image10"
   end
 
   add_index "news", ["slug"], name: "index_news_on_slug", unique: true, using: :btree
