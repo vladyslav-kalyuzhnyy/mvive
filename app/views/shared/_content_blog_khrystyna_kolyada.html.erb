@@ -1,0 +1,121 @@
+<div class="row">
+  <div class="col-lg-8 col-md-8 col-sm-8">
+    <div class="left_content">
+
+      <div class="single_moda_content">
+        <h2><span>Блог Христини Коляди</span></h2>
+        <div class="single_moda_content_left">
+          <ul class="moda_catgnav">
+            <li>
+              <% @blog_khrystyna_kolyada.each do |blog_khrystyna_kolyada| %>
+                  <figure class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="<%= blog_khrystyna_kolyada_path(blog_khrystyna_kolyada) %>"> <img src="<%= blog_khrystyna_kolyada.image %>"><span class="overlay2"></span> </a>
+                    <figcaption> <h1 style="font-size: 23px"><a href="<%= blog_khrystyna_kolyada_path(blog_khrystyna_kolyada) %>"><%= blog_khrystyna_kolyada.name %></a></h1> </figcaption>
+                    <p style="border-bottom: 1px solid #000000;"><%= blog_khrystyna_kolyada.short %></p>
+                  </figure>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4">
+    <aside class="right_content">
+      <div class="single_sidebar">
+        <h2><span>Популярні новини</span></h2>
+        <ul class="spost_nav">
+          <li>
+            <div class="media wow fadeInDown"> <a href="http://mvive.net/news/anna_october_resort_2017_leto_blizko" class="media-left"><img src="https://s3.amazonaws.com/mvive-news-images/images-news/27-noya-2.jpeg" alt="Anna October Resort 2017"></a>
+              <div class="media-body"> <a href="http://mvive.net/news/anna_october_resort_2017_leto_blizko" class="catg_title">Anna October Resort 2017: лето близко</a> </div>
+            </div>
+          </li>
+          <li>
+            <div class="media wow fadeInDown"> <a href="http://mvive.net/news/grammy-2017-epatagni-naryadu-ceremonii" class="media-left"><img src="https://s3.amazonaws.com/mvive-news-images/images-news/13-feb2-1.jpg" alt="Grammy 2017"></a>
+              <div class="media-body"> <a href="http://mvive.net/news/grammy-2017-epatagni-naryadu-ceremonii" class="catg_title">Grammy 2017: епатажні наряди церемонії</a> </div>
+            </div>
+          </li>
+          <li>
+            <div class="media wow fadeInDown"> <a href="http://mvive.net/news/zhukova-jewelry-nova-kolekciya-love-is" class="media-left"><img src="https://s3.amazonaws.com/mvive-news-images/images-news/13-feb-2.jpg" alt="Zhukova jewelry"></a>
+              <div class="media-body"> <a href="http://mvive.net/news/zhukova-jewelry-nova-kolekciya-love-is" class="catg_title">Zhukova jewelry: нова колекція "Love is"</a> </div>
+            </div>
+          </li>
+          <li>
+            <div class="media wow fadeInDown"> <a href="http://mvive.net/news/ostel-fw-2017-18-foto-novoi-kolekcii" class="media-left"><img src="https://s3.amazonaws.com/mvive-news-images/images-news/29-yanva-1.jpg" alt="OSTEL FW 2017/18"></a>
+              <div class="media-body"> <a href="http://mvive.net/news/ostel-fw-2017-18-foto-novoi-kolekcii" class="catg_title">OSTEL FW 2017/18: фото нової колекції</a> </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="single_sidebar">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">M'Vive TV</a></li>
+          <li role="presentation"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Категорії</a></li>
+          <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">Голосування</a></li>
+        </ul>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="video">
+            <div class="vide_area">
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/2sbJYlR34GQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="category">
+            <ul>
+              <li class="cat-item"><a href="#">Світське життя</a></li>
+              <li class="cat-item"><a href="#">Fashion</a></li>
+              <li class="cat-item"><a href="#">LifeStyle</a></li>
+              <li class="cat-item"><a href="#">Краса</a></li>
+              <li class="cat-item"><a href="#">MVive Fashion TV</a></li>
+              <li class="cat-item"><a href="#">Покази моди</a></li>
+            </ul>
+          </div>
+          <!--<div role="tabpanel" class="tab-pane" id="comments">
+            <ul class="spost_nav">
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <%= image_tag "post_img1.jpg" %> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <%= image_tag "post_img2.jpg" %> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <%= image_tag "post_img1.jpg" %> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <%= image_tag "post_img2.jpg" %> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                </div>
+              </li>
+            </ul>
+          </div>-->
+        </div>
+      </div>
+      <div class="single_sidebar wow fadeInDown">
+        <h2><span>Блог</span></h2>
+        <a class="sideAdd" href="#"><%= image_tag "blog-photo1.jpg" %></a>
+        <div style="padding-left: 160px; text-align: center">
+          <p style="padding-top: 60px;font-size: 17px;">Христина Коляда</p>
+          <p style="font-size: 15px; font-weight: bold">Мілітарі</p>
+          <p style="font-size: 14px; font-style: italic">«Це стиль, у якому використовують деталі та елементи військового одягу...»</p>
+        </div>
+      </div>
+      <div class="single_sidebar wow fadeInDown">
+        <h2><span>Facebook</span></h2>
+        <div class="fb-page" data-href="https://www.facebook.com/mvivenet/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/mvivenet/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/mvivenet/">M&#039;Vive - Мода 2017/18</a></blockquote></div>
+      </div>
+      <div class="single_sidebar wow fadeInDown">
+        <h2><span>MVive рекомендує</span></h2>
+        <ul>
+          <li><a href="http://lvivfashionweek.com/" rel="nofollow">Lviv Fashion Week</a></li>
+          <li><a href="#">MVive Blogs</a></li>
+          <li><a href="https://vk.com/wonderlandstudio444">Wonderland Studio and Production</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>

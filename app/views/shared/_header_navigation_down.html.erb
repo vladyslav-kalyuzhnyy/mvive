@@ -17,7 +17,11 @@
       <%= link_to '<li class="dropdown-navbar-li"><p class="dropdown-navbar-p">Life&Style</p></li>'.html_safe, lifestyle_index_path, target: "_self" %>
       <%= link_to '<li class="dropdown-navbar-li"><p class="dropdown-navbar-p">Шопінг</p></li>'.html_safe, shoppingandmakeup_index_path, target: "_self" %>
       <%= link_to '<li class="dropdown-navbar-li"><p class="dropdown-navbar-p">Події</p></li>'.html_safe, event_index_path, target: "_self" %>
-      <li class="dropdown-navbar-li"><p class="dropdown-navbar-p">Блоги</p></li>
+      <li class="dropdown dropdown-navbar-li"><p class="dropdown-toggle dropdown-navbar-p" data-toggle="dropdown" role="button" aria-expanded="false">Блоги</p>
+        <ul class="dropdown-menu" role="menu">
+          <%= link_to '<li class="dropdown-navbar-li"><p class="dropdown-navbar-p">Христина Коляда</p></li>'.html_safe, blog_khrystyna_kolyada_index_path, target: "_self" %>
+        </ul>
+      </li>
       <%= link_to '<li class="dropdown-navbar-li"><p class="dropdown-navbar-p">MVive Channel</p></li>'.html_safe, mvive_tv_index_path, target: "_self" %>
     </ul>
   </div>
