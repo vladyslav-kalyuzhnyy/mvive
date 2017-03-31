@@ -2,7 +2,7 @@ class FashionshowController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   def index
     @fashionshow = Fashionshow.all
-    @fashionshow = Fashionshow.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+    @fashionshow = Fashionshow.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
   end
 
   def feed

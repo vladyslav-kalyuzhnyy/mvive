@@ -2,7 +2,7 @@ class PeopleandpartyController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   def index
     @peopleandparty = Peopleandparty.all
-    @peopleandparty = Peopleandparty.order(created_at: :desc).paginate(page: params[:page], per_page: 7)
+    @peopleandparty = Peopleandparty.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
   end
 
   def show

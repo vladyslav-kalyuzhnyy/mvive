@@ -2,7 +2,7 @@ class ModaController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   def index
     @moda = Moda.all
-    @moda = Moda.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+    @moda = Moda.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
   end
 
   def feed

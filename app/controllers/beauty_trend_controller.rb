@@ -2,7 +2,7 @@ class BeautyTrendController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   def index
     @beauty_trend = BeautyTrend.all
-    @beauty_trend = BeautyTrend.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+    @beauty_trend = BeautyTrend.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
   end
 
   def feed

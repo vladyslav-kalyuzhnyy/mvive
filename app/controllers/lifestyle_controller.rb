@@ -2,7 +2,7 @@ class LifestyleController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   def index
     @lifestyle = Lifestyle.all
-    @lifestyle = Lifestyle.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+    @lifestyle = Lifestyle.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
   end
 
   def feed
