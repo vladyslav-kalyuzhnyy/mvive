@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328084633) do
+ActiveRecord::Schema.define(version: 20170506123036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -221,6 +221,15 @@ ActiveRecord::Schema.define(version: 20170328084633) do
     t.string   "image48"
     t.string   "image49"
     t.string   "image50"
+    t.string   "body5"
+    t.string   "body6"
+    t.string   "body7"
+    t.string   "body8"
+    t.string   "body9"
+    t.string   "body10"
+    t.string   "body11"
+    t.string   "body12"
+    t.string   "body13"
   end
 
   add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
