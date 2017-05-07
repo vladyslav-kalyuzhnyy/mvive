@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   resources :fashionshow
   resources :krasota_ta_zdorovja
   resources :blog_khrystyna_kolyada
+  resources :blog_olena_nazar
   resources :beauty_novunku
   resources :beauty_trend
   resources :kultura
