@@ -23,6 +23,6 @@ class PeopleandpartyController < ApplicationController
     params.require(:peopleandparty).permit(:name, :short, :body, :body2, :body3, :body4, :news_day, :news_month, :image, :image2, :image3, :image4, :image5, :image6, :image7, :image8, :image9, :image10, :image11, :image12, :image13, :image14, :image15, :image16,
                                            :image17, :image18, :image19, :image20, :image21, :image22, :image23, :image24, :image25,
                                            :image26, :image27, :image28, :image29, :image30, :image31, :image32, :image33, :image34,
-                                           :image35)
+                                           :image35, :image36)
   end
 end
